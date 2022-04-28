@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  description: MyText
+  venue: MyString
+  set_length: 1
+  hourly_rate: 1.5
+  music_genre: MyString
+  event_type: MyString
+  date: 2022-04-28
+
+two:
+  user: two
+  description: MyText
+  venue: MyString
+  set_length: 1
+  hourly_rate: 1.5
+  music_genre: MyString
+  event_type: MyString
+  date: 2022-04-28
