@@ -3,13 +3,12 @@ class SpotifyApiController < ApplicationController
   end
 
   def success
-    @spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
+    spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
+    @hash = spotify_user.to_hash
   end
 
   def playlists
-    raise
-    spotify_user = params[:spotify_user]
-
+    spotify_user = RSpotify::User.new(params[:spotify_user])
     @playlists = spotify_user.playlists
   end
 end
