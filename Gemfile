@@ -25,6 +25,11 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'devise'
+gem 'rspotify'
+gem 'dotenv-rails', groups: [:development, :test]
+
+# Gem for the Oauth2 authenticity error.
+gem "omniauth-rails_csrf_protection"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false

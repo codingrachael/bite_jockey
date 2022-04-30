@@ -1,0 +1,8 @@
+<h1>Welcome to BiteJockey!</h1>
+
+<% @playlists.each do |playlist| %>
+  <h3><%= playlist.name %></h3>
+    <% playlist.tracks.each do |track| %>
+      <p><%= track.name %></p>
+    <% end %>
+  <% end %>
