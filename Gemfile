@@ -28,6 +28,8 @@ gem 'devise'
 gem 'rspotify'
 gem 'dotenv-rails', groups: [:development, :test]
 
+gem "font-awesome-sass", "~> 5.6.1"
+
 # Gem for the Oauth2 authenticity error.
 gem "omniauth-rails_csrf_protection"
 
