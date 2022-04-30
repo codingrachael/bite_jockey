@@ -70,7 +70,7 @@
 
   #api-features h1 {
     color: white;
-    padding: 46px 0px 32px 0px;
+    padding: 32px 0px 32px 0px;
     text-align: center;
     font-weight: bolder;
   }
@@ -83,5 +83,39 @@
   #api-features p {
     color: white;
     padding: 0 24px 24px 24px;
+    }
+
+  #api-features button {
+    margin: 22px;
+    padding: 48px;
   }
+
+  #social-features {
+    overflow: hidden;
+    padding: 40px;
+  }
+
+  #social-features h1 {
+    color: white;
+    padding: 32px 0px 32px 0px;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  #social-features h4 {
+    color: white;
+    padding: 24px 24px 8px 24px;
+  }
+
+  #social-features p {
+    color: white;
+    padding: 0 24px 24px 24px;
+  }
+
+  #social-features button {
+    margin: 22px;
+    padding: 48px;
+  }
+
+
 }
