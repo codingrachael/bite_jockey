@@ -1,18 +1,21 @@
 // Specific CSS for your home-page
 
 .home-page {
-  h1 {
+  header h1 {
     color: red;
+    font-size: 110px;
+    text-shadow: 4px 3px 0 #000000;
   }
 
-  p {
+  header h3 {
     color: red;
+    text-shadow: 4px 3px 0 #000000;
+    font-size: 40px;
   }
 
   header {
     position: relative;
-    background-color: black;
-    height: 75vh;
+    height: 100vh;
     min-height: 25rem;
     width: 100%;
     overflow: hidden;
@@ -34,6 +37,7 @@
   }
 
   header .container {
+    float: left;
     position: relative;
     z-index: 2;
   }
@@ -44,7 +48,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: rgb(29, 28, 28);
     opacity: 0.5;
     z-index: 1;
   }
@@ -57,5 +61,27 @@
     header video {
       display: none;
     }
+  }
+
+  #api-features {
+    overflow: hidden;
+    padding: 40px;
+  }
+
+  #api-features h1 {
+    color: white;
+    padding: 46px 0px 32px 0px;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  #api-features h4 {
+    color: white;
+    padding: 24px 24px 8px 24px;
+  }
+
+  #api-features p {
+    color: white;
+    padding: 0 24px 24px 24px;
   }
 }
