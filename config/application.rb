@@ -19,4 +19,6 @@ module BITEJockey
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
   end
+
+  RSpotify::authenticate("9727e183cc694c2692b3621c7c9a7c57", ENV['SPOTIFY_SECRET_KEY'])
 end
