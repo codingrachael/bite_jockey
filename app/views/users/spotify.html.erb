@@ -1,0 +1,12 @@
+<h1>Welcome to BiteJockey!</h1>
+
+<div class="container">
+  <% @playlists.each do |playlist| %>
+    <h3><%= playlist.name %></h3>
+      <% counter = 1 %>
+      <% playlist.tracks.each do |track| %>
+        <p><%= counter %>. <%= track.name %></p>
+        <% counter += 1 %>
+      <% end %>
+    <% end %>
+</div>
