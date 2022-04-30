@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   get 'connect', to: 'spotify_api#connect'
 
-  get '/auth/spotify/callback', to: 'users#spotify'
+  get '/auth/spotify/callback', to: 'spotify_api#success'
+
+  get 'playlists', to: 'spotify_api#playlists'
 end
