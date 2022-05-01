@@ -132,8 +132,6 @@ GEM
     multi_xml (0.6.0)
     netrc (0.11.0)
     nio4r (2.5.8)
-    nokogiri (1.13.4-x86_64-darwin)
-      racc (~> 1.4)
     nokogiri (1.13.4-x86_64-linux)
       racc (~> 1.4)
     oauth2 (1.4.9)
@@ -267,7 +265,6 @@ GEM
     zeitwerk (2.5.4)
 
 PLATFORMS
-  x86_64-darwin-19
   x86_64-linux
 
 DEPENDENCIES
