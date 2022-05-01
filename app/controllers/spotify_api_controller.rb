@@ -13,6 +13,7 @@ class SpotifyApiController < ApplicationController
   end
 
   def playlist_tracks
-
+    @playlist = RSpotify::Playlist.find_by_id(params[:playlist_id])
+    @tracks = @playlist.tracks
   end
 end
