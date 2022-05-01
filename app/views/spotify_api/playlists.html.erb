@@ -2,11 +2,9 @@
 
 <div class="container">
   <% @playlists.each do |playlist| %>
-    <h3><%= playlist.name %></h3>
-      <% counter = 1 %>
-      <% playlist.tracks.each do |track| %>
-        <p><%= counter %>. <%= track.name %></p>
-        <% counter += 1 %>
-      <% end %>
-    <% end %>
+    <div class="d-flex mb-3 align-items-center">
+      <%= image_tag playlist.images.first["url"], size: 150 %>
+      <h3>- <%=link_to playlist.name, playlist_tracks_path(playlist_id: playlist.id) %></h3>
+    </div>
+  <% end %>
 </div>

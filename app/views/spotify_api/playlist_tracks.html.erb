@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Playlist Tracks</h1>
+  <%= image_tag @playlist.images.first["url"], size: 200 %>
+  <h2 class="mb-3"><%= @playlist.name %></h2>
+  <% counter = 1 %>
+
+  <div class="container">
+    <% @tracks.each do |track| %>
+      <p><%= counter %>. <%= track.name %> by <%= track.artists.first.name %></p>
+      <% counter += 1 %>
+    <% end %>
+  </div>
+
+</div>
