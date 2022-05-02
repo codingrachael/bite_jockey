@@ -269,11 +269,7 @@ GEM
 PLATFORMS
   x86_64-darwin-19
   x86_64-darwin-21
-
->>>>>>> playlist_html_branch
-
   x86_64-darwin-21
->>>>>>> 2abae406c0a0cc6388fcbb42eaa28de489fd133a
   x86_64-linux
 
 DEPENDENCIES

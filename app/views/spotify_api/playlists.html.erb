@@ -1,10 +1,11 @@
-<h1>BiteJockey Magic Playlist Organiser</h1>
-
-<div class="container">
-  <% @playlists.each do |playlist| %>
-    <div class="d-flex mb-3 align-items-center">
-      <%= image_tag playlist.images.first["url"], size: 150 %>
-      <h3>- <%=link_to playlist.name, playlist_tracks_path(playlist_id: playlist.id) %></h3>
-    </div>
-  <% end %>
+<div class="playlists-container mt-5" p>
+  <h1>BiteJockey Magic Playlist Organiser</h1>
+  <div class="container">
+    <% @playlists.each do |playlist| %>
+      <div class="d-flex mb-3 align-items-center">
+        <%= image_tag playlist.images.first["url"], size: 150 %>
+        <h3>- <%=link_to playlist.name, playlist_tracks_path(playlist_id: playlist.id) %></h3>
+      </div>
+    <% end %>
+  </div>
 </div>
