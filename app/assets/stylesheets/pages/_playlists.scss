@@ -1,4 +1,16 @@
+.playlist-display {
+  .mt-5 {
+    margin-top: ($spacer * 5)!important;
+  }
 
-.mt-5 {
-  margin-top: ($spacer * 5)!important;
-}
+  #playlist-card {
+      padding: 1em 1em 1em;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    }
+
+    img {
+      border-radius: 10px;
+    }
+  }
