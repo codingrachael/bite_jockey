@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get '/auth/spotify/callback', to: 'spotify_api#success'
 
   get 'playlists', to: 'spotify_api#playlists'
+
+  get 'social', to: 'pages#social_home'
 end
