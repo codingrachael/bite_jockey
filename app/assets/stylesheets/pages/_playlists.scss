@@ -34,4 +34,12 @@
     h1 {
       color: #F4F4F4;
     }
+
+    .jumbotron {
+      text-align: left;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+      background-color: #2d3436;
+      background-image: linear-gradient(to bottom, #2d3436 0%, #000000 74%);
+    }
   }
