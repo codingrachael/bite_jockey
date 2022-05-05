@@ -1,0 +1,46 @@
+.playlist-display {
+    background-color: #121212;
+
+    .mt-5 {
+      margin-top: ($spacer * 5)!important;
+    }
+
+    #playlist-card {
+      padding: 1em 1em 1em;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+      background-color: #212121;
+      background-image: linear-gradient(315deg, #212121 0%, #000000 74%);
+    }
+
+    img {
+      border-radius: 10px;
+    }
+
+    h3 {
+      a {
+        color: #F4F4F4;
+        text-decoration: none;
+        text-align: left;
+        font-size: small;
+      }
+
+      a:hover {
+        color: #FD1015;
+      }
+    }
+
+    h1 {
+      color: #F4F4F4;
+    }
+
+    .jumbotron {
+      text-align: left;
+      border-radius: 10px;
+      background-color: #2d3436;
+      background-image: linear-gradient(to bottom, #2d3436 0%, #121212 74%);
+    }
+
+
+  }
