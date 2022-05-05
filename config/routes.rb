@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get 'playlists', to: 'spotify_api#playlists'
 
   get 'social', to: 'pages#social_home'
+
+  get 'playlist-tracks', to: 'spotify_api#playlist_tracks'
 end
