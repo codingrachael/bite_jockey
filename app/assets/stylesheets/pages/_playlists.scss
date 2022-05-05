@@ -1,5 +1,5 @@
 .playlist-display {
-    background-color: black;
+    background-color: #121212;
 
     .mt-5 {
       margin-top: ($spacer * 5)!important;
@@ -10,8 +10,8 @@
       border-radius: 10px;
       text-align: center;
       box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-      background-color: #2d3436;
-      background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+      background-color: #212121;
+      background-image: linear-gradient(315deg, #212121 0%, #000000 74%);
     }
 
     img {
@@ -38,8 +38,9 @@
     .jumbotron {
       text-align: left;
       border-radius: 10px;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
       background-color: #2d3436;
-      background-image: linear-gradient(to bottom, #2d3436 0%, #000000 74%);
+      background-image: linear-gradient(to bottom, #2d3436 0%, #121212 74%);
     }
+
+
   }
