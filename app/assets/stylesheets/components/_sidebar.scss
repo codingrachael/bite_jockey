@@ -40,3 +40,34 @@
   color: #fff;
   font-weight: 600;
 }
+
+.sidebar .nav-links {
+  background: darkolivegreen;
+  height: 100%;
+  padding-top: 30px;
+}
+
+.sidebar .nav-links li {
+  position: relative;
+  list-style: none;
+}
+
+.sidebar .nav-links li i {
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+}
+
+.sidebar .nav-links li a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sidebar .nav-links li a .BiteJockeyLogo {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
