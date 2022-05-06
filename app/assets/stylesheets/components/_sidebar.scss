@@ -42,7 +42,7 @@
 }
 
 .sidebar .nav-links {
-  background: darkolivegreen;
+  background: rgb(43, 44, 42);
   height: 100%;
   padding-top: 30px;
 }
@@ -50,6 +50,10 @@
 .sidebar .nav-links li {
   position: relative;
   list-style: none;
+}
+
+.sidebar .nav-links li:hover {
+  background: #1d1b31;
 }
 
 .sidebar .nav-links li i {
@@ -66,8 +70,25 @@
   text-decoration: none;
 }
 
+.sidebar .nav-links li .iocn-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .sidebar .nav-links li a .BiteJockeyLogo {
   font-size: 18px;
   font-weight: 400;
   color: #fff;
+}
+
+.sidebar .nav-links li .sub-menu {
+  padding: 6px 6px 14px 80px;
+  margin-top: -10px;
+  background: #1d1b31;
+}
+.sidebar .nav-links li .submenu a{
+  color: #fff;
+  font-size: 15px;
+  padding: 5px;
 }
