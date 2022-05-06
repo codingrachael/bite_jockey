@@ -187,6 +187,13 @@
     height: 100%;
   }
 
+  #social-banner {
+    height: 75vh;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+    background-size: contain;
+    }
+
   #social-features {
     overflow: hidden;
     padding: 40px;
@@ -214,8 +221,100 @@
     padding: 48px;
   }
 
+  .arrow-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+  }
 
-}
+  .arrow-1 {
+    width: 100px;
+    height: 100px;
+    background: #41B6E6;
+    opacity: 0.5;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .arrow-2 {
+    width: 60px;
+    height: 60px;
+    background: #41B6E6;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    display: table;
+  }
+
+  .arrow-2:before {
+    width: 52px;
+    height: 52px;
+    content: "";
+    border: 2px solid #DB3EB1;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+
+  .arrow-2 i.fa {
+    font-size: 30px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #DB3EB1;
+  }
+
+  /* Custom Animate.css */
+
+  .animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+  }
+
+  @-webkit-keyframes zoomIn {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale3d(.4, .4, .4);
+      transform: scale3d(.4, .4, .4);
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes zoomIn {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale3d(.4, .4, .4);
+      transform: scale3d(.4, .4, .4);
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+  }
+
 
 .social_home {
 
@@ -401,4 +500,7 @@
   input:nth-of-type(5):checked~main#carousel {
     --position: 5;
   }
+
+
+}
 }
