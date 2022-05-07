@@ -1,125 +1,86 @@
-<div class="home-page">
+<div class="home-page" style="background-color: black;">
   <header>
     <div class="overlay"></div>
     <%= video_tag "dj_vid.mp4", autoplay: :autoplay, loop: :loop, muted: :muted %>
-    <div class="container h-100">
-      <div class="d-flex h-100 text-center align-items-center">
-        <div class="w-100 text-white">
-          <h1 class="display-3">BiteJockey</h1>
-          <h3 class="lead mb-0">Less Admin More Mixin</p>
-          <button type="button" class="btn btn-outline-info"><%= link_to 'Sort Ya Tracks', '/auth/spotify', method: :post %></button>
-          <%# <button type="button" class="btn btn-outline-info">Sort Ya Tracks</button> %>
-          <button type="button" class="btn btn-outline-info">Get A Bit Social</button>
-        </div>
+    <div class="container h-100" style="display:flex; align-items: center;">
+      <div class="w-100 text-white" id="banner-content">
+        <h1 class="display-3">Bite Jockey</h1>
+        <h3 class="lead mb-0">Less Admin More Mixin</p>
+        <a href="#" class="myButton">Sort Your Tracks</a>
+        <a href="#" class="myButton">Get Social</a>
       </div>
     </div>
   </header>
-  <div class="container" id="api-features" style="border: solid red; background-color: pink; text-align: center;">
-    <h1>Features of Spotify API</h1>
+  <div class="container-md" id="api-features" style="text-align: center; padding: 60px 0 60px 0;">
+    <h1>Bite Jockey Can Raise Your DJ Game</h1>
       <div class="row">
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="border-top: solid black; background-color: grey">
-          <div class="icon-box">
-            <img src="https://images.unsplash.com/photo-1461784180009-21121b2f204c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" style="width: 100%; object-fit: cover;">
-            <h4>Live Loops</a></h4>
-            <p>Explore musical ideas using a grid of musical loops and phrases that you can trigger and manipulate in real time to create unique arrangements.</p>
-          </div>
+        <div class="col-md-6" id="api-card-feature">
+          <h3 class="card-title">Access Your Own Spotify Playlists</h3>
+          <p class="card-text">We'll link up your existing Spotify playlists so you can work on those #{DJ-Adjective} sets you've already made, instead of starting from scratch.</p>
+          <%= image_tag 'playlists.jpg', width: '100%', height: '60%'%>
         </div>
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" style="border-top: solid black; background-color: grey">
-          <div class="icon-box">
-           <img src="https://images.unsplash.com/photo-1461784180009-21121b2f204c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" style="width: 100%; object-fit: cover;">
-            <h4>Multi-Touch Mixing</h4>
-            <p>Control your mix from wherever you are in the room — whether that’s next to your computer or on the couch — with Multi-Touch faders.</p>
-          </div>
+        <div class="col-md-6" id="api-card-feature">
+          <h3 class="card-title">BiteJockey's Intelligent Sort</h3>
+          <p class="card-text">Let BiteJockey's Intelligent Algorithm automatically sort your playlist which is guaranteed to generate a killer set.</p>
+          <%= image_tag 'sort.jpg', width: '100%', height: '60%'%>
         </div>
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" style="border-top: solid black; background-color: grey">
-          <div class="icon-box">
-            <img src="https://images.unsplash.com/photo-1461784180009-21121b2f204c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" style="width: 100%; object-fit: cover;">
-            <h4>Key Commands</h4>
-            <p>Create at the speed of sound with Key Commands in Logic Remote. Choose from curated commands for popular workflows, or create your own customised set.</p>
-          </div>
+        <div class="col-md-6" id="api-card-feature">
+          <h3 class="card-title">Custom Sort By DJ Specific Filters</h3>
+          <p class="card-text">Choose to manually filter your existing playlists based on unique DJ-relevant categories such as BPM, Key, Danceability, Energy and plenty more. </p>
+          <%= image_tag 'filter3.jpg', width: '100%', height: '60%'%>
         </div>
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" style="border-top: solid black; background-color: grey">
-          <div class="icon-box">
-            <img src="https://images.unsplash.com/photo-1461784180009-21121b2f204c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" style="width: 100%; object-fit: cover;">
-            <h4>Sequence your beats</h4>
-            <p>Program drum patterns and melodic parts, create dynamic rhythmic performances and automate your plug-ins — all with a quick tap of your finger.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" style="border-top: solid black; background-color: grey">
-          <div class="icon-box">
-            <img src="https://images.unsplash.com/photo-1461784180009-21121b2f204c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" style="width: 100%; object-fit: cover;">
-            <h4>Smart Tempo</h4>
-            <p>Play freely and stay on beat with Smart Tempo, a way to effortlessly mix and match music and beats without worrying about the original tempo. Record freely without a click track.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" style="border-top: solid black; background-color: grey">
-          <div class="icon-box">
-            <img src="https://images.unsplash.com/photo-1461784180009-21121b2f204c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" style="width: 100%; object-fit: cover;">
-            <h4>Track Stacks</h4>
-            <p>Consolidate multiple related tracks into a single track. Use a Summing Stack as a quick way to create submixes. Or create layered and split instruments.</p>
-          </div>
+        <div class="col-md-6" id="api-card-feature">
+          <h3 class="card-title">Save or Create Playlists</h3>
+          <p class="card-text">Once the magic's been worked you can remove songs that don't fit, save the final result as a new playlist or over-ride the original playlist.</p>
+          <%= image_tag 'save.jpg', width: '100%', height: '60%'%>
         </div>
       </div>
-      <button type="button" class="btn btn-primary btn-lg">GET STARTED</button>
+      <br>
+      <br>
+      <button class="glow-on-hover" type="button" style="font-size: x-large;">Get Started</button>
   </div>
-  <div class="container" id="social-features" style="border: solid red; background-color: turquoise; text-align: center;">
-    <h1>Features Of BitSocial</h1>
-      <div class="row">
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="border-top: solid black; background-color: grey">
-          <div class="icon-box">
-            <img src="https://images.unsplash.com/photo-1557040135-9dc2a6b60411?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" alt="" style="width: 100%; object-fit: cover;">
-            <h4>Live Loops</a></h4>
-            <p>Explore musical ideas using a grid of musical loops and phrases that you can trigger and manipulate in real time to create unique arrangements.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" style="border-top: solid black; background-color: grey">
-          <div class="icon-box">
-           <img src="https://images.unsplash.com/photo-1557040135-9dc2a6b60411?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" alt="" style="width: 100%; object-fit: cover;">
-            <h4>Multi-Touch Mixing</h4>
-            <p>Control your mix from wherever you are in the room — whether that’s next to your computer or on the couch — with Multi-Touch faders.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" style="border-top: solid black; background-color: grey">
-          <div class="icon-box">
-            <img src="https://images.unsplash.com/photo-1557040135-9dc2a6b60411?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" alt="" style="width: 100%; object-fit: cover;">
-            <h4>Key Commands</h4>
-            <p>Create at the speed of sound with Key Commands in Logic Remote. Choose from curated commands for popular workflows, or create your own customised set.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" style="border-top: solid black; background-color: grey">
-          <div class="icon-box">
-            <img src="https://images.unsplash.com/photo-1557040135-9dc2a6b60411?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" alt="" style="width: 100%; object-fit: cover;">
-            <h4>Sequence your beats</h4>
-            <p>Program drum patterns and melodic parts, create dynamic rhythmic performances and automate your plug-ins — all with a quick tap of your finger.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" style="border-top: solid black; background-color: grey">
-          <div class="icon-box">
-            <img src="https://images.unsplash.com/photo-1557040135-9dc2a6b60411?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" alt="" style="width: 100%; object-fit: cover;">
-            <h4>Smart Tempo</h4>
-            <p>Play freely and stay on beat with Smart Tempo, a way to effortlessly mix and match music and beats without worrying about the original tempo. Record freely without a click track.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" style="border-top: solid black; background-color: grey">
-          <div class="icon-box">
-            <img src="https://images.unsplash.com/photo-1557040135-9dc2a6b60411?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" alt="" style="width: 100%; object-fit: cover;">
-            <h4>Track Stacks</h4>
-            <p>Consolidate multiple related tracks into a single track. Use a Summing Stack as a quick way to create submixes. Or create layered and split instruments.</p>
-          </div>
+  <div class="banner" id="social-banner-top"; >
+    <div class="container h-100">
+      <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-white">
+          <h1 class="display-3">Bite Social</h1>
+          <h3 class="lead mb-0">Share, Connect, Get Booked</p>
         </div>
       </div>
-      <h1>Sign Up Now!</h1>
-      <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+    </div>
   </div>
-
-</div>
+  <div class="container-md" id="api-features" style="text-align: center; padding: 0 0 100px 0; margin-top: 100px;">
+    <h1>Take Your Passion To The Next Level With Bite Social</h1>
+      <div class="row">
+        <div class="col-md-6" id="api-card-feature">
+          <h3 class="card-title">Make A Profile That's All You</h3>
+          <p class="card-text">Have fun being you. Share what you love, your unique sounds and styles, while showing off those deadly playlists!</p>
+          <%= image_tag 'profile.jpg', width: '100%', height: '60%'%>
+        </div>
+        <div class="col-md-6" id="api-card-feature">
+          <h3 class="card-title">Open, Inclusive, BS-Free</h3>
+          <p class="card-text">We'll leave the toxicity to the other social sites. Bite Social is all for friends, sharing cool music, positive vibes, encouragement and inclusivity.</p>
+          <%= image_tag 'smile.jpg', width: '100%', height: '60%'%>
+        </div>
+        <div class="col-md-6" id="api-card-feature">
+          <h3 class="card-title">Connect With Other DJs</h3>
+          <p class="card-text">Choose to manually filter your existing playlists based on unique DJ-relevant categories such as BPM, Key, Danceability, Energy and plenty more. </p>
+          <%= image_tag 'multi.jpg', width: '100%', height: '60%'%>
+        </div>
+        <div class="col-md-6" id="api-card-feature">
+          <h3 class="card-title">Get Booked or Book DJs</h3>
+          <p class="card-text">Once the magic's been worked you can remove songs that don't fit, save the final result as a new playlist or over-ride the original playlist.</p>
+          <%= image_tag 'booked.jpg', width: '100%', height: '60%'%>
+        </div>
+      </div>
+  </div>
+  <div class="banner" id="social-banner-bottom";>
+    <div class="container h-100">
+      <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-white">
+          <h3 class="display-3">Join The Community</h3>
+          <button data-tf-popup="e0SWw5tD" data-tf-hide-headers data-tf-size="50" data-tf-iframe-props="title=Registration Form" data-tf-medium="snippet" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#41B6E6;color:#000000;font-size:20px;border-radius:25px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">Sign Up Now</button><script src="//embed.typeform.com/next/embed.js"></script>
+        </div>
+      </div>
+    </div>
+  </div>

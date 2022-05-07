@@ -1,16 +1,89 @@
 // Specific CSS for your home-page
 
 .home-page {
+
   header h1 {
-    color: red;
-    font-size: 110px;
-    text-shadow: 4px 3px 0 #000000;
+    color: white;
+    font-size: 140px;
+    text-shadow: 2px 1px 0 black;
   }
 
   header h3 {
-    color: red;
-    text-shadow: 4px 3px 0 #000000;
-    font-size: 40px;
+    color: white;
+    text-shadow: 1px 1px 0 black;
+    font-size: 50px;
+  }
+
+  #banner-content {
+  text-align: center;
+  }
+
+  .glow-on-hover {
+    width: auto;
+    height: fit-content;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgb(27, 27, 27);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 50px;
+  }
+
+  .glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #DB3EB1, #41B6E6, #DB3EB1);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 50px;
+  }
+
+  .glow-on-hover:active {
+    color: #000
+  }
+
+  .glow-on-hover:active:after {
+    background: transparent;
+  }
+
+  .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+
+  .glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(27, 27, 27);
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+  }
+
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+
+    50% {
+      background-position: 400% 0;
+    }
+
+    100% {
+      background-position: 0 0;
+    }
   }
 
   header {
@@ -20,10 +93,28 @@
     width: 100%;
     overflow: hidden;
 
-    a {
-      text-decoration: none;
-      color: #FFC65A;
-    }
+    .myButton {
+        background-color: transparent;
+        border-radius: 42px;
+        border: 3px solid white;
+        display: inline-block;
+        cursor: pointer;
+        color: white;
+        font-family: Arial;
+        font-size: 24px;
+        padding: 12px 58px;
+        text-decoration: none;
+        text-shadow: 0px 0px 0px #41b7e6;
+      }
+
+      .myButton:hover {
+        background-color: #41b7e6;
+      }
+
+      .myButton:active {
+        position: relative;
+        top: 1px;
+      }
   }
 
   header video {
@@ -42,9 +133,8 @@
   }
 
   header .container {
-    float: left;
     position: relative;
-    z-index: 2;
+    z-index: 1000;
   }
 
   header .overlay {
@@ -60,7 +150,7 @@
 
   @media (pointer: coarse) and (hover: none) {
     header {
-      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+      background: black no-repeat center center scroll;
     }
 
     header video {
@@ -70,7 +160,6 @@
 
   #api-features {
     overflow: hidden;
-    padding: 40px;
   }
 
   #api-features h1 {
@@ -85,14 +174,78 @@
     padding: 24px 24px 8px 24px;
   }
 
+  #api-features img {
+    padding: 0 0 0 15%;
+    overflow: hidden;
+  }
+
   #api-features p {
     color: white;
-    padding: 0 24px 24px 24px;
-    }
+    padding: 0 10% 24px 15%;
+    font-size: larger;
+  }
 
   #api-features button {
     margin: 22px;
     padding: 48px;
+  }
+
+  #api-card-feature h3 {
+    color: white;
+    margin: 56px 0 16px 0;
+    padding: 0 10% 12px 15%;
+    font-weight: bolder;
+  }
+
+  #api-card-feature {
+    object-fit: cover;
+    text-align: left;
+    border-top: 2px solid #41B6E6;
+    background-color: rgb(27, 27, 27);
+    border-left: 6px solid black;
+    border-right: 6px solid black;
+    margin-bottom: 16px;
+    height: 100%;
+  }
+
+  #social-banner-top {
+    background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 75vh;
+    min-width: 100%;
+    background-size: cover;
+    background-position-y: bottom;
+  }
+
+  #social-banner-top h1 {
+    color: white;
+    font-size: 110px;
+    text-shadow: 2px 1px 0 black;
+  }
+
+  #social-banner-top h3 {
+  color: white;
+  text-shadow: 1px 1px 0 black;
+  font-size: 40px;
+  }
+
+  #social-banner-bottom {
+    background-image: url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 50vh;
+    min-width: 100%;
+    background-size: cover;
+    background-position-y: top;
+  }
+
+  #social-banner-bottom h3 {
+  color: white;
+  text-shadow: 1px 1px 0px black;
+  font-size: 80px;
   }
 
   #social-features {
@@ -123,8 +276,6 @@
   }
 
 
-}
-
 .social_home {
 
   .banner {
@@ -143,7 +294,7 @@
     background-color: white;
     width: fit-content;
     display: flex;
-    }
+  }
 
   .avatar-large {
     width: 50%;
@@ -309,4 +460,7 @@
   input:nth-of-type(5):checked~main#carousel {
     --position: 5;
   }
+
+
+}
 }
