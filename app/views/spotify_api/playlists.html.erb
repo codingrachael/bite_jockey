@@ -19,7 +19,7 @@
           <% @spotify_user.playlists.each do |playlist| %>
             <div class="card card-img-top text-center mx-auto align-items-center bg-dark mb-3" id="playlist-card" style="width: 12rem; height: 18rem;">
               <div class="playlist-image img-rounded">
-                <%# <%= image_tag playlist.images.first["url"], size: 150 %>
+                <%= image_tag playlist.images.first["url"], size: 150 %>
               </div>
               <div class="playlist-text link-light">
                 <h3><%=link_to playlist.name, playlist_tracks_path(playlist_id: playlist.id, spotify_user: @user_hash) %></h3>
