@@ -1,65 +1,37 @@
-<div class= "sidebar-wrapper">
-  <div class="sidebar">
-  <br>
-  <br>
-  <br>
+<body>
+  <div class="sidebar open">
     <div class="logo-details">
-      <i class='bx bx-music'></i>
-      <span class="BiteJockeyLogo">BiteJockey</span>
+              <div class="logo_name">BiteJockey</div>
   </div>
-
-  <ul class="nav-list">
-    <li>
-          <i class='bx bx-search'></i>
+    <ul class="nav-list">
+      <li>
+        <div class="logo-details">
+            <div class="logo_name">BiteJockey</div>
+        </div>
+      </li>
+      <li>
+         <i class='bx bx-search' ></i>
          <input type="text" placeholder="Search...">
          <span class="tooltip">Search</span>
-    </li>
-    <li>
-      <a href="#">
-        <i class="bx bx-grid-alt"><i>
-        <span class="link_name">My Playlists</span>
-        <i class='bx bxs-chevron-down arrow'></i>
-      </a>
-      <ul class="sub-menu">
-      <li><a href="#">Playlist 1</a></li>
-      <li><a href="#">Playlist 2</a></li>
-      <li><a href="#">Playlist 3</a></li>
-      <li><a href="#">Playlist 4</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bx-user-pin'></i>
-        <span class="link_name">BiteMate</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bxl-deezer'></i>
-        <span class="link_name">BiteBot</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bxs-right-arrow'></i>
-        <span class="link_name">Trending Playlists</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bxs-calendar'></i>
-        <span class="link_name">My Bookings</span>
-      </a>
-    </li>
-
-    <li>
-      <div class="iocn-link"></div>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">My Playlists</span>
+            <ul class="sub-menu">
+              <li><% @playlists.each do |playlist| %>
+              <%=link_to playlist.name, playlist_tracks_path(playlist_id: playlist.id) %>
+              <% end %><li>
+            </ul>
+          </a>
+        </div>
+      </li>
         <a href="#">
-          <i class='bx bxs-collection'></i>
-          <span class="link_name">Category</span>
+          <i class='bx bx-log-out'></i>
+          <span class="links_name">Log Out</span>
         </a>
-        <i class='bx bxs-chevron-down arrow'></i>
-      </div>
-    </li>
-  </ul>
-</div>
+      </li>
+    </ul>
+  </div>
+</body>
