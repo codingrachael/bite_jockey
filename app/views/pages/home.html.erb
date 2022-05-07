@@ -2,19 +2,17 @@
   <header>
     <div class="overlay"></div>
     <%= video_tag "dj_vid.mp4", autoplay: :autoplay, loop: :loop, muted: :muted %>
-    <div class="container h-100">
-      <div class="d-flex h-100 text-center align-items-center">
-        <div class="w-100 text-white">
-          <h1 class="display-3">Bite Jockey</h1>
-          <h3 class="lead mb-0">Less Admin More Mixin</p>
-          <button type="button" class="btn btn-outline-info btn-lg" id="home-buttons"><%= link_to 'Sort Ya Tracks', '/auth/spotify', method: :post %></button>
-          <button type="button" class="btn btn-outline-info btn-lg m-3" id="home-buttons"><%= link_to 'Get A Bit Social', 'social', method: :post %></button>
-        </div>
+    <div class="container h-100" style="display:flex; align-items: center;">
+      <div class="w-100 text-white" id="banner-content">
+        <h1 class="display-3">Bite Jockey</h1>
+        <h3 class="lead mb-0">Less Admin More Mixin</p>
+        <a href="#" class="myButton">Sort Your Tracks</a>
+        <a href="#" class="myButton">Get Social</a>
       </div>
     </div>
   </header>
   <div class="container-md" id="api-features" style="text-align: center; padding: 0;">
-    <h1>How Bite Jockey Can Raise Your DJ Game</h1>
+    <h1>Bite Jockey Can Raise Your DJ Game</h1>
       <div class="row">
         <div class="col-md-6" id="api-card-feature">
           <h3 class="card-title">Access Your Own Spotify Playlists</h3>
@@ -50,16 +48,16 @@
     </div>
   </div>
   <div class="container-md" id="api-features" style="text-align: center; padding: 0;">
-    <h1>Where Music Lovers and DJs Can Collaborate, Share and Get Booked.</h1>
+    <h1>Take Your Passion To The Next Level With Bite Social</h1>
       <div class="row">
         <div class="col-md-6" id="api-card-feature">
           <h3 class="card-title">Make A Profile That's All You</h3>
-          <p class="card-text">Have fun being you. Share what you love, your unique sounds and style and show off those deadly playlists!</p>
+          <p class="card-text">Have fun being you. Share what you love, your unique sounds and styles, while showing off those deadly playlists!</p>
           <%= image_tag 'profile.jpg', width: '100%', height: '60%'%>
         </div>
         <div class="col-md-6" id="api-card-feature">
           <h3 class="card-title">Open, Inclusive, BS-Free</h3>
-          <p class="card-text">We'll leave the toxicity to the other social sites. Bite Social is all for friends, sharing cool stuff, positive vibes, encouragement and inclusivity.</p>
+          <p class="card-text">We'll leave the toxicity to the other social sites. Bite Social is all for friends, sharing cool music, positive vibes, encouragement and inclusivity.</p>
           <%= image_tag 'smile.jpg', width: '100%', height: '60%'%>
         </div>
         <div class="col-md-6" id="api-card-feature">

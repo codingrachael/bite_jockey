@@ -3,15 +3,19 @@
 .home-page {
 
   header h1 {
-    color: #41B6E6;
-    font-size: 110px;
+    color: white;
+    font-size: 140px;
     text-shadow: 2px 1px 0 black;
   }
 
   header h3 {
-    color: #41B6E6;
+    color: white;
     text-shadow: 1px 1px 0 black;
-    font-size: 40px;
+    font-size: 50px;
+  }
+
+  #banner-content {
+  text-align: center;
   }
 
   .glow-on-hover {
@@ -89,10 +93,28 @@
     width: 100%;
     overflow: hidden;
 
-    a {
-      text-decoration: none;
-      color: #FFC65A;
-    }
+    .myButton {
+        background-color: transparent;
+        border-radius: 42px;
+        border: 3px solid white;
+        display: inline-block;
+        cursor: pointer;
+        color: white;
+        font-family: Arial;
+        font-size: 24px;
+        padding: 12px 58px;
+        text-decoration: none;
+        text-shadow: 0px 0px 0px #41b7e6;
+      }
+
+      .myButton:hover {
+        background-color: #41b7e6;
+      }
+
+      .myButton:active {
+        position: relative;
+        top: 1px;
+      }
   }
 
   header video {
@@ -111,9 +133,8 @@
   }
 
   header .container {
-    float: left;
     position: relative;
-    z-index: 2;
+    z-index: 1000;
   }
 
   header .overlay {
