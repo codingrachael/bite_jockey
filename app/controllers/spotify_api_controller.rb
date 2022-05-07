@@ -1,33 +1,7 @@
+require_relative '../../lib/camelot_keys'
+
 class SpotifyApiController < ApplicationController
   BASE_URL = 'https://api.spotify.com/v1'
-  MAJOR_CAMELOT = {
-    '0': '8B',
-    '1': '3B',
-    '2': '10B',
-    '3': '5B',
-    '4': '12B',
-    '5': '7B',
-    '6': '2B',
-    '7': '9B',
-    '8': '4B',
-    '9': '11B',
-    '10': '6B',
-    '11': '1B'
-  }
-  MINOR_CAMELOT = {
-    '0': '5A',
-    '1': '12A',
-    '2': '7A',
-    '3': '2A',
-    '4': '9A',
-    '5': '4A',
-    '6': '11A',
-    '7': '6A',
-    '8': '1A',
-    '9': '8A',
-    '10': '3A',
-    '11': '10A'
-  }
 
   def connect
   end
@@ -56,7 +30,8 @@ class SpotifyApiController < ApplicationController
                     modality: audio_features.mode == 1 ? 'Major' : 'Minor',
                     danceability: audio_features.danceability,
                     energy: audio_features.energy }
-      new_track[:camelot] = camelot_wheel
+      new_track[:camelot] = camelot_wheel(new_track[:key].to_s.to_sym, new_track[:modality])
+      new_track[:key_text] = CAMELOT_TO_TEXT[new_track[:camelot].to_s.to_sym]
       @tracks << new_track
     end
     @tracks
@@ -77,10 +52,6 @@ class SpotifyApiController < ApplicationController
   end
 
   def camelot_wheel(key, modality)
-    if modality == 'Major'
-      MAJOR_CAMELOT[key.to_s]
-    else
-      MINOR_CAMELOT[key.to_s]
-    end
+    modality == 'Major' ? MAJOR_CAMELOT[key] : MINOR_CAMELOT[key]
   end
 end
