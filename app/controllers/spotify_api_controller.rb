@@ -39,7 +39,8 @@ class SpotifyApiController < ApplicationController
                     key: audio_features.key,
                     modality: audio_features.mode == 1 ? 'Major' : 'Minor',
                     danceability: audio_features.danceability,
-                    energy: audio_features.energy }
+                    energy: audio_features.energy,
+                    uri: track.uri }
       new_track[:camelot] = camelot_wheel(new_track[:key].to_s.to_sym, new_track[:modality])
       new_track[:key_text] = CAMELOT_TO_TEXT[new_track[:camelot].to_s.to_sym]
       tracks << new_track

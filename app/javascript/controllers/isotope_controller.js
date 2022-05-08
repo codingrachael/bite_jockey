@@ -2,6 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 import $ from 'jquery'
 import jQueryBridget from 'jquery-bridget'
 import Isotope from 'isotope-layout'
+import { jsonToString } from "webpack/lib/Stats";
 
 export default class extends Controller {
   connect() {
@@ -49,9 +50,31 @@ export default class extends Controller {
         // $grid.isotope('updateSortData', '.grid-item-playlist').isotope();
         var elems = $grid.isotope('getFilteredItemElements')
         const newTrackIndexes = elems.map(track => {
-          return parseInt(track.innerText.match(/(\d+)/)[0]) //Find track number in the html and convert to integer.
+          return track.dataset.uriValue //Find track number in the html and convert to integer.
         })
-        console.log(newTrackIndexes)
+
+        const base_url = 'https://api.spotify.com/v1'
+
+        // Reorder the playlist tracks on spotify
+        $.ajax({
+          url: `${base_url}/playlists/${playlist_id}/tracks`,
+          type: "PUT",
+          dataType: 'json',
+          headers: {
+            'Authorization': "Bearer " + user_token,
+            'Content-Type': 'application/json' },
+          data: JSON.stringify({
+            'uris': newTrackIndexes,
+          }),
+          success: function () {
+            alert(`Playlist Updated Successfully!`);
+            location.reload(true);
+          },
+          error: function () {
+            alert(`Playlist Update Failed`);
+          }
+        });
+        // location.reload() to reload the page after updating the playlist.
       });
     });
   };
