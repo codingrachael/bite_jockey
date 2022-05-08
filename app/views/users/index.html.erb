@@ -1,0 +1,14 @@
+<ul>
+  <% @users.each do |user| %>
+    <li><%= user.first_name %></li>
+    <li><%= user.last_name %></li>
+    <li><%= user.user_name %></li>
+    <li><%= user.location %></li>
+    <li><%= user.email %></li>
+    <li><%= user.password %></li>
+    <li><%= user.social_link %></li>
+    <li><%= user.operator_type %></li>
+    <li><%= user.spotify_id %></li>
+    <li><%= user.image %></li>
+  <% end %>
+</ul>
