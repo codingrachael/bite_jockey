@@ -1,31 +1,36 @@
-<div class="playlist-display page-content-wrapper mt-5" p>
-  <div class="jumbotron jumbotron-fluid mb-5 rounded">
-    <div class="container">
-        <header>
+<div class="container-fluid w100">
+  <div class="playlist-display page-content-wrapper mt-5" p>
+    <div class="row justify-content-end">
+      <div class="col-10">
+        <header class="jumbotron jumbotron-fluid mb-5 rounded p-4">
             <br>
             <br>
             <br>
             <h1 class="display-4">My Playlist's</h1>
             <p class="display-4">Listen to your music unmixed, as often as you can. Having your DJ collection on hand ensures you can be listening to your music anywhere and everywhere. Preparing music files can be boring, but it’s essential if you want to appear to always know what song to play next, effortlessly. Not only should you prepare each individual music file, but also work on playlists, BiteJockey makes this part stress free.</p>
         </header>
+      </div>
     </div>
-  </div>
 
-  <div class="playlist-container my-4 d-flex col-md-12">
-    <div class="row w-100">
-      <div class="d-flex flex-column justify-content-between align-items-center">
-        <div class="container-fluid d-flex justify-content-center flex-wrap w-100">
-        <%= render "layouts/sidebar"%>
-          <% @spotify_user.playlists.each do |playlist| %>
-            <div class="card card-img-top text-center mx-auto align-items-center bg-dark mb-3" id="playlist-card" style="width: 12rem; height: 18rem;">
-              <div class="playlist-image img-rounded">
-                <%= image_tag playlist.images.first["url"], size: 150 %>
-              </div>
-              <div class="playlist-text link-light">
-                <h3><%=link_to playlist.name, playlist_tracks_path(playlist_id: playlist.id, spotify_user: @user_hash) %></h3>
-              </div>
+      <div class="container-fluid d-flex justify-content-center flex-wrap w-100">
+        <div class="d-flex flex-column justify-content-between align-items-center">
+          <div class="row">
+            <div class="sidebar col-2">
+              <%= render "layouts/sidebar"%>
             </div>
-          <% end %>
+
+              <% @spotify_user.playlists.each do |playlist| %>
+                <div class="card card-img-top text-center mx-auto align-items-end bg-dark mb-3" id="playlist-card" style="width: 12rem; height: 18rem;">
+                  <div class="playlist-image img-rounded">
+                    <%= image_tag playlist.images.first["url"], size: 150 %>
+                  </div>
+                  <div class="playlist-text link-light">
+                    <h3><%=link_to playlist.name, playlist_tracks_path(playlist_id: playlist.id, spotify_user: @user_hash) %></h3>
+                  </div>
+                </div>
+              <% end %>
+
+          </div>
         </div>
       </div>
     </div>

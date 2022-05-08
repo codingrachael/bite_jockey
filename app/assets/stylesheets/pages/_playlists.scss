@@ -46,4 +46,15 @@
       background-color: #2d3436;
       background-image: linear-gradient(to bottom, #2d3436 0%, #121212 74%);
     }
+
+  }
+
+  .container-fluid {
+    scrollbar-gutter: none;
+    overflow: hidden;
+  }
+
+  .col-9 {
+    display: flex;
+    align-self: flex-start;
   }
