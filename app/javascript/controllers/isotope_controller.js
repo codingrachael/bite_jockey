@@ -1,4 +1,3 @@
-// app/javascript/controllers/typed_js_controller.js
 import { Controller } from "@hotwired/stimulus"
 import $ from 'jquery'
 import jQueryBridget from 'jquery-bridget'
@@ -43,6 +42,16 @@ export default class extends Controller {
       $('.sort-by-button-group').on('click', 'button', function () {
         var sortByValue = $(this).attr('data-sort-by');
         $grid.isotope({ sortBy: sortByValue });
+      });
+
+
+      $('.playlist-button-group').on('click', 'button', function () {
+        // $grid.isotope('updateSortData', '.grid-item-playlist').isotope();
+        var elems = $grid.isotope('getFilteredItemElements')
+        const newTrackIndexes = elems.map(track => {
+          return parseInt(track.innerText.match(/(\d+)/)[0]) //Find track number in the html and convert to integer.
+        })
+        console.log(newTrackIndexes)
       });
     });
   };
