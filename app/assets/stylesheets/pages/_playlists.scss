@@ -10,9 +10,15 @@
       border-radius: 10px;
       text-align: center;
       box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-      background-color: #141414;
+      background-color: #2222;
       display: inline-grid;
     }
+
+    #playlist-card.card:hover{
+      background-color: pink;
+      color: #dc1778;
+    }
+
 
     .col-10 {
       justify-content: end;
@@ -35,7 +41,7 @@
       }
 
       a:hover {
-        color: #45afcf;
+        color: greenyellow;
       }
     }
 
@@ -81,4 +87,5 @@
   .container-fluid {
     scrollbar-gutter: none;
     overflow: visible;
+    overflow-y: scroll;
   }
