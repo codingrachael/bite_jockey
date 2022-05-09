@@ -1,6 +1,3 @@
-<%= javascript_tag "user_token = '#{@spotify_user.credentials[:token]}'" %>
-<%= javascript_tag "playlist_id = '#{@playlist.id}'" %>
-
 <div class="container">
   <h1>Playlist Tracks</h1>
   <div class="d-flex align-items-center mb-3">
@@ -17,7 +14,8 @@
       <button data-sort-by="energy">Energy</button>
     </div>
     <div class="button-group playlist-button-group">
-      <button>Update Playlist</button>
+      <button class="update-playlist-button">Update Playlist</button>
+      <button class="create-playlist-button">Create New Playlist</button>
     </div>
     <div class="grid">
       <% counter = 1 %>
@@ -46,3 +44,7 @@
     </div>
   </div>
 </div>
+
+<script id="my_vars_json" type="text/json">
+    <%= raw @my_vars.to_json %>
+</script>
