@@ -9,6 +9,15 @@ export default class extends Controller {
     jQueryBridget('isotope', Isotope, $);
 
     $(function () {
+
+      let myVarsJSON = $("#my_vars_json").html(),
+        myVars = JSON.parse(myVarsJSON)
+
+      const playlistId = myVars['playlist']['id']
+      const userId = myVars['user_id']
+      const userToken = myVars['user_token']
+      const baseUrl = 'https://api.spotify.com/v1'
+
       var $grid = $('.grid').isotope({
         itemSelector: '.grid-item-playlist',
         layoutMode: 'fitRows',
