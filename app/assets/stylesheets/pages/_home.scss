@@ -93,28 +93,28 @@
     width: 100%;
     overflow: hidden;
 
-    .myButton {
-        background-color: transparent;
-        border-radius: 42px;
-        border: 3px solid white;
-        display: inline-block;
-        cursor: pointer;
-        color: white;
-        font-family: Arial;
-        font-size: 24px;
-        padding: 12px 58px;
-        text-decoration: none;
-        text-shadow: 0px 0px 0px #41b7e6;
-      }
+  .myButton {
+      background-color: transparent;
+      border-radius: 42px;
+      border: 3px solid white;
+      display: inline-block;
+      cursor: pointer;
+      color: white;
+      font-family: Arial;
+      font-size: 24px;
+      padding: 12px 58px;
+      text-decoration: none;
+      text-shadow: 0px 0px 0px #41b7e6;
+    }
 
-      .myButton:hover {
-        background-color: #41b7e6;
-      }
+    .myButton:hover {
+      background-color: #db3eb1;
+    }
 
-      .myButton:active {
-        position: relative;
-        top: 1px;
-      }
+    .myButton:active {
+      position: relative;
+      top: 1px;
+    }
   }
 
   header video {
@@ -208,6 +208,49 @@
     height: 100%;
   }
 
+
+  .spotify-button {
+    font-family: Arial;
+    color: #FFFFFF;
+    font-size: 29px;
+    border-radius: 50px;
+    border: 3px #ffffff solid;
+    background-color: #1b1b1b;
+    text-shadow: 1px 1px 1px #528ecc;
+    box-shadow: inset 1px 1px 2px 0px #bbdaf7;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 24px 0 24px 0;
+  }
+
+  .spotify-button:hover {
+    background-color: #db3eb1;
+  }
+
+  .spotify-button-icon {
+    padding: 8px 38px;
+    color: #1db954;
+    text-shadow: none;
+  }
+
+  .spotify-button-icon i {
+    position: relative;
+    font-size: 90px;
+  }
+
+  .spotify-button-text {
+    padding: 8px 42px;
+  }
+
+  .spotify-button-text span {
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 35px;
+  }
+
   #social-banner-top {
     background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
     background-repeat: no-repeat;
@@ -248,6 +291,10 @@
   font-size: 80px;
   }
 
+  #social-banner-bottom button:hover {
+    background-color: black;
+  }
+
   #social-features {
     overflow: hidden;
     padding: 40px;
@@ -274,7 +321,6 @@
     margin: 22px;
     padding: 48px;
   }
-
 
 .social_home {
 
