@@ -41,20 +41,41 @@
 
     h1 {
       color: #F4F4F4;
-      font-size: medium;
+      font-size: xx-large;
+      font-family: "Poppins",
+      sans-serif;
+      font-weight: 800;
     }
 
     p {
       color: #F4F4F4;
       font-size: small;
+      font-family: "Poppins",
+      sans-serif;
     }
 
     .jumbotron {
-      text-align: left;
       border-radius: 10px;
       background-color: #2d3436;
       background-image: linear-gradient(to bottom, #2d3436 0%, #121212 74%);
     }
+
+  }
+
+  .items {
+    margin-top: 0px;
+  }
+
+  .jumbo-text {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 20px;
+    margin-bottom: 0;
+    margin-left: 240px;
+    border-radius: 10px;
+    background-color: #dc1778;
+    background-image: linear-gradient(to bottom, #dc1778 0%, #76ceeb 74%);
+    font-family: "Poppins", sans-serif;
   }
 
   .container-fluid {
