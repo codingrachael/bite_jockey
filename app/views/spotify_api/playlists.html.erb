@@ -11,12 +11,7 @@
         </header>
       </div>
     </div>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-    
->>>>>>> dd15f30439fea850a479cae8da621940153bbe95
     <div class="container-fluid d-flex justify-content-center flex-wrap w-100">
         <div class="row">
           <div class="sidebar">
@@ -28,42 +23,20 @@
     <div class="items container-fluid">
       <div class="row justify-content-end">
         <div class="col-10 justify-content-center">
-            <% @spotify_user.playlists.each do |playlist| %>
-              <div class="card card-img-top text-center m-3 bg-dark" id="playlist-card" style="width: 12rem; height: 18rem;">
-                  <div class="playlist-image img-rounded">
-<<<<<<< HEAD
-                    <%= image_tag playlist.images.first["url"], size: 150 %>
-                  </div>
-                  <div class="playlist-text link-light">
-                    <h3><%=link_to playlist.name, playlist_tracks_path(playlist_id: playlist.id, spotify_user: @user_hash) %></h3>
-                  </div>
-=======
-  <div class="playlist-container my-4 d-flex col-md-12">
-    <div class="row w-100">
-      <div class="d-flex flex-column justify-content-between align-items-center">
-        <div class="container-fluid d-flex justify-content-center flex-wrap w-100">
-        <%= render "layouts/sidebar"%>
           <% @spotify_user.playlists.each do |playlist| %>
-            <div class="card card-img-top text-center mx-auto align-items-center bg-dark mb-3" id="playlist-card" style="width: 12rem; height: 18rem;">
+            <div class="card card-img-top text-center m-3 bg-dark" id="playlist-card" style="width: 12rem; height: 18rem;">
               <div class="playlist-image img-rounded">
-                <% if playlist.images.first.exist? %>
-=======
-                    <% if playlist.images.first.exist? %>
->>>>>>> dd15f30439fea850a479cae8da621940153bbe95
+                  <% if playlist.images.first.exist? %>
                   <%= image_tag playlist.images.first["url"], size: 150 %>
-                <% else %>
+                  <% else %>
                   <%= image_tag 'bitelogo.jpg', size: 150 %>
-                <% end %>
-<<<<<<< HEAD
->>>>>>> a3693c490bf37bccc679b1501e989e217de557d0
-=======
-                  </div>
-                  <div class="playlist-text link-light">
-                    <h3><%=link_to playlist.name, playlist_tracks_path(playlist_id: playlist.id, spotify_user: @user_hash) %></h3>
-                  </div>
->>>>>>> dd15f30439fea850a479cae8da621940153bbe95
               </div>
-            <% end %>
+                <div class="playlist-text link-light">
+                    <h3><%=link_to playlist.name, playlist_tracks_path(playlist_id: playlist.id, spotify_user: @user_hash) %></h3>
+                </div>
+              </div>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
