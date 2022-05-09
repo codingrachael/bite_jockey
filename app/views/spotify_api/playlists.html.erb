@@ -23,13 +23,18 @@
     <div class="items container-fluid">
       <div class="row justify-content-end">
         <div class="col-10 justify-content-center">
-          <% @spotify_user.playlists.each do |playlist| %>
-            <div class="card card-img-top text-center m-3 bg-dark" id="playlist-card" style="width: 12rem; height: 18rem;">
-              <div class="playlist-image img-rounded">
-                  <% if playlist.images.first.exist? %>
-                  <%= image_tag playlist.images.first["url"], size: 150 %>
-                  <% else %>
-                  <%= image_tag 'bitelogo.jpg', size: 150 %>
+            <% @spotify_user.playlists.each do |playlist| %>
+              <div class="card card-img-top text-center m-3 bg-dark" id="playlist-card" style="width: 12rem; height: 18rem;">
+                  <div class="playlist-image img-rounded">
+                    <% if playlist.images.first.nil? == false %>
+                      <%= image_tag playlist.images.first["url"], size: 150 %>
+                    <% else %>
+                      <%= image_tag 'bitelogo.jpg', size: 150 %>
+                    <% end %>
+                  </div>
+                  <div class="playlist-text link-light">
+                    <h3><%=link_to playlist.name, playlist_tracks_path(playlist_id: playlist.id, spotify_user: @user_hash) %></h3>
+                  </div>
               </div>
                 <div class="playlist-text link-light">
                     <h3><%=link_to playlist.name, playlist_tracks_path(playlist_id: playlist.id, spotify_user: @user_hash) %></h3>
