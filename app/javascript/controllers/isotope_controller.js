@@ -2,12 +2,22 @@ import { Controller } from "@hotwired/stimulus"
 import $ from 'jquery'
 import jQueryBridget from 'jquery-bridget'
 import Isotope from 'isotope-layout'
+import { jsonToString } from "webpack/lib/Stats";
 
 export default class extends Controller {
   connect() {
     jQueryBridget('isotope', Isotope, $);
 
     $(function () {
+
+      let myVarsJSON = $("#my_vars_json").html(),
+        myVars = JSON.parse(myVarsJSON)
+
+      const playlistId = myVars['playlist']['id']
+      const userId = myVars['user_id']
+      const userToken = myVars['user_token']
+      const baseUrl = 'https://api.spotify.com/v1'
+
       var $grid = $('.grid').isotope({
         itemSelector: '.grid-item-playlist',
         layoutMode: 'fitRows',
@@ -45,14 +55,87 @@ export default class extends Controller {
       });
 
 
-      $('.playlist-button-group').on('click', 'button', function () {
-        // $grid.isotope('updateSortData', '.grid-item-playlist').isotope();
+
+      $('.update-playlist-button').on('click', function () {
+        // Get current order of tracks
         var elems = $grid.isotope('getFilteredItemElements')
-        const newTrackIndexes = elems.map(track => {
-          return parseInt(track.innerText.match(/(\d+)/)[0]) //Find track number in the html and convert to integer.
+        const newTrackUris = elems.map(track => {
+          return track.dataset.uriValue
         })
-        console.log(newTrackIndexes)
+
+        // Replace the playlist tracks on spotify
+        $.ajax({
+          url: `${baseUrl}/playlists/${playlistId}/tracks`,
+          type: "PUT",
+          dataType: 'json',
+          headers: {
+            'Authorization': "Bearer " + userToken,
+            'Content-Type': 'application/json' },
+          data: JSON.stringify({
+            'uris': newTrackUris,
+          }),
+          success: function () {
+            alert(`Playlist Updated Successfully!`);
+            // Refresh the page.
+            location.reload(true);
+          },
+          error: function () {
+            alert(`Playlist Update Failed`);
+          }
+        });
+      });
+
+      $('.create-playlist-button').on('click', function () {
+        // Get current order of tracks
+        var elems = $grid.isotope('getFilteredItemElements')
+        const newTrackUris = elems.map(track => {
+          return track.dataset.uriValue
+        })
+
+        // Create new empty playlist
+        $.ajax({
+          url: `${baseUrl}/users/${userId}/playlists`,
+          type: "POST",
+          dataType: 'json',
+          headers: {
+            'Authorization': "Bearer " + userToken,
+            'Content-Type': 'application/json'
+          },
+          data: JSON.stringify({
+            'name': `${myVars['playlist']['name']} by BiteJockey`,
+            'description': 'Created by BiteJockey.'
+          }),
+          success: function(response) {
+            const newPlaylistId = response['id']
+            // Call function to insert tracks into new empty playlist.
+            insertTracks(newPlaylistId)
+          },
+          error: function () {
+            alert(`Playlist Creation Failed`);
+          },
+        });
+
+        function insertTracks(playlistId){
+          $.ajax({
+          url: `${baseUrl}/playlists/${playlistId}/tracks`,
+          type: "POST",
+          dataType: 'json',
+          headers: {
+            'Authorization': "Bearer " + userToken,
+            'Content-Type': 'application/json'
+          },
+          data: JSON.stringify({
+            'uris': newTrackUris,
+            'position': 0
+          }),
+          success: function () {
+            alert(`Playlist Creation Successful!`);
+            // Refresh the page.
+            location.reload(true);
+          }
+        });
+      }
       });
     });
   };
-}
+};
