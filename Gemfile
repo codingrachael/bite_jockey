@@ -29,6 +29,8 @@ gem 'rspotify'
 gem 'dotenv-rails', groups: [:development, :test]
 
 gem "font-awesome-sass", "~> 5.6.1"
+gem 'simple_form', github: 'heartcombo/simple_form'
+
 
 # Gem for the Oauth2 authenticity error.
 gem "omniauth-rails_csrf_protection"
