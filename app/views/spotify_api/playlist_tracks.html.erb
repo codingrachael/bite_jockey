@@ -7,11 +7,11 @@
 
   <div class="container" data-controller="isotope">
     <div class="button-group sort-by-button-group m-3">
-      <button data-sort-by="original-order">original order</button>
-      <button data-sort-by="bpm">BPM</button>
-      <button data-sort-by="key">Song Key</button>
-      <button data-sort-by="danceability">Danceability</button>
-      <button data-sort-by="energy">Energy</button>
+      <button data-sort-by="original-order">Original order</button>
+      <button data-sort-by="bpm" data-sort-direction="desc">BPM <span aria-hidden="true"><i class="fa-solid fa-caret-up"></i></span></button>
+      <button data-sort-by="key" data-sort-direction="desc">Song Key <i class="fa-solid fa-caret-up"></i></button>
+      <button data-sort-by="danceability" data-sort-direction="desc">Danceability <i class="fa-solid fa-caret-up"></i></button>
+      <button data-sort-by="energy" data-sort-direction="desc">Energy <i class="fa-solid fa-caret-up"></i></button>
     </div>
     <div class="button-group playlist-button-group">
       <button class="update-playlist-button">Update Playlist</button>

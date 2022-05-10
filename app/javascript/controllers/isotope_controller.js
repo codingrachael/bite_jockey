@@ -40,18 +40,27 @@ export default class extends Controller {
             return parseFloat(energy.replace(/[\(\)]/g, ''));
           }
         },
-        sortAscending: {
-          originalOrder: true,
-          key: false,
-          bpm: false,
-          danceability: false,
-          energy: false
-        }
       });
-
+      var arrowIcon = $(this).find('.fa-solid');
+      arrowIcon.hide()
       $('.sort-by-button-group').on('click', 'button', function () {
+        // Get the element name to sort
         var sortByValue = $(this).attr('data-sort-by');
-        $grid.isotope({ sortBy: sortByValue });
+
+        // Get the sorting direction: asc||desc
+        var direction = $(this).attr('data-sort-direction');
+
+        // Convert it to a boolean
+        var isAscending = (direction == 'asc');
+        var newDirection = (isAscending) ? 'desc' : 'asc';
+
+        $grid.isotope({ sortBy: sortByValue, sortAscending: isAscending });
+
+        $(this).attr('data-sort-direction', newDirection);
+
+        arrowIcon = $(this).find('.fa-solid');
+        arrowIcon.show()
+        arrowIcon.toggleClass('fa-caret-up fa-caret-down');
       });
 
 
