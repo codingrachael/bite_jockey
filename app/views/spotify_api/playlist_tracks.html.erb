@@ -14,12 +14,13 @@
       <button data-sort-by="energy">Energy</button>
     </div>
     <div class="button-group playlist-button-group">
-      <button>Update Playlist</button>
+      <button class="update-playlist-button">Update Playlist</button>
+      <button class="create-playlist-button">Create New Playlist</button>
     </div>
     <div class="grid">
       <% counter = 1 %>
       <% @tracks.each do |track| %>
-        <div class="grid-item-playlist shadow mb-2 p-3" data-controller="camelot">
+        <div class="grid-item-playlist shadow mb-2 p-3" data-controller="camelot" data-uri-value=<%= track[:uri]%>>
           <div class="track-features d-flex justify-content-between align-items-center">
             <div class="track-title-artist">
               <h4 class="mb-2"><%= counter %>. <%= track[:name]  %></h4>
@@ -43,3 +44,7 @@
     </div>
   </div>
 </div>
+
+<script id="my_vars_json" type="text/json">
+    <%= raw @my_vars.to_json %>
+</script>
