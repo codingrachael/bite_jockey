@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get 'playlist-tracks', to: 'spotify_api#playlist_tracks'
 
-  resources :grandparents do
+  resources :uers do
     resources :bookings, only: %i[new create edit update index show]
   end
 
