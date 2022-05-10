@@ -1,10 +1,10 @@
 .playlist_tracks {
 
+  background-color: #121212;
+
   .tracks_container {
     margin-left: 100px;
-
   }
-
 
   .jumbotron {
     border-radius: 10px;
@@ -42,5 +42,8 @@
     margin-bottom: 0;
     margin-left: 240px;
     border-radius: 10px;
+  }
+  .grid-item-playlist {
+
   }
 }
