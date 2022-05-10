@@ -183,6 +183,7 @@
 
 
   .spotify-button {
+    font-family: monospace;
     color: #FFFFFF;
     font-size: 29px;
     border-radius: 50px;
@@ -535,6 +536,26 @@
     --position: 5;
   }
 
+
+
+}
+
+.log_in {
+
+  .container {
+    width: 20vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-div {
+    border: 3px solid yellow;
+    width: 100%;
+  }
+
+  .form-div {
+
+  }
 
 
 }
