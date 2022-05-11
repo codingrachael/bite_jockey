@@ -1,9 +1,7 @@
 .grid-item-playlist {
-  width: 80%;
-  height: 34px;
+  width: 360px;
+  height: 240px;
   color: white;
-  background: rgb(53, 152, 83);
-  background: linear-gradient(120deg, rgba(53, 152, 83, 1) 0%, rgba(12, 65, 0, 1) 44%);
   border-radius: 10px;
-  contain: content;
+  display: block;
 }

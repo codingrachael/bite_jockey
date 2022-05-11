@@ -28,11 +28,13 @@
   }
 
   .playlist-heading {
-    color: red;
-    font-size: xx-large;
-    font-family: "Poppins",
-    sans-serif;
-    font-weight: 800;
+    h2 {
+      color: #F4F4F4;
+      font-size: xx-large;
+      font-family: "Poppins",
+      sans-serif;
+      font-weight: 800;
+    }
   }
 
   .playlist-tracks-text {
@@ -43,7 +45,14 @@
     margin-left: 240px;
     border-radius: 10px;
   }
-  .grid-item-playlist {
 
+  .track-features {
+    h4 {
+     font-size: small;
+    }
+
+    p{
+      font-size: smaller;
+    }
   }
 }
