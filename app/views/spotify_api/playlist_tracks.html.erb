@@ -1,5 +1,3 @@
-<%= javascript_pack_tag 'isotope.js' %>
-
 <div class="container">
   <h1>Playlist Tracks</h1>
   <div class="d-flex align-items-center mb-3">
@@ -7,27 +5,37 @@
     <h2 class="ms-3"><%= @playlist.name %></h2>
   </div>
 
-  <div class="container">
+  <div class="container" data-controller="isotope">
     <div class="button-group sort-by-button-group m-3">
-      <button data-sort-by="original-order">original order</button>
-      <button data-sort-by="bpm">BPM</button>
-      <button data-sort-by="key">Song Key</button>
-      <button data-sort-by="danceability">Danceability</button>
-      <button data-sort-by="energy">Energy</button>
+      <button data-sort-by="original-order">Original order</button>
+      <button data-sort-by="bpm" data-sort-direction="desc">BPM <span aria-hidden="true"><i class="fa-solid fa-caret-up"></i></span></button>
+      <button data-sort-by="key" data-sort-direction="desc">Song Key <i class="fa-solid fa-caret-up"></i></button>
+      <button data-sort-by="danceability" data-sort-direction="desc">Danceability <i class="fa-solid fa-caret-up"></i></button>
+      <button data-sort-by="energy" data-sort-direction="desc">Energy <i class="fa-solid fa-caret-up"></i></button>
+    </div>
+    <div class="button-group playlist-button-group">
+      <button class="update-playlist-button">Update Playlist</button>
+      <button class="create-playlist-button">Create New Playlist</button>
     </div>
     <div class="grid">
       <% counter = 1 %>
       <% @tracks.each do |track| %>
-        <div class="grid-item-playlist shadow mb-2 p-3">
+        <div class="grid-item-playlist shadow mb-2 p-3" data-controller="camelot" data-uri-value=<%= track[:uri]%>>
           <div class="track-features d-flex justify-content-between align-items-center">
-            <h4><%= counter %>. <%= track.name  %> by <%= track.artists.first.name %></h4>
-            <div>
-              Key:<p class="key ms-2"><%= track.audio_features.key %></p>
-              BPM:<p class="bpm ms-2"><%= track.audio_features.tempo %></p>
+            <div class="track-title-artist">
+              <h4 class="mb-2"><%= counter %>. <%= track[:name]  %></h4>
+              <p><%= track[:artist] %></p>
             </div>
-            <div>
-              Danceability:<p class="danceability ms-2"><%= track.audio_features.danceability %></p>
-              Energy:<p class="energy ms-2"><%= track.audio_features.energy %></p>
+            <div class="track-audio-features d-flex justify-content-between">
+              <div class="mx-3 d-flex align-items-center flex-column">
+                <span class="d-flex"><p>Key: </p><p class="key-text ms-2"><%= track[:key_text] %></p></span>
+                <p class="key ms-2" style="color: transparent;"><%= track[:key] %></p></span>
+              </div>
+              <div class="mx-3">
+                <span class="d-flex"><p>BPM: </p><p class="bpm ms-2"><%= track[:bpm] %></p></span>
+                <span class="d-flex"><p>Danceability: </p><p class="danceability ms-2"><%= track[:danceability] %></p></span>
+                <span class="d-flex"><p>Energy: </p><p class="energy ms-2"><%= track[:energy] %></p></span>
+              </div>
             </div>
           </div>
         </div>
@@ -36,3 +44,7 @@
     </div>
   </div>
 </div>
+
+<script id="my_vars_json" type="text/json">
+    <%= raw @my_vars.to_json %>
+</script>

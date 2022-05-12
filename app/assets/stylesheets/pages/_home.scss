@@ -1,17 +1,42 @@
 // Specific CSS for your home-page
 
+
 .home-page {
+
+
   header h1 {
-    color: red;
-    font-size: 110px;
-    text-shadow: 4px 3px 0 #000000;
+    color: black;
+    font-size: 140px;
+    text-shadow: 0 0 10px hsl(0, 0%, 100%), 0 0 20px hsl(0, 0%, 100%), 0 0 40px hsl(0, 0%, 100%);
+    font-family: monospace;
+    transition: 0.2s ease-out;
   }
 
+
+  // header h1:hover {
+  //  color: hsl(0, 0%, 100%);
+  //  text-shadow: 0 0 10px hsl(0, 0%, 100%), 0 0 20px hsl(0, 0%, 100%), 0 0 40px hsl(0, 0%, 100%);
+  // }
+
+
   header h3 {
-    color: red;
-    text-shadow: 4px 3px 0 #000000;
-    font-size: 40px;
+    color: black;
+    text-shadow: 0 0 10px hsl(0, 0%, 100%), 0 0 20px hsl(0, 0%, 100%), 0 0 40px hsl(0, 0%, 100%);
+    font-family: monospace;
+    font-size: 50px;
   }
+
+
+  // header h3:hover {
+  //  color: hsl(0, 0%, 100%);
+  //  text-shadow: 0 0 10px hsl(0, 0%, 100%), 0 0 20px hsl(0, 0%, 100%), 0 0 40px hsl(0, 0%, 100%);
+  // }
+
+
+  #banner-content {
+    text-align: center;
+  }
+
 
   header {
     position: relative;
@@ -20,11 +45,37 @@
     width: 100%;
     overflow: hidden;
 
-    a {
+
+    .myButton {
+      font-family: monospace;
+      background-color: transparent;
+      border-radius: 42px;
+      border: 3px solid white;
+      display: inline-block;
+      cursor: pointer;
+      color: white;
+      font-family: Arial;
+      font-size: 24px;
+      padding: 12px 58px;
       text-decoration: none;
-      color: #FFC65A;
+      text-shadow: 0px 0px 0px #41b7e6;
+      // box-shadow: 0 0 40px hsl(0, 0%, 100%);
+    }
+
+
+    .myButton:hover {
+      background-color: white;
+      color: black;
+      box-shadow: 0 0 40px hsl(0, 0%, 100%);
+    }
+
+
+    .myButton:active {
+      position: relative;
+      top: 1px;
     }
   }
+
 
   header video {
     position: absolute;
@@ -41,11 +92,12 @@
     transform: translateX(-50%) translateY(-50%);
   }
 
+
   header .container {
-    float: left;
     position: relative;
-    z-index: 2;
+    z-index: 1000;
   }
+
 
   header .overlay {
     position: absolute;
@@ -58,20 +110,23 @@
     z-index: 1;
   }
 
+
   @media (pointer: coarse) and (hover: none) {
     header {
-      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+      background: black no-repeat center center scroll;
     }
+
 
     header video {
       display: none;
     }
   }
 
+
   #api-features {
     overflow: hidden;
-    padding: 40px;
   }
+
 
   #api-features h1 {
     color: white;
@@ -80,25 +135,164 @@
     font-weight: bolder;
   }
 
+
   #api-features h4 {
     color: white;
     padding: 24px 24px 8px 24px;
   }
 
+
+  #api-features img {
+    padding: 0 0 0 15%;
+    overflow: hidden;
+  }
+
+
   #api-features p {
     color: white;
-    padding: 0 24px 24px 24px;
-    }
+    padding: 0 10% 24px 15%;
+    font-size: larger;
+  }
+
 
   #api-features button {
     margin: 22px;
     padding: 48px;
   }
 
+
+  #api-card-feature h3 {
+    color: white;
+    margin: 56px 0 16px 0;
+    padding: 0 10% 12px 15%;
+    font-weight: bolder;
+  }
+
+
+  #api-card-feature {
+    object-fit: cover;
+    text-align: left;
+    border-top: 2px solid #DB3EB1;
+    background-color: rgb(27, 27, 27);
+    border-left: 6px solid black;
+    border-right: 6px solid black;
+    margin-bottom: 16px;
+    height: 100%;
+  }
+
+
+
+  .spotify-button {
+    color: #FFFFFF;
+    font-size: 29px;
+    border-radius: 50px;
+    border: 3px #ffffff solid;
+    // background-color: #1b1b1b;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 48px 0 24px 0;
+  }
+
+
+  .spotify-button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 20px hsl(0, 0%, 100%);
+  }
+
+
+  .spotify-button-icon {
+    padding: 8px 38px;
+    color: #1db954;
+    text-shadow: none;
+  }
+
+
+  .spotify-button-icon i {
+    position: relative;
+    font-size: 90px;
+  }
+
+
+  .spotify-button-text {
+    padding: 8px 42px;
+  }
+
+
+  .spotify-button-text span {
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 35px;
+  }
+
+
+  #social-banner-top {
+    background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 75vh;
+    min-width: 100%;
+    background-size: cover;
+    background-position-y: bottom;
+  }
+
+
+  #social-banner-top h1 {
+    color: black;
+    text-shadow: 0 0 10px hsl(0, 0%, 100%);
+    // color: white;
+    // text-shadow: 1px 1px 0px black;
+    font-size: 110px;
+    font-family: monospace;
+  }
+
+
+  #social-banner-top h3 {
+    // color: black;
+    // text-shadow: 0 0 10px hsl(0, 0%, 100%), 0 0 20px hsl(0, 0%, 100%), 0 0 40px hsl(0, 0%, 100%);
+    color: black;
+    text-shadow: 0 0 10px hsl(0, 0%, 100%);
+    font-family: monospace;
+    font-size: 50px;
+  }
+
+
+  #social-banner-bottom {
+    background-image: url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 50vh;
+    min-width: 100%;
+    background-size: cover;
+    background-position-y: top;
+  }
+
+
+  #social-banner-bottom h3 {
+    color: black;
+    text-shadow: 0 0 10px hsl(0, 0%, 100%);
+    // color: white;
+    // text-shadow: 1px 1px 0px black;
+    font-family: monospace;
+    font-size: 80px;
+  }
+
+
+  #social-banner-bottom button:hover {
+    background-color: black;
+  }
+
+
   #social-features {
     overflow: hidden;
     padding: 40px;
   }
+
 
   #social-features h1 {
     color: white;
@@ -107,25 +301,28 @@
     font-weight: bolder;
   }
 
+
   #social-features h4 {
     color: white;
     padding: 24px 24px 8px 24px;
   }
+
 
   #social-features p {
     color: white;
     padding: 0 24px 24px 24px;
   }
 
+
   #social-features button {
     margin: 22px;
     padding: 48px;
   }
-
-
 }
 
+
 .social_home {
+
 
   .banner {
     background-image: url(https://images.unsplash.com/photo-1530352865347-3c2e277abefe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80);
@@ -139,11 +336,13 @@
     align-items: center;
   }
 
+
   .headings {
     background-color: white;
     width: fit-content;
     display: flex;
-    }
+  }
+
 
   .avatar-large {
     width: 50%;
@@ -151,6 +350,7 @@
     margin: 20px;
     display: block;
   }
+
 
   .banner-info {
     display: flex;
@@ -160,11 +360,13 @@
     margin-left: -10%;
   }
 
+
   #playlists h1 {
     text-align: center;
     margin: 16px;
     color: white;
   }
+
 
   #social-feed h1 {
     text-align: center;
@@ -172,21 +374,25 @@
     color: white;
   }
 
+
   #map-container h1 {
     text-align: center;
     margin: 16px;
     color: white;
   }
 
+
   #map-container {
     color: white;
   }
+
 
   #booking-form h1 {
     margin: 16px;
     color: white;
     text-align: center;
   }
+
 
   .cards {
     height: 600px;
@@ -198,6 +404,7 @@
     justify-items: center;
   }
 
+
   #c-item {
     display: flex;
     flex-direction: column;
@@ -205,11 +412,13 @@
     text-align: center;
   }
 
+
   .cards img {
     width: 100%;
     height: 60%;
     object-fit: cover;
   }
+
 
   main#carousel {
     grid-row: 1 / 2;
@@ -228,6 +437,7 @@
     pointer-events: none;
   }
 
+
   div.item {
     position: absolute;
     width: 300px;
@@ -240,73 +450,91 @@
     z-index: calc((var(--position) - var(--abs)));
   }
 
+
   div.item:nth-of-type(1) {
     --offset: 1;
     background-color: #90f1ef;
   }
+
 
   div.item:nth-of-type(2) {
     --offset: 2;
     background-color: #ff70a6;
   }
 
+
   div.item:nth-of-type(3) {
     --offset: 3;
     background-color: #ff9770;
   }
+
 
   div.item:nth-of-type(4) {
     --offset: 4;
     background-color: #ffd670;
   }
 
+
   div.item:nth-of-type(5) {
     --offset: 5;
     background-color: #e9ff70;
   }
+
 
   input:nth-of-type(1) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
   }
 
+
   input:nth-of-type(1):checked~main#carousel {
     --position: 1;
   }
+
 
   input:nth-of-type(2) {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
   }
 
+
   input:nth-of-type(2):checked~main#carousel {
     --position: 2;
   }
+
 
   input:nth-of-type(3) {
     grid-column: 4 /5;
     grid-row: 2 / 3;
   }
 
+
   input:nth-of-type(3):checked~main#carousel {
     --position: 3;
   }
+
 
   input:nth-of-type(4) {
     grid-column: 5 / 6;
     grid-row: 2 / 3;
   }
 
+
   input:nth-of-type(4):checked~main#carousel {
     --position: 4;
   }
+
 
   input:nth-of-type(5) {
     grid-column: 6 / 7;
     grid-row: 2 / 3;
   }
 
+
   input:nth-of-type(5):checked~main#carousel {
     --position: 5;
   }
+
+
+
 }

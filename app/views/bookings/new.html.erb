@@ -3,3 +3,8 @@
 <%= render 'form', booking: @booking %>
 
 <%= link_to 'Back', bookings_path %>
+
+<%= simple_form_for [ @user, @booking ] do |f| %>
+  <%= f.input :content %>
+  <%= f.submit "Submit Booking", class: "btn btn-primary" %>
+<% end %>

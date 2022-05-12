@@ -45,4 +45,7 @@ class BookingsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to bookings_url
   end
+  # test "the truth" do
+  #   assert true
+  # end
 end

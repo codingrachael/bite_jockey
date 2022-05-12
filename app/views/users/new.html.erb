@@ -1,0 +1,27 @@
+<div class="container">
+<br><br><br><br><br><br><br><br><br><br>
+  <form action="/users" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <label for="first_name">First Name</label>
+    <input type="text" name="user[first_name]"><br>
+    <label for="last_name">Last Name</label>
+    <input type="text" name="user[last]"><br>
+    <label for="user_name">User Name</label>
+    <input type="text" name="user[user_name]"><br>
+    <label for="location">Location</label>
+    <input type="text" name="user[location]"><br>
+    <label for="email">Email</label>
+    <input type="text" name="user[email]"><br>
+    <label for="password">password</label>
+    <input type="text" name="user[password]"><br>
+    <label for="social_link">social_link</label>
+    <input type="text" name="user[social_link]"><br>
+    <label for="image">image</label>
+    <input type="text" name="user[image]"><br>
+    <label for="operator_type">operator_type</label>
+    <input type="text" name="user[operator_type]"><br>
+    <label for="spotify_id">spotify_id</label>
+    <input type="text" name="user[spotify_id]"><br>
+    <input type="submit">
+  </form>
+</div>
