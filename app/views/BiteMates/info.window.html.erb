@@ -1,0 +1,9 @@
+<h2><%= BiteMates.name %></h2>
+<p><%= BiteMates.address %></p>
+
+<div class="container">
+  <%= image_tag BiteMates.image, alt: "Grandparent", class: "rounded-circle", style: "width: 150px; height: 150px; object-fit: cover;" %>
+  <h3><%= BiteMates.name %></h3>
+  <p><%= BiteMates.location %></p>
+  <%= link_to "View #{BiteMates.name}'s Profile", BiteMates_path(BiteMates), class: "btn btn-primary" %>
+</div>
