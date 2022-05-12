@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :bookings
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'pages#home'
@@ -12,11 +13,12 @@ Rails.application.routes.draw do
   get 'social', to: 'pages#social_home'
 
   get 'playlist-tracks', to: 'spotify_api#playlist_tracks'
+  
+  get 'social_index', to: 'pages#social_index'
 
   resources :users do
     resources :bookings, only: %i[new create edit update index show]
   end
-
 
   resources :bookings, only: %i[destroy]
 

@@ -2,6 +2,7 @@
   "name": "bite-jockey",
   "private": true,
   "dependencies": {
+    "@mapbox/mapbox-gl-geocoder": "^5.0.1",
     "@hotwired/stimulus": "^3.0.1",
     "@hotwired/stimulus-webpack-helpers": "^1.0.1",
     "@popperjs/core": "^2.11.5",
@@ -13,6 +14,7 @@
     "isotope-layout": "^3.0.6",
     "jquery": "^3.6.0",
     "jquery-bridget": "^3.0.1",
+    "mapbox-gl": "^2.8.2",
     "popper.js": "^1.16.1",
     "stimulus": "^3.0.1",
     "turbolinks": "^5.2.0",
