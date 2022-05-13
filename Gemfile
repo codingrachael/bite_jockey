@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'rspotify'
 gem 'dotenv-rails', groups: [:development, :test]
-
+gem 'create_api_gem', git: 'https://github.com/Typeform/create-api-gem.git'
 gem "font-awesome-sass", "~> 5.6.1"
 gem 'simple_form', github: 'heartcombo/simple_form'
 
