@@ -14,59 +14,48 @@
         <%= render "layouts/sidebar"%>
       </div>
     </div>
-</div>
 
-<div class="tracks_container container-fluid">
-  <div class="row justify-content-end">
-    <div class="col-10 justify-content-center">
-      <div class="playlist-heading">
-        <div class="d-flex align-items-center mb-3">
-          <%= image_tag @playlist.images.first["url"], size: 250 %>
-          <h2 class="ms-3"><%= @playlist.name %></h2>
-        </div>
+  <div class="container" data-controller="isotope">
+      <div class="button-group sort-by-button-group m-3">
+        <button data-sort-by="original-order">Original order</button>
+        <button data-sort-by="bpm" data-sort-direction="desc">BPM <span aria-hidden="true"><i class="fa-solid fa-caret-up"></i></span></button>
+        <button data-sort-by="key" data-sort-direction="desc">Song Key <i class="fa-solid fa-caret-up"></i></button>
+        <button data-sort-by="danceability" data-sort-direction="desc">Danceability <i class="fa-solid fa-caret-up"></i></button>
+        <button data-sort-by="energy" data-sort-direction="desc">Energy <i class="fa-solid fa-caret-up"></i></button>
       </div>
-
-      <div class="container filter-menu" data-controller="isotope">
-        <div class="button-group border border-success sort-by-button-group m-3">
-          <button data-sort-by="original-order" type="button" class="btn btn-outline-light">Original Order</button>
-          <button data-sort-by="bpm" type="button" class="btn btn-outline-light">BPM</button>
-          <button data-sort-by="key" type="button" class="btn btn-outline-light">Song Key</button>
-          <button data-sort-by="danceability" type="button" class="btn btn-outline-light">Danceability</button>
-          <button data-sort-by="energy" type="button" class="btn btn-outline-light">Energy</button>
-        </div>
-        <div class="button-group playlist-button-group">
-          <button class="btn btn-lg btn-outline-light" type="button">Update Playlist</button>
-        </div>
-        <div class="grid">
-          <% counter = 1 %>
-          <% @tracks.each do |track| %>
-            <div class="card grid-item-playlist bg-dark shadow mb-2 p-3 justify-content-center" style="width: 52rem; height: 4rem;">
-              <div class="card-body track-features d-flex justify-content-between align-items-center">
-                <div class="card-title track-title-artist">
-                  <h4 class="mb-2"><%= counter %>. <%= track[:name]  %></h4>
-                  <p class="card-subtitle text-muted"><%= track[:artist] %></p>
+      <div class="button-group playlist-button-group">
+        <button class="update-playlist-button">Update Playlist</button>
+        <button class="create-playlist-button">Create New Playlist</button>
+      </div>
+      <div class="grid">
+        <% counter = 1 %>
+        <% @tracks.each do |track| %>
+          <div class="grid-item-playlist shadow mb-2 p-3" data-controller="camelot" data-uri-value=<%= track[:uri]%>>
+            <div class="track-features d-flex justify-content-between align-items-center">
+              <div class="track-title-artist">
+                <h4 class="mb-2"><%= counter %>. <%= track[:name]  %></h4>
+                <p><%= track[:artist] %></p>
+              </div>
+              <div class="track-audio-features d-flex justify-content-between">
+                <div class="mx-3 d-flex align-items-center flex-column">
+                  <span class="d-flex"><p>Key: </p><p class="key-text ms-2"><%= track[:key_text] %></p></span>
+                  <p class="key ms-2" style="color: transparent;"><%= track[:key] %></p></span>
                 </div>
-                <div class="card-text track-audio-features d-flex justify-content-between">
-                  <div class="mx-3 d-flex align-items-center flex-column">
-                    <span class="d-flex"><p>Key: </p><p class="key-text ms-2"><%= track[:key_text] %></p></span>
-                    <p class="key ms-2" style="color: transparent;"><%= track[:key] %></p></span>
-                  </div>
-                  <div class="mx-3">
-                    <span class="d-flex"><p>BPM: </p><p class="bpm ms-2"><%= track[:bpm] %></p></span>
-                    <span class="d-flex"><p>Danceability: </p><p class="danceability ms-2"><%= track[:danceability] %></p></span>
-                    <span class="d-flex"><p>Energy: </p><p class="energy ms-2"><%= track[:energy] %></p></span>
-                  </div>
+                <div class="mx-3">
+                  <span class="d-flex"><p>BPM: </p><p class="bpm ms-2"><%= track[:bpm] %></p></span>
+                  <span class="d-flex"><p>Danceability: </p><p class="danceability ms-2"><%= track[:danceability] %></p></span>
+                  <span class="d-flex"><p>Energy: </p><p class="energy ms-2"><%= track[:energy] %></p></span>
                 </div>
               </div>
             </div>
-            <% counter += 1 %>
-          <% end %>
-        </div>
+          </div>
+          <% counter += 1 %>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
 
-<script id="my_vars_json" type="text/json">
-    <%= raw @my_vars.to_json %>
-</script>
+  <script id="my_vars_json" type="text/json">
+      <%= raw @my_vars.to_json %>
+  </script>
