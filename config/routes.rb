@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'social', to: 'pages#social_home'
 
   get 'playlist-tracks', to: 'spotify_api#playlist_tracks'
-  
+
   get 'social_index', to: 'pages#social_index'
 
   resources :users do
