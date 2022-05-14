@@ -12,6 +12,7 @@ class BookingsController < ApplicationController
       redirect_to user_path(@user)
     else
       render :new
+    end
   end
 
   def destroy
