@@ -14,5 +14,6 @@ CreateFormRequest.execute(Form.new, token: 'tfp_5WFQWSGHDTAgF7D3NHwtKgyNXiwiXkLU
         payload: form.payload
       )
     end
+  end
 
 end
