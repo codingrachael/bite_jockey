@@ -23,7 +23,7 @@ class SpotifyApiController < ApplicationController
     @my_vars = {
       user_token: @spotify_user.credentials[:token],
       playlist: @playlist,
-      user_id: @spotify_user.display_name
+      user_id: @spotify_user.id
     }
   end
 
