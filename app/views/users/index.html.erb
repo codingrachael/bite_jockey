@@ -3,10 +3,11 @@
     <h1 style="border: 2px solid red; text-align: center; margin: 24px;">Find Some Bite-Mates</h1>
   </div>
   <div class="map-div" style="border: 2px solid yellowgreen; width: 100%; height: 60vh; display: flex; align-items: center; justify-content: center; margin: 16px 0px;" >
-    <h1 style="background-color: hotpink;">MAP GOES HERE</h1>
+    <h1 style="background-color: skyblue;">MAP GOES HERE</h1>
   </div>
   <div class="cards-div" style="border: 2px solid blue; width: 80%; display: flex; flex-wrap: wrap; align-self: auto; justify-content: center; margin-bottom: 24px;">
     <!-- <h2 style="color: white; border: 2px solid hotpink; text-align: center; margin: 24px;">Find Some Bite-Mates</h2> -->
+    <%# <% @users.each do |user| %> %>
     <div class="card-container" style="width: fit-content; height: auto; border: 2px solid black;" >
       <div class="container">
           <div class="card" style="background-color: transparent;">
@@ -19,27 +20,33 @@
               </div>
               <div class="slide slide2">
                   <div class="content">
-                      <h3>Hello there!</h3>
-                      <p>Trust yourself and keep going.</p>
+                      <!--
+                      <% @users.each do |user| %>
+                        <h3><%= user.user_name %></h3>
+                        <p><%= user.operator_type %></p>
+                        <br>
+                      <% end %>
+                      -->
+                      <h3>UserName</h3>
+                      <p>OperatorType</p>
+                      <button type="button" class="btn btn-light" style="margin: 20px;">View Profile</button>
                   </div>
               </div>
           </div>
       </div>
+    <%# <% end %> %>
     </div>
   </div>
 </div>
 
-<!--  <ul>
+<!--
   <% @users.each do |user| %>
-    <li><%= user.first_name %></li>
-    <li><%= user.last_name %></li>
-    <li><%= user.user_name %></li>
-    <li><%= user.location %></li>
-    <li><%= user.email %></li>
-    <li><%= user.password %></li>
-    <li><%= user.social_link %></li>
-    <li><%= user.operator_type %></li>
-    <li><%= user.spotify_id %></li>
-    <li><%= user.image %></li>
+    <%= user.first_name %>
+    <%= user.last_name %>
+    <%= user.user_name %>
+    <%= user.location %>
+    <%= user.social_link %>
+    <%= user.operator_type %>
+    <%= user.image %>
   <% end %>
-</ul> -->
+ -->
