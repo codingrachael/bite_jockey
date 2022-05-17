@@ -2,13 +2,12 @@
   <div class="playlist-display page-content-wrapper mt-5">
     <div class="row justify-content-end">
       <div class="col-12">
-        <header class="jumbotron jumbotron-fluid mb-5 rounded p-4">
+         <header class="jumbotron jumbotron-fluid mb-5 rounded p-4">
             <br>
             <br>
             <br>
-            <div class="jumbo-text card justify-content-end" style="width: 24rem; height: 12rem;">
-              <h1 class="display-4">Playlists</h1>
-              <br>
+            <div class="jumbotron-text">
+              <h1 class="display-4">Playlist Tracks</h1>
               <p class="display">Listen to your music unmixed, as often as you can. Having your DJ collection on hand ensures you can be listening to your music anywhere and everywhere. Preparing music files can be boring, but it’s essential if you want to appear to always know what song to play next, effortlessly. Not only should you prepare each individual music file, but also work on playlists, BiteJockey makes this part stress free.</p>
             <div>
         </header>
@@ -27,7 +26,7 @@
       <div class="row justify-content-end">
         <div class="col-10 justify-content-center">
           <% @spotify_user.playlists.each do |playlist| %>
-            <div class="card card-img-top text-center m-3 bg-dark" id="playlist-card" style="width: 12rem; height: 18rem;">
+            <div class="card card-img-top text-center m-3 bg-dark border border-white" id="playlist-card" style="width: 14rem; height: 20rem;">
               <div class="playlist-image img-rounded">
                 <% if playlist.images.first.nil? == false %>
                   <%= image_tag playlist.images.first["url"], size: 150 %>
