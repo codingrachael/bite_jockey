@@ -19,6 +19,34 @@
         <%= f.label :password %><br />
         <%= f.password_field :password, autocomplete: "current-password" %>
         </div>
+        <div class="field">
+        <%= f.label :first_name %><br />
+        <%= f.text_field :first_name, autocomplete: "first_name" %>
+        </div>
+        <div class="field">
+        <%= f.label :last_name %><br />
+        <%= f.text_field :last_name, autocomplete: "last_name" %>
+        </div>
+        <div class="field">
+        <%= f.label :user_name %><br />
+        <%= f.text_field :user_name, autocomplete: "user_name" %>
+        </div>
+        <div class="field">
+        <%= f.label :operator_type %><br />
+        <%= f.text_field :operator_type, autocomplete: "operator_type" %>
+        </div>
+        <div class="field">
+        <%= f.label :location %><br />
+        <%= f.text_field :location, autocomplete: "location" %>
+        </div>
+        <div class="field">
+        <%= f.label :image %><br />
+        <%= f.text_field :image, autocomplete: "image" %>
+        </div>
+        <div class="field">
+        <%= f.label :social_link %><br />
+        <%= f.text_field :social_link, autocomplete: "social_link" %>
+        </div>
 
         <% if devise_mapping.rememberable? %>
         <div class="field">
