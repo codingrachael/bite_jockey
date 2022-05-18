@@ -14,7 +14,6 @@
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
         </div>
-
         <div class="field">
         <%= f.label :password %><br />
         <%= f.password_field :password, autocomplete: "current-password" %>
@@ -46,6 +45,18 @@
         <div class="field">
         <%= f.label :social_link %><br />
         <%= f.text_field :social_link, autocomplete: "social_link" %>
+        </div>
+        <div class="field">
+        <%= f.label :pronoun %><br />
+        <%= f.text_field :pronoun, autocomplete: "pronoun" %>
+        </div>
+        <div class="field">
+        <%= f.label :genres %><br />
+        <%= f.text_field :genres, autocomplete: "genres" %>
+        </div>
+        <div class="field">
+        <%= f.label :description %><br />
+        <%= f.text_field :description, autocomplete: "description" %>
         </div>
 
         <% if devise_mapping.rememberable? %>
