@@ -582,6 +582,7 @@
   .field {
     color: white;
     width: 100%;
+    font-size: larger;
   }
 
   .form input {
@@ -687,6 +688,10 @@
       100% {
         background-position: 0 0;
       }
+    }
+
+    .btn-submit {
+      background-color: white;
     }
 
 }
