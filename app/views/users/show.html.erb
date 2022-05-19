@@ -1,29 +1,21 @@
-<p><%= @user.first_name %></p>
-<p><%= @user.last_name %></p>
-<p><%= @user.user_name %></p>
-<p><%= @user.operator_type %></p>
-<p><%= @user.location %></p>
-<p><%= @user.social_link %></p>
-<p><%= @user.image %></p>
-<p><%= @user.email %></p>
-<p><%= @user.password %></p>
 
 <div class="social_home" style="border: 5px solid blue; background: rbg(219,62,177); background: radial-gradient(circle, rgba(219,62,177,1) 0%, rgba(0,0,0,1) 73%); color-stop(0.75, #000000))">
   <div class="banner" style="border: 5px solid yellowgreen;">
     <div class="headings" style="margin: 30px; border: 5px solid red;">
       <div class="profile-avatar">
-        <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+        <img class="avatar-large" alt="avatar-large" src=<%= @user.image %>/>
       </div>
       <div class="banner-info">
-        <h2><%= @user.user_name %></h2>
-        <p>He/Him</p>
-        <p>Melbourne, Australia</p>
-        <p>Techno-Funk</p>
+        <h2><%=@user.user_name %></h2>
+        <p><%= @user.operator_type %></p>
+        <p><%= @user.location %></p>
+        <p><%= @user.pronoun %></p>
+        <p><%= @user.social_link %></p>
       </div>
     </div>
   </div>
   <div class="container" id="playlists" style="border: 5px solid brown; text-align: center;;">
-    <h1>User's Playlists</h1>
+    <h1><%=@user.user_name %>'s Playlists</h1>
     <div class="cards" style="border: 5px solid purple">
       <input type="radio" name="position" checked />
       <input type="radio" name="position" />
@@ -95,27 +87,27 @@
       </iframe>
       <div class="container" id="info-global" style="width: 30%; height: 100%; border: 5px solid white;">
         <div class="container" id="description">
-          <h4>About Moi</h4>
+          <h4>About <%=@user.user_name %></h4>
           <p>I drop some pleasant bits with some valid energy</p>
         </div>
         <div class="container" id="genres">
-          <h4>Genres</h4>
+          <h4><%= @user.operator_type %>'s Genres</h4>
           <p>Desert House, Stairwell Trance, Aeroplane Techno</p>
         </div>
         <div class="container" id="contact links">
-          <h4>Contact</h4>
+          <h4>Contact <%=@user.user_name %></h4>
           <ul>
-            <li>Soundcloud</li>
-            <li>Instagram</li>
-            <li>Whatsapp</li>
-            <li>Email</li>
+            <li><%= @user.social_link %></li>
+            <li><%= @user.social_link %></li>
+            <li><%= @user.social_link %></li>
+            <li><%= @user.email %></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
   <div class="container justify-content-center" id="booking-form" style="height: 100%; border: 5px solid aqua;">
-    <h1>Book Em</h1>
+    <h1>Book <%=@user.user_name %></h1>
     <form>
         <div class="form-group">
           <label for="exampleInputEmail1">Venue</label>
