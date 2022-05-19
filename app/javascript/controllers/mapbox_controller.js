@@ -34,8 +34,8 @@ export default class extends Controller {
       new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])
         .setPopup(popup)
-        .addTo(this.map);
-    });
+        .addTo(this.map)
+    })
 
     this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken, mapboxgl: mapboxgl
     }))

@@ -50,7 +50,8 @@ class UsersController < ApplicationController
         lat: user.latitude,
         lng: user.longitude,
         info_window: render_to_string(partial: 'info_window', locals: {
-        user: user })
+        user: user }),
+        image_url: helpers.asset_url("images/djmarker.png")
       }
     end
   end
