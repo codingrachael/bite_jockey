@@ -1,0 +1,55 @@
+# Hashes for conversion of key/modality to Camelot keys.
+MAJOR_CAMELOT = {
+    '0': '8B',
+    '1': '3B',
+    '2': '10B',
+    '3': '5B',
+    '4': '12B',
+    '5': '7B',
+    '6': '2B',
+    '7': '9B',
+    '8': '4B',
+    '9': '11B',
+    '10': '6B',
+    '11': '1B'
+  }
+MINOR_CAMELOT = {
+  '0': '5A',
+  '1': '12A',
+  '2': '7A',
+  '3': '2A',
+  '4': '9A',
+  '5': '4A',
+  '6': '11A',
+  '7': '6A',
+  '8': '1A',
+  '9': '8A',
+  '10': '3A',
+  '11': '10A'
+}
+CAMELOT_TO_TEXT = {
+  '5A': 'C Minor',
+  '12A': 'D-Flat Minor',
+  '7A': 'D Minor',
+  '2A': 'E-Flat Minor',
+  '9A': 'E Minor',
+  '4A': 'F Minor',
+  '11A': 'F-Sharp Minor',
+  '6A': 'G Minor',
+  '1A': 'A-Flat Minor',
+  '8A': 'A Minor',
+  '3A': 'B-Flat Minor',
+  '10A': 'B-Minor',
+  '8B': 'C Major',
+  '3B': 'D-Flat Major',
+  '10B': 'D-Major',
+  '5B': 'E-Flat Major',
+  '12B': 'E Major',
+  '7B': 'F Major',
+  '2B': 'F-Sharp Major',
+  '9B': 'G Major',
+  '4B': 'A-Flat Major',
+  '11B': 'A Major',
+  '6B': 'B-Flat Major',
+  '1B': 'B Major'
+}

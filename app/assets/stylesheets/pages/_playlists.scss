@@ -1,0 +1,99 @@
+.playlist-display {
+    background-color: #121212;
+
+    .mt-5 {
+      margin-top: ($spacer * 5)!important;
+    }
+
+    #playlist-card {
+      padding: 1em 1em 1em;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+      background-color: #2222;
+      display: inline-grid;
+    }
+
+    #playlist-card.card:hover{
+      background-color: pink;
+      color: #dc1778;
+    }
+
+
+    .col-10 {
+      justify-content: end;
+    }
+
+    .card {
+      padding: 10px;
+    }
+
+    img {
+      border-radius: 10px;
+    }
+
+    h3 {
+      a {
+        color: #F4F4F4;
+        text-decoration: none;
+        text-align: left;
+        font-size: small;
+      }
+
+      a:hover {
+        color: greenyellow;
+      }
+    }
+
+    h1 {
+      color: #F4F4F4;
+      font-size: xx-large;
+      font-family: "Poppins",
+      sans-serif;
+      font-weight: 800;
+    }
+
+    p {
+      color: #F4F4F4;
+      font-size: small;
+      font-family: "Poppins",
+      sans-serif;
+    }
+
+    .jumbotron {
+      border-radius: 10px;
+      background-color: #2d3436;
+      background-image: linear-gradient(to bottom, #2d3436 0%, #121212 74%);
+    }
+
+    .jumbotron-text {
+      width: fit-content;
+      height: fit-content;
+      margin-top: 20px;
+      margin-bottom: 0;
+      margin-left: 240px;
+      border-radius: 10px;
+    }
+
+  }
+
+  .items {
+    margin-top: 0px;
+  }
+
+  .jumbo-text {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 20px;
+    margin-bottom: 0;
+    margin-left: 240px;
+    border-radius: 10px;
+    background-color: #2222;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .container-fluid {
+    scrollbar-gutter: none;
+    overflow: visible;
+    overflow-y: scroll;
+  }

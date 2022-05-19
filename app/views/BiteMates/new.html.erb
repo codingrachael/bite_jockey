@@ -1,0 +1,19 @@
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+          <h1 class="mx-auto my-3" style="text-align: center;">New Booking</h1>
+
+             <%= simple_form_for(@Booking) do |f| %>
+             <%= f.input :name %>
+             <%= f.input :description, label: 'About Me' %>
+             <%= f.input :interest, label: 'Interests' %>
+
+              <%= f.input :address,
+          input_html: { data: { geocoder_target: "location" }, class: 'd-none' },
+          wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } }
+          %>
+          <%= f.button :submit, class: "btn btn-primary" %>
+        <% end %>
+    </div>
+  </div>
+</div>

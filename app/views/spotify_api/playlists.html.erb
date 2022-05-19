@@ -1,12 +1,46 @@
-<h1>BiteJockey Magic Playlist Organiser</h1>
+<div class="container-fluid w100">
+  <div class="playlist-display page-content-wrapper mt-5">
+    <div class="row justify-content-end">
+      <div class="col-12">
+         <header class="jumbotron jumbotron-fluid mb-5 rounded p-4">
+            <br>
+            <br>
+            <br>
+            <div class="jumbotron-text">
+              <h1 class="display-4">Playlist Tracks</h1>
+              <p class="display">Listen to your music unmixed, as often as you can. Having your DJ collection on hand ensures you can be listening to your music anywhere and everywhere. Preparing music files can be boring, but it’s essential if you want to appear to always know what song to play next, effortlessly. Not only should you prepare each individual music file, but also work on playlists, BiteJockey makes this part stress free.</p>
+            <div>
+        </header>
+      </div>
+    </div>
 
-<div class="container">
-  <% @playlists.each do |playlist| %>
-    <h3><%= playlist.name %></h3>
-      <% counter = 1 %>
-      <% playlist.tracks.each do |track| %>
-        <p><%= counter %>. <%= track.name %></p>
-        <% counter += 1 %>
-      <% end %>
-    <% end %>
+    <div class="container-fluid d-flex justify-content-center flex-wrap w-100">
+        <div class="row">
+          <div class="sidebar">
+            <%= render "layouts/sidebar"%>
+          </div>
+        </div>
+    </div>
+
+    <div class="items container-fluid">
+      <div class="row justify-content-end">
+        <div class="col-10 justify-content-center">
+          <% @spotify_user.playlists.each do |playlist| %>
+            <div class="card card-img-top text-center m-3 bg-dark border border-white" id="playlist-card" style="width: 14rem; height: 20rem;">
+              <div class="playlist-image img-rounded">
+                <% if playlist.images.first.nil? == false %>
+                  <%= image_tag playlist.images.first["url"], size: 150 %>
+                <% else %>
+                  <%= image_tag 'bitelogo.jpg', size: 150 %>
+                <% end %>
+              </div>
+              <div class="playlist-text link-light">
+                <h3><%=link_to playlist.name, playlist_tracks_path(playlist_id: playlist.id, spotify_user: @user_hash) %></h3>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

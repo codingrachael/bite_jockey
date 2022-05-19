@@ -1,0 +1,9 @@
+<h2><%= Booking.name %></h2>
+<p><%= Booking.address %></p>
+
+<div class="container">
+  <%= image_tag Booking.image, alt: "Grandparent", class: "rounded-circle", style: "width: 150px; height: 150px; object-fit: cover;" %>
+  <h3><%= Booking.name %></h3>
+  <p><%= Booking.location %></p>
+  <%= link_to "View #{Booking.name}'s Profile", Booking_path(Booking), class: "btn btn-primary" %>
+</div>

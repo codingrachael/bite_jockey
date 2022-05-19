@@ -1,3 +1,21 @@
+GIT
+  remote: https://github.com/Typeform/create-api-gem.git
+  revision: e0d391dcd54b0b8ee4d7d88240bdeb3f3ee83e85
+  specs:
+    create_api_gem (0.0.1)
+      ffaker
+      json
+      rack
+      rest-client (>= 2)
+
+GIT
+  remote: https://github.com/heartcombo/simple_form.git
+  revision: 23205201a935c7e52c39549756e2ec2e2ec47793
+  specs:
+    simple_form (5.1.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -97,9 +115,11 @@ GEM
       faraday-net_http (~> 2.0)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (2.0.2)
+    ffaker (2.21.0)
     ffi (1.15.5)
     font-awesome-sass (5.6.1)
       sassc (>= 1.11)
+    geocoder (1.7.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
     hashie (5.0.0)
@@ -110,11 +130,12 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    json (2.6.1)
     jwt (2.3.0)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    loofah (2.16.0)
+    loofah (2.17.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -132,6 +153,8 @@ GEM
     multi_xml (0.6.0)
     netrc (0.11.0)
     nio4r (2.5.8)
+    nokogiri (1.13.4-x86_64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.4-x86_64-linux)
       racc (~> 1.4)
     oauth2 (1.4.9)
@@ -265,15 +288,20 @@ GEM
     zeitwerk (2.5.4)
 
 PLATFORMS
+  x86_64-darwin-19
+  x86_64-darwin-20
+  x86_64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  create_api_gem!
   devise
   dotenv-rails
   font-awesome-sass (~> 5.6.1)
+  geocoder
   jbuilder (~> 2.7)
   listen (~> 3.3)
   omniauth-rails_csrf_protection
@@ -283,6 +311,7 @@ DEPENDENCIES
   rspotify
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
+  simple_form!
   spring
   turbolinks (~> 5)
   tzinfo-data
@@ -294,4 +323,4 @@ RUBY VERSION
    ruby 2.7.4p191
 
 BUNDLED WITH
-   2.2.32
+   2.3.10
