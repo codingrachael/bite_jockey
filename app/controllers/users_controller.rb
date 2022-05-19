@@ -44,6 +44,16 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+
+    @markers = @users.geocoded.map do |user|
+      {
+        lat: user.latitude,
+        lng: user.longitude,
+        info_window: render_to_string(partial: 'info_window', locals: {
+        user: user }),
+        image_url: helpers.asset_url("images/djmarker.png")
+      }
+    end
   end
 
   def show
@@ -79,7 +89,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :user_name, :location, :email, :password, :social_link, :image, :spotify_id)
+    params.require(:user).permit(:first_name, :last_name, :user_name, :location, :email, :password, :social_link, :image, :spotify_id, :pronoun, :description, :genres)
   end
 
 end

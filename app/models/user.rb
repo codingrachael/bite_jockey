@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   # has_many :bookings, :playlists
   validates :first_name, :last_name, presence: true
+
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
+
+  has_many_attached :image_url
 end
