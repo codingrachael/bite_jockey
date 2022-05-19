@@ -44,7 +44,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:description, :venue, :set_length, :hourly_rate, :music_genre, :event_type, :date)
+    params.require(:booking).permit(:description, :venue, :set_length, :hourly_rate, :music_genre, :event_type, :date, :equiptment_type)
   end
 
   def find_booking
