@@ -18,22 +18,16 @@
   <div class="tracks_container">
     <div class="row justify-content-end">
       <div class="col-9 justify-content-center">
-        <div class="container button-container" data-controller="isotope">
-          <div class="button-group sort-by-button-group m-3">
-            <button data-sort-by="original-order" class="btn btn-outline-light">Original order</button>
-            <button data-sort-by="bpm" data-sort-direction="desc" class="btn btn-outline-light">BPM <span aria-hidden="true"><i class="fa-solid fa-caret-up"></i></span></button>
-            <button data-sort-by="key" data-sort-direction="desc" class="btn btn-outline-light">Song Key <i class="fa-solid fa-caret-up"></i></button>
-            <button data-sort-by="danceability" data-sort-direction="desc" class="btn btn-outline-light">Danceability <i class="fa-solid fa-caret-up"></i></button>
-            <button data-sort-by="energy" data-sort-direction="desc" class="btn btn-outline-light">Energy <i class="fa-solid fa-caret-up"></i></button>
-            <%= link_to 'Harmonic Sorting', playlist_harmonic_path(playlist_id: @playlist.id, spotify_user: @user_hash) %>
-            <button class="btn btn-light">Harmonic Sorting</button>
+        <div class="container button-container">
+          <div class="button-group m-3">
             <button class="update-playlist-button btn btn-light">Update Playlist</button>
             <button class="create-playlist-button btn btn-light">Create New Playlist</button>
           </div>
+        </div>
         <div class="grid">
           <% counter = 1 %>
           <% @tracks.each do |track| %>
-            <div class="grid-item-playlist bg-dark border border-white shadow mb-2 p-3" data-controller="camelot" data-uri-value=<%= track[:uri]%>>
+            <div class="harmonic-track-card bg-dark border border-white shadow mb-2 p-3" data-uri-value=<%= track[:uri]%>>
               <div class="track-features d-flex justify-content-between align-items-center">
                 <div class="track-title-artist">
                   <h4 class="mb-2"><% counter %> <%= track[:name]  %></h4>
@@ -42,7 +36,7 @@
                 <div class="track-audio-features d-flex justify-content-between">
                   <div class="mx-3 d-flex align-items-center flex-column">
                     <span class="d-flex"><p>Key: </p><p class="key-text ms-2"><%= track[:key_text] %></p></span>
-                    <p class="key ms-2" style="color: transparent;"><%= track[:key] %></p></span>
+                    <span class="d-flex"><p>Camelot Key: </p><p class="key ms-2" style="color: transparent;"><%= track[:key] %></p></span>
                   </div>
                   <div class="mx-3">
                     <span class="d-flex"><p>BPM: </p><p class="bpm ms-2"><%= track[:bpm] %></p></span>
