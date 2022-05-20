@@ -1,33 +1,36 @@
 <div class="playlist_tracks container-fluid d-flex justify-content-center flex-wrap w-100">
-  <div class="row justify-content-end">
+  <div class="sidebar">
+    <%= render "layouts/sidebar"%>
+  </div>
+  <div class="row">
     <div class="col-12">
-      <header class="jumbotron jumbotron-fluid mb-5 rounded p-4">
-          <br>
-          <br>
-          <br>
-          <div class="playlist-tracks-text">
-              <h1 class="display-4"><span><%= image_tag @playlist.images.first["url"], size: 200 %></span><%= @playlist.name %> Harmonic Sorting</h1>
-              <p class="display col-8">Sort your Spotify playlists by any of a wide range of musical attributes such as BPM, key, energy, danceability or leave it up to BiteJockey's algorithm to return the playlists best playable order! </p>
-          <div>
+      <header class="playlist-tracks-header">
+        <div class="playlist-tracks-header-text mt-5 mb-5 d-flex justify-content-start align-items-center">
+          <div class="p-3">
+            <%= image_tag @playlist.images.first["url"], size: 200 %>
+          </div>
+          <div class= "w-50 px-5">
+            <h1>Harmonic Sorting</h1>
+            <p>Sort your Spotify playlists by any of a wide range of musical attributes such as BPM, key, energy, danceability or leave it up to BiteJockey's algorithm to return the playlists best playable order! </p>
+          </div>
+        <div>
       </header>
-    <div class="sidebar">
-      <%= render "layouts/sidebar"%>
     </div>
   </div>
 
-  <div class="tracks_container">
-    <div class="row justify-content-end">
-      <div class="col-9 justify-content-center">
-        <div class="container button-container">
-          <div class='d-flex justify-content-center'>
-            <%= image_tag 'camelot_wheel.png', size: 400 %>
+  <div class="tracks_container mb-5 d-flex justify-content-around">
+    <div class="row">
+      <div class="col">
+        <div class="grid ps-5" data-controller='sortable' id="harmonic-cards">
+          <div class="grid-heading d-flex justify-content-between">
+            <h1 class="mb-3"><%= @playlist.name %></h1>
+            <div class="container button-container">
+              <div class="button-group m-3">
+                <button class="update-playlist-button btn btn-success">Update Playlist</button>
+                <button class="create-playlist-button btn btn-success">Create New Playlist</button>
+              </div>
+            </div>
           </div>
-          <div class="button-group m-3">
-            <button class="update-playlist-button btn btn-light">Update Playlist</button>
-            <button class="create-playlist-button btn btn-light">Create New Playlist</button>
-          </div>
-        </div>
-        <div class="grid" data-controller='sortable' id="harmonic-cards">
           <% counter = 1 %>
           <% @tracks.each do |track| %>
             <div class="harmonic-track-card border border-white shadow mb-2 p-3" data-uri-value=<%= track[:uri]%> data-camelot-key=<%= track[:camelot]%>>
@@ -54,6 +57,9 @@
           <% end %>
         </div>
       </div>
+    </div>
+    <div class="px-3">
+      <%= image_tag 'camelot_wheel.png', size: 400 %>
     </div>
   </div>
 </div>
