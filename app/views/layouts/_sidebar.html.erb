@@ -1,26 +1,23 @@
-
-<body>
-  <div class="sidebar open">
+<div class="sidebar open">
+  <ul class="nav-list">
+    <li>
       <div class="logo-details">
-      <div class="logo_name">BiteJockey</div>
+        <i class='bx bxl-deezer'></i>
+        <div class="logo_name">My Playlists</div>
       </div>
-    <ul class="nav-list">
-      <li>
-        <div class="logo-details">
-            <i class='bx bxl-deezer'></i>
-            <div class="logo_name">My Playlists</div>
-        </div>
-      </li>
-      <li>
-        <div class="iocn-link">
-          <a href="#">
-                <ul class="sub-menu">
-                  <li class="playlist-title"><% @spotify_user.playlists.each do |playlist| %>
-                  <%=link_to playlist.name, playlist_tracks_path(playlist_id: playlist.id, spotify_user: @user_hash) %><li>
-                  <% end %>
-                </ul>
-          </a>
-        </div>
-    </ul>
-  </div>
-</body>
+    </li>
+    <li>
+      <div class="icon-link">
+        <a href="#">
+          <ul class="sub-menu">
+            <li class="playlist-title mb-3">
+              <% @spotify_user.playlists.each do |playlist| %>
+                <%=link_to playlist.name, playlist_tracks_path(playlist_id: playlist.id, spotify_user: @user_hash) %>
+              <% end %>
+            </li>
+          </ul>
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -18,6 +18,18 @@ class SpotifyApiController < ApplicationController
 
   def playlist_tracks
     build_user
+    @user_hash = @spotify_user.to_hash
+    @playlist = @spotify_user.playlists.find { |playlist| playlist.id == user_params[:playlist_id] }
+    @tracks = build_tracklist(@playlist)
+    @my_vars = {
+      user_token: @spotify_user.credentials[:token],
+      playlist: @playlist,
+      user_id: @spotify_user.id
+    }
+  end
+
+  def harmonic_sort
+    build_user
     @playlist = @spotify_user.playlists.find { |playlist| playlist.id == user_params[:playlist_id] }
     @tracks = build_tracklist(@playlist)
     @my_vars = {

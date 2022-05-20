@@ -1,15 +1,10 @@
 .playlist_tracks {
 
   background-color: #121212;
+  color: white;
 
   .tracks_container {
-    margin-left: 100px;
-  }
-
-  .jumbotron {
-    border-radius: 10px;
-    background-color: #2d3436;
-    background-image: linear-gradient(to bottom, #2d3436 0%, #121212 74%);
+    margin-left: 250px;
   }
 
   p.display {
@@ -29,12 +24,13 @@
     font-weight: 800;
   }
 
-  .playlist-tracks-text {
-    margin-left: 240px;
-  }
-
   .display-4 span {
     margin: 0 25px;
   }
 
+}
+
+.playlist-tracks-header {
+  margin-left: 250px;
+  margin-top: 80px;
 }
