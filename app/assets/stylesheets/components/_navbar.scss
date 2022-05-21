@@ -1,4 +1,51 @@
 .navbar {
   background-color: #2d3436;
   background-image: linear-gradient(to bottom, #2d3436 0%, #000000 74%);
+
+  .spotify-button {
+    font-family: monospace;
+    color: #FFFFFF;
+    font-size: 16px;
+    border-radius: 50px;
+    border: 2px #ffffff solid;
+    // background-color: #1b1b1b;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 16px 8px 16px 0;
+  }
+
+
+  .spotify-button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 20px hsl(0, 0%, 100%);
+  }
+
+
+  .spotify-button-icon {
+    padding: 8px 38px;
+    color: #1db954;
+    text-shadow: none;
+  }
+
+
+  .spotify-button-icon i {
+    position: relative;
+    font-size: 20px;
+  }
+
+
+  .spotify-button-text {
+    padding: 8px 16px;
+  }
+
+
+  .spotify-button-text span {
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 35px;
+  }
 }

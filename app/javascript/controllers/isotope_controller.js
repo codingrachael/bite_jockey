@@ -18,7 +18,7 @@ export default class extends Controller {
       const userToken = myVars['user_token']
       const baseUrl = 'https://api.spotify.com/v1'
 
-      var $grid = $('.grid').isotope({
+      var $grid = $('.grid-tracks').isotope({
         itemSelector: '.grid-item-playlist',
         layoutMode: 'fitRows',
         transitionDuration: '0.6s',
