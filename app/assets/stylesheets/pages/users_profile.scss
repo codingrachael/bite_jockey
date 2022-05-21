@@ -1,4 +1,11 @@
+//// localhost:3000/users/:id (individual users profile page)
+
 .social_home {
+
+  .banner-info {
+    font-family: "Poppins";
+    color: "red";
+  }
 
 
   .banner {
@@ -13,9 +20,8 @@
     align-items: center;
   }
 
-
   .headings {
-    background-color: purple;
+    background-color: rgb(252, 248, 252);
     width: fit-content;
     display: flex;
   }
@@ -35,6 +41,7 @@
     justify-content: center;
     padding: 8px 8px 0 0;
     margin-left: -10%;
+    color: red;
   }
 
 

@@ -4,10 +4,10 @@
 <div class="social_home" style="border: 5px solid blue; background: rbg(219,62,177); background: radial-gradient(circle, rgba(219,62,177,1) 0%, rgba(0,0,0,1) 73%); color-stop(0.75, #000000))">
   <div class="banner" style="border: 5px solid yellowgreen;">
     <div class="headings" style="margin: 30px; border: 5px solid red;">
-      <div class="profile-avatar" class="avatar-large" alt="avatar-large">
+      <div class="profile-avatar">
         <img class="avatar-large" alt="avatar-large" src=<%= @user.image %>/>
       </div>
-      <div class="banner-info">
+      <div class="banner-info" id="banner-info">
         <h2><%=@user.user_name %></h2>
         <p><%= @user.operator_type %></p>
         <p><%= @user.location %></p>
