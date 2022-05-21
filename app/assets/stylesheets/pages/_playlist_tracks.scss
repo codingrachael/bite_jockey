@@ -1,7 +1,8 @@
-.playlist_tracks {
+.sorting-container {
 
   background-color: #121212;
   color: white;
+  padding-left: 250px;
 
   .camelot-image {
     height: 250px;
@@ -19,7 +20,7 @@
   }
 
   .tracks_container {
-    margin-left: 250px;
+    // margin-left: 250px;
   }
 
   p.display {
@@ -46,6 +47,21 @@
 }
 
 .playlist-tracks-header {
-  margin-left: 250px;
+  // margin-left: 250px;
   margin-top: 80px;
+}
+
+.spotify-buttons {
+  height: 100%;
+}
+
+.grid-heading {
+  h1 {
+    font-size: 64px;
+    padding-top: 24px;
+  }
+}
+
+.playlist-title-description {
+  padding-top: 24px;
 }
