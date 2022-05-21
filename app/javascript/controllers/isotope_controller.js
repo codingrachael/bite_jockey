@@ -126,24 +126,24 @@ export default class extends Controller {
 
         function insertTracks(playlistId){
           $.ajax({
-          url: `${baseUrl}/playlists/${playlistId}/tracks`,
-          type: "POST",
-          dataType: 'json',
-          headers: {
-            'Authorization': "Bearer " + userToken,
-            'Content-Type': 'application/json'
-          },
-          data: JSON.stringify({
-            'uris': newTrackUris,
-            'position': 0
-          }),
-          success: function () {
-            alert(`Playlist Creation Successful!`);
-            // Refresh the page.
-            location.reload(true);
-          }
-        });
-      }
+            url: `${baseUrl}/playlists/${playlistId}/tracks`,
+            type: "POST",
+            dataType: 'json',
+            headers: {
+              'Authorization': "Bearer " + userToken,
+              'Content-Type': 'application/json'
+            },
+            data: JSON.stringify({
+              'uris': newTrackUris,
+              'position': 0
+            }),
+            success: function () {
+              alert(`Playlist Creation Successful!`);
+              // Refresh the page.
+              location.reload(true);
+            }
+          });
+        }
       });
     });
   };

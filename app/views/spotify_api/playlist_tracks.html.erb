@@ -25,6 +25,8 @@
             <button data-sort-by="key" data-sort-direction="desc" class="btn btn-outline-light">Song Key <i class="fa-solid fa-caret-up"></i></button>
             <button data-sort-by="danceability" data-sort-direction="desc" class="btn btn-outline-light">Danceability <i class="fa-solid fa-caret-up"></i></button>
             <button data-sort-by="energy" data-sort-direction="desc" class="btn btn-outline-light">Energy <i class="fa-solid fa-caret-up"></i></button>
+            <%= link_to 'Harmonic Sorting', playlist_harmonic_path(playlist_id: @playlist.id, spotify_user: @user_hash) %>
+            <button class="btn btn-light">Harmonic Sorting</button>
             <button class="update-playlist-button btn btn-light">Update Playlist</button>
             <button class="create-playlist-button btn btn-light">Create New Playlist</button>
           </div>

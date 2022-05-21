@@ -26,7 +26,7 @@
                     <div class="content">
                         <h3><%= user.user_name.upcase %></h3>
                         <p><%= user.operator_type %></p>
-                        <button type="button" class="btn btn-light" style="margin: 20px;">View Profile</button>
+                        <%= link_to "View Profile", user_path(user), class:"btn btn-light", style:"margin: 20px;"%>
                     </div>
                 </div>
             </div>
