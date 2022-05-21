@@ -1,63 +1,32 @@
-<div class="index-page"><br><br><br>
-  <div class="h1-container">
-    <h1 style="border: 2px solid red; text-align: center; margin: 24px;">Find Some Bite-Mates</h1>
-  </div>
-  <div class="map-div" style="border: 2px solid yellowgreen; width: 100%; height: 60vh; display: flex; align-items: center; justify-content: center; margin: 16px 0px;" >
-    <h1 style="background-color: skyblue;">MAP GOES HERE</h1>
-  </div>
-  <div class="cards-div" style="border: 2px solid blue; width: 80%; display: flex; flex-wrap: wrap; align-self: auto; justify-content: center; margin-bottom: 24px;">
-    <% @users.each do |user| %>
-      <div class="card-container" style="width: fit-content; height: auto; border: 2px solid black;" >
-        <div class="container">
-            <div class="card" style="background-color: transparent;">
-                <div class="slide slide1">
-                    <div class="content">
-                        <div class="icon">
-                            <img src="<%= user.image %>" alt="" style="width: 100%; height: 200px; object-fit: contain;">
-                        </div>
-                    </div>
-                </div>
-                <div class="slide slide2">
-                    <div class="content">
-                        <h3><%= user.user_name.upcase %></h3>
-                        <p><%= user.operator_type %></p>
-                        <button type="button" class="btn btn-light" style="margin: 20px;">View Profile</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
 
 
 
 
 <br><br><br><br><br>
-<!--
-<p id="notice"><%= notice %></p>
+<div class="container" style="border: 2px solid red;">
+  <h1>Bookings</h1>
+  <br><br>
+  <% @bookings.each do |booking|%>
+  <hr>
+    <h3>Date:<%= booking.date %></h3>
+    <hr><br>
+    <p><strong>Performer:</strong><%= booking.user.user_name %></p>
+    <p><strong>Venue:</strong><%= booking.venue %></p>
+    <p><strong>Set Length:</strong><%= booking.set_length %></p>
+    <p><strong>Hourly Rate:</strong><%= booking.hourly_rate %></p>
+    <p><strong>Music Genres:</strong><%= booking.music_genre %></p>
+    <p><strong>Equiptment Info:</strong><%= booking.venue %></p>
+    <p><strong>Description:</strong><%= booking.description %></p>
+    <p><strong>Booked By:</strong><%= booking.booker.user_name %></p>
+    <%# <button type="button" class="btn btn-primary">Edit Booking</button>
+    <button type="button" class="btn btn-primary">Delete Booking</button> %>
 
-<h1>Bookings</h1>
+    <ul>
+      <li><%= link_to 'Edit', edit_booking_path(booking) %></li>
+      <li><%= button_to 'Destroy', booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    </ul>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @bookings.each do |booking| %>
-      <tr>
-        <td><%= link_to 'Show', booking %></td>
-        <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
-        <td><%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New Booking', new_booking_path %>
+  <% end %>
+</div>
