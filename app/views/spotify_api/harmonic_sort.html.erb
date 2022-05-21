@@ -1,19 +1,16 @@
-<div class="playlist_tracks container-fluid d-flex justify-content-center flex-wrap w-100">
+<div class="sorting-container container-fluid">
   <div class="sidebar">
     <%= render "layouts/sidebar"%>
   </div>
   <div class="row">
     <div class="col-12">
       <header class="playlist-tracks-header">
-        <div class="playlist-tracks-header-text mt-5 mb-5 d-flex justify-content-start align-items-center">
-          <div class="p-3">
-            <%= image_tag @playlist.images.first["url"], size: 200 %>
-          </div>
+        <div class="playlist-tracks-header-text mt-5 mb-5 d-flex justify-content-center align-items-center">
           <div class= "w-50 px-5">
             <h1>Harmonic Sorting</h1>
             <p>Sort your Spotify playlists by any of a wide range of musical attributes such as BPM, key, energy, danceability or leave it up to BiteJockey's algorithm to return the playlists best playable order! </p>
           </div>
-          <div class="px-3">
+          <div class="p-3">
             <%= image_tag 'camelot_wheel.png', class: "camelot-image" %>
           </div>
         <div>
@@ -21,17 +18,24 @@
     </div>
   </div>
 
-  <div class="tracks_container mb-5 d-flex justify-content-around">
-    <div class="row">
-      <div class="col">
-        <div class="grid ps-5" data-controller='sortable' id="harmonic-cards">
-          <div class="grid-heading d-flex justify-content-between">
-            <h1 class="mb-3"><%= @playlist.name %></h1>
-            <div class="container button-container">
-              <div class="button-group m-3">
-                <button class="update-playlist-button btn btn-success">Update Playlist</button>
-                <button class="create-playlist-button btn btn-success">Create New Playlist</button>
+  <div class="row">
+    <div class="col">
+      <div class="tracks_container mb-5 d-flex justify-content-center">
+        <div class="grid p-3" data-controller='sortable' id="harmonic-cards">
+          <div class="grid-heading d-flex justify-content-between p-1">
+            <div class="image-and-title d-flex">
+              <div class="p-3">
+                <%= image_tag @playlist.images.first["url"], size: 180 %>
               </div>
+              <div class="playlist-title-description">
+                <h1><%= @playlist.name %></h1>
+                <p><%= @playlist.description %></p>
+                <p><%= @playlist.owner.display_name %> • <%= @playlist.total %> songs • <%= @playlist.public ? 'Public' : 'Private' %></p>
+              </div>
+            </div>
+            <div class="button-container d-flex flex-column align-items-end pt-2 pe-2">
+              <button class="update-playlist-button btn btn-success mb-2">Update Playlist</button>
+              <button class="create-playlist-button btn btn-success">Create Playlist</button>
             </div>
           </div>
           <% counter = 1 %>

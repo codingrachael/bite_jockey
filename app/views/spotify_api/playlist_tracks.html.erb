@@ -1,36 +1,44 @@
-<div class="playlist_tracks container-fluid d-flex justify-content-center flex-wrap w-100">
-  <div class="row justify-content-end">
-    <div class="col-12">
-      <header class="jumbotron jumbotron-fluid mb-5 rounded p-4">
-          <br>
-          <br>
-          <br>
-          <div class="playlist-tracks-text">
-              <h1 class="display-4"><span><%= image_tag @playlist.images.first["url"], size: 200 %></span><%= @playlist.name %></h1>
-              <p class="display col-8">Sort your Spotify playlists by any of a wide range of musical attributes such as BPM, key, energy, danceability or leave it up to BiteJockey's algorithm to return the playlists best playable order! </p>
-          <div>
+<div class="sorting-container container-fluid">
+  <div class="sidebar">
+    <%= render "layouts/sidebar"%>
+  </div>
+  <div class="row">
+    <div class="col">
+      <header class="playlist-tracks-header">
+        <div class="playlist-tracks-header-text mt-5 mb-5 d-flex justify-content-center align-items-center">
+          <div class="p-3">
+            <%= image_tag @playlist.images.first["url"], size: 200 %>
+          </div>
+          <div class= "w-50 px-5">
+            <h1><%= @playlist.name %></h1>
+            <p>Sort your Spotify playlists by any of a wide range of musical attributes such as BPM, key, energy, danceability or leave it up to BiteJockey's algorithm to return the playlists best playable order! </p>
+          </div>
+          <div class="spotify-buttons d-flex flex-wrap justify-content-start align-items-start mt-5">
+            <button class="update-playlist-button btn btn-success mx-2 mb-2">Update Playlist</button>
+            <button class="create-playlist-button btn btn-success mx-2 mb-2">Create New Playlist</button>
+            <%= link_to 'Harmonic Sorting', playlist_harmonic_path(playlist_id: @playlist.id, spotify_user: @user_hash), class: 'btn btn-warning mx-2' %>
+          </div>
+        <div>
       </header>
-    <div class="sidebar">
-      <%= render "layouts/sidebar"%>
     </div>
   </div>
 
-  <div class="tracks_container">
-    <div class="row justify-content-end">
-      <div class="col-9 justify-content-center">
-        <div class="container button-container" data-controller="isotope">
-          <div class="button-group sort-by-button-group m-3">
-            <button data-sort-by="original-order" class="btn btn-outline-light">Original order</button>
-            <button data-sort-by="bpm" data-sort-direction="desc" class="btn btn-outline-light">BPM <span aria-hidden="true"><i class="fa-solid fa-caret-up"></i></span></button>
-            <button data-sort-by="key" data-sort-direction="desc" class="btn btn-outline-light">Song Key <i class="fa-solid fa-caret-up"></i></button>
-            <button data-sort-by="danceability" data-sort-direction="desc" class="btn btn-outline-light">Danceability <i class="fa-solid fa-caret-up"></i></button>
-            <button data-sort-by="energy" data-sort-direction="desc" class="btn btn-outline-light">Energy <i class="fa-solid fa-caret-up"></i></button>
-            <%= link_to 'Harmonic Sorting', playlist_harmonic_path(playlist_id: @playlist.id, spotify_user: @user_hash) %>
-            <button class="btn btn-light">Harmonic Sorting</button>
-            <button class="update-playlist-button btn btn-light">Update Playlist</button>
-            <button class="create-playlist-button btn btn-light">Create New Playlist</button>
+  <div class="row">
+    <div class="col">
+      <div class="grid-tracks p-3 d-flex flex-column">
+        <div class="grid-heading">
+          <h1>Sorting Options</h1>
+          <div class="button-container" data-controller="isotope">
+            <div class="button-group sort-by-button-group m-3">
+              <button data-sort-by="original-order" class="btn btn-outline-light">Original order</button>
+              <button data-sort-by="bpm" data-sort-direction="desc" class="btn btn-outline-light">BPM <span aria-hidden="true"><i class="fa-solid fa-caret-up"></i></span></button>
+              <button data-sort-by="key" data-sort-direction="desc" class="btn btn-outline-light">Song Key <i class="fa-solid fa-caret-up"></i></button>
+              <button data-sort-by="danceability" data-sort-direction="desc" class="btn btn-outline-light">Danceability <i class="fa-solid fa-caret-up"></i></button>
+              <button data-sort-by="energy" data-sort-direction="desc" class="btn btn-outline-light">Energy <i class="fa-solid fa-caret-up"></i></button>
+            </div>
           </div>
-        <div class="grid">
+        </div>
+        <div class="d-flex flex-column">
           <% counter = 1 %>
           <% @tracks.each do |track| %>
             <div class="grid-item-playlist bg-dark border border-white shadow mb-2 p-3" data-controller="camelot" data-uri-value=<%= track[:uri]%>>
@@ -60,6 +68,6 @@
   </div>
 </div>
 
-  <script id="my_vars_json" type="text/json">
-      <%= raw @my_vars.to_json %>
-  </script>
+<script id="my_vars_json" type="text/json">
+    <%= raw @my_vars.to_json %>
+</script>
