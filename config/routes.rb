@@ -18,10 +18,10 @@ Rails.application.routes.draw do
   get 'test', to: 'pages#test_page'
 
   resources :users do
-    resources :bookings, only: %i[new create edit update index show]
+    resources :bookings, only: %i[new create index]
   end
 
-  resources :bookings, only: %i[destroy]
+  resources :bookings, only: %i[edit update destroy]
 
   # get "/users", to: "users#index"
   # get '/users/new', to: 'users#new'
