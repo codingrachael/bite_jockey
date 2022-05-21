@@ -1,8 +1,9 @@
 class BookingsController < ApplicationController
-  before_action :find_booking, only: %i[index show edit update destroy]
+  before_action :find_booking, only: %i[show edit update destroy]
 
   def index
-    @bookings = policy_scope(Booking)
+    # @bookings = policy_scope(Booking)
+    @bookings = Booking.where(booker_id: current_user.id)
   end
 
   def new
@@ -14,11 +15,12 @@ class BookingsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @booking = Booking.new(booking_params)
-    @user = User.find(params[user_id])
-    @booking.user = current_user
+    @user = User.find(params[:user_id])
     @booking.user = @user
+    @booking.booker = current_user
+    # raise
     if @booking.save
-      redirect_to user_path(@user)
+      redirect_to root_path
     else
       render :new
     end

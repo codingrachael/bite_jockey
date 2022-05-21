@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   get 'social_index', to: 'pages#social_index'
 
+  get 'test', to: 'pages#test_page'
+
   resources :users do
     resources :bookings, only: %i[new create edit update index show]
   end
