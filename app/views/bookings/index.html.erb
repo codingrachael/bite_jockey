@@ -1,32 +1,39 @@
+<div class="test-page">
 
-
-
-
-<br><br><br><br><br>
-<div class="container" style="border: 2px solid red;">
-  <h1>Bookings</h1>
-  <br><br>
-  <% @bookings.each do |booking|%>
-  <hr>
-    <h3>Date:<%= booking.date %></h3>
-    <hr><br>
-    <p><strong>Performer:</strong><%= booking.user.user_name %></p>
-    <p><strong>Venue:</strong><%= booking.venue %></p>
-    <p><strong>Set Length:</strong><%= booking.set_length %></p>
-    <p><strong>Hourly Rate:</strong><%= booking.hourly_rate %></p>
-    <p><strong>Music Genres:</strong><%= booking.music_genre %></p>
-    <p><strong>Equiptment Info:</strong><%= booking.venue %></p>
-    <p><strong>Description:</strong><%= booking.description %></p>
-    <p><strong>Booked By:</strong><%= booking.booker.user_name %></p>
-    <%# <button type="button" class="btn btn-primary">Edit Booking</button>
-    <button type="button" class="btn btn-primary">Delete Booking</button> %>
-
+  <br><br><br><br><br><br><br>
+ <h1>Bookings</h1>
+ <br><br>
+ <% @bookings.each do |booking|%>
     <ul>
-      <li><%= link_to 'Edit', edit_booking_path(booking) %></li>
-      <li><%= button_to 'Destroy', booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      <li class="booking-card" style="background-image: url(https://images.unsplash.com/photo-1516873240891-4bf014598ab4?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870)">
+        <div class="informations-container">
+          <h2 class="title">Date:<%= booking.date %></h2>
+          <hr>
+          <p class="sub-title" style="font-family: monospace;"><strong>Venue: </strong><%= booking.venue %></p>
+          <p class="sub-title" style="font-family: monospace;"><strong>Set Length: </strong><%= booking.set_length %></p>
+          <p class="sub-title" style="font-family: monospace;"><strong>Hourly Rate: $</strong><%= booking.hourly_rate.to_i %></p>
+          <p class="sub-title" style="font-family: monospace;"><strong>Music Genres: </strong><%= booking.music_genre %></p>
+          <p class="sub-title" style="font-family: monospace;"><strong>Equipment: </strong><%= booking.equipment_type %></p>
+          <hr>
+          <div class="more-information">
+            <p class="disclaimer">Two of Naarms finest hard dance crews, Dazed HDT & IWTFA - are joining forces to present ‘Control Theory’ at Subclub. We’ve asked some of our favourite selectors to join us in the basement for a night of music mayhem.</p><hr>
+            <button id="booker-button">Booking By: <%= booking.user.user_name.upcase %></button>
+          </div>
+        </div>
+      </li>
     </ul>
-
-
-
-  <% end %>
+  <h3>Date:<%= booking.date %></h3>
+  <hr><br>
+  <img src="<%= booking.booker.image %>">
+  <p><strong>Performer:</strong><%= booking.user.user_name %></p>
+  <p><strong>Venue:</strong><%= booking.venue %></p>
+  <p><strong>Set Length:</strong><%= booking.set_length %></p>
+  <p><strong>Hourly Rate:</strong><%= booking.hourly_rate %></p>
+  <p><strong>Music Genres:</strong><%= booking.music_genre %></p>
+  <p><strong>Equipment Info:</strong><%= booking.venue %></p>
+  <p><strong>Description:</strong><%= booking.description %></p>
+  <p><strong>Booked By:</strong><%= booking.booker.user_name %></p>
+  <%= link_to 'Edit', edit_booking_path(booking) %>
+  <%= button_to 'Destroy', booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %>
+ <% end %>
 </div>
