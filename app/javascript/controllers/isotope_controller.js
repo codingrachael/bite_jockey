@@ -21,6 +21,10 @@ export default class extends Controller {
       var $grid = $('.grid-tracks').isotope({
         itemSelector: '.grid-item-playlist',
         layoutMode: 'fitRows',
+        masonry: {
+          columnWidth: 100,
+          fitWidth: true
+        },
         transitionDuration: '0.6s',
         getSortData: {
           bpm: function (itemElem) {
