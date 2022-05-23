@@ -23,6 +23,9 @@ Rails.application.routes.draw do
 
   resources :bookings, only: %i[edit update destroy]
 
+  resources :notifications, only: %i[index]
+
+
   # get "/users", to: "users#index"
   # get '/users/new', to: 'users#new'
   # get '/users/:id', to: 'users#show'

@@ -1,0 +1,21 @@
+<div class="container" style="border: 2px solid black; height: 70vh; margin-top: 24px;">
+  <% if current_user.unchecked_notifications.count == 0 %>
+    <h1>No New Notifications</h1>
+    <%= link_to "View Bookings", user_bookings_path, class:"btn btn-outline-primary p-100" %>
+    <%= link_to "Search BiteMates", users_path, class:"btn btn-outline-primary p-100" %>
+  <% else current_user.unchecked_notifications.count > 0  %>
+    <% @notifications.each do |notification| %>
+      <div class="card-product" style="border-radius: 15px;">
+      <% booker = notification.params[:booking].booker %>
+      <% booking = notification.params[:booking] %>
+        <img src=<%= notification.params[:booking].booker.image %> style="object-fit: cover;" />
+        <div class="card-product-infos pt-22">
+            <h2>New Booking: "<%= booking.venue %>" with <%= booking.booker.user_name %></h2>
+            <p><%= booking.description %></p>
+            <p><%= booking.date %></p>
+            <%= link_to "View Bookings", user_bookings_path, class:"btn btn-outline-primary p-100 d-flex justify-content flex-end" %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
