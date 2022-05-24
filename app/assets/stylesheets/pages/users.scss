@@ -34,6 +34,11 @@
     margin-top: 0px;;
   }
 
+  .card {
+    border: none;
+    height: 400px;
+  }
+
   .container .card .icon {
     position: absolute;
     top: 0;
@@ -44,6 +49,7 @@
     // border: 6px solid white;
     // border-bottom: none;
   }
+
 
   .container .card .icon .fa {
     position: absolute;
@@ -67,7 +73,7 @@
     align-items: center;
     z-index: 1;
     transition: .7s;
-    transform: translateY(200px);
+    transform: translateY(0px);
   }
 
   .container .card:hover .slide.slide1 {
@@ -81,13 +87,14 @@
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
+    height: 150px;
     transition: .8s;
-    transform: translateY(-100px);
+    transform: translateY(-220px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   }
 
   .container .card:hover .slide.slide2 {
-    transform: translateY(0);
+    transform: translateY(-100px);
   }
 
   .container .card .slide.slide2::after {
@@ -137,5 +144,10 @@
     width: 100%;
     padding: 0px;
     margin: 0px;
+  }
+
+  .cards-div {
+    max-height: 80vh;
+    overflow-y: scroll;
   }
 }
