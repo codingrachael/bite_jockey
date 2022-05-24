@@ -19,10 +19,6 @@
     transition-duration: 0.3s;
   }
 
-  .tracks_container {
-    // margin-left: 250px;
-  }
-
   p.display {
     color: #F4F4F4;
     font-size: small;
@@ -47,8 +43,25 @@
 }
 
 .playlist-tracks-header {
-  // margin-left: 250px;
   margin-top: 80px;
+  h1 {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 32px;
+  }
+
+  p {
+    font-family: 'Raleway';
+    font-weight: 400;
+  }
+}
+
+.playlist-title-description {
+  p {
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 16px;
+  }
 }
 
 .spotify-buttons {
@@ -57,8 +70,14 @@
 
 .grid-heading {
   h1 {
-    font-size: 64px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 48px;
     padding-top: 24px;
+  }
+  .button-container {
+    font-family: 'Raleway';
+    color: white;
   }
 }
 

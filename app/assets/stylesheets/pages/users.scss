@@ -25,6 +25,12 @@
     background-image: linear-gradient(to bottom, #2d3436 0%, #121212 74%);
   }
 
+  .container {
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+  }
+
 
 
   .container .card .icon {
@@ -117,6 +123,6 @@
   .col-6 {
   flex: 1;
   padding: 1em;
-  border: solid;
+
   }
 }
