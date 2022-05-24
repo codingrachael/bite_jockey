@@ -13,7 +13,7 @@ all_users = [
     user_name: 'Omega3',
     email: 'omega3@gmail.com',
     password: 'password',
-    location:'Collingwood, Melbourne',
+    location: 'Collingwood, Melbourne',
     first_name: 'Rachael',
     last_name: 'Mac',
     social_link: '@omega3',
@@ -25,7 +25,7 @@ all_users = [
     femme & GNC club night 'Freakquency' and
     founder of The Daily Commute, an electronic music mix series. Omega3's sets are built around tension and release, driving
     floor fillers and spacey sounds, she flirts with a variety of styles and tempos but her forays into industrial techno and Melbourne minimal have become a calling card. Omega3 has continuously moved dancefloors across Melbourne at venues including Colour, Miscelliania, Rooftop Bar, Baxter’s Lot & The Rochester Hotel.",
-    genre:'HOUSE TECHNO DISCO TRANCE ELECTRO MINIMAL',
+    genre: 'HOUSE TECHNO DISCO TRANCE ELECTRO MINIMAL',
     operator_type: 'DJ, Promoter, Booker'
   },
     {
@@ -42,22 +42,22 @@ all_users = [
       pronoun: 'She/Her',
       description: "Effortlessly chic, O Honey’s mixes deliver petal-soft hooks, engaging rhythmic patterns and enduring quality. O Honey, started out playing her favourite dance, funk, soul, disco, hip hop and new wave records at local bars and parties in 2018. With a passion for matching the energy, she can always keep the boogie alive, bringing it upbeat or slowing it right down.From weddings and Christmas parties to popular Naarm bars and clubs, O Honey aspires to connect with people through good music, new and old, and create lasting memories on dance floors around Melbourne.",
       genres: 'HOUSE DISCO HIP HOP/R&B CORPORATE/PARTY FUNK/SOUL VINYL'
-   }, 
-   {  
-    user_name: 'Tanika',
-    password: 'password',
-    email: 'tanika@gmail.com',
-    operator_type: 'DJ',
-    location: ' Footscary, Melbourne',
-    first_name: 'Tanika',
-    last_name: 'Smith',
-    social_link: '@tanika',
-    image: 'https://i.imgur.com/QEau6WV.jpg',
-    # spotify_id: 'dj_test',
-    pronoun: 'She/Her',
-    description: "Renowned for her distinctive taste and adventurous track selection is Tinika, Melbourne based DJ and purveyor of fine Tunes. Fresh off the back of a career-changing set at Novel’s Bridge Rave, Tinika has quickly pushed her way to the front of the Melbourne electronic scene.",
-    genres: 'HOUSE TECHNO DISCO HIP HOP/R&B CORPORATE/PARTY DEEP HOUSE'
-  },
+   },
+    {
+      user_name: 'Tanika',
+      password: 'password',
+      email: 'tanika@gmail.com',
+      operator_type: 'DJ',
+      location: 'Footscray, Melbourne',
+      first_name: 'Tanika',
+      last_name: 'Smith',
+      social_link: '@tanika',
+      image: 'https://i.imgur.com/QEau6WV.jpg',
+      # spotify_id: 'dj_test',
+      pronoun: 'She/Her',
+      description: 'Renowned for her distinctive taste and adventurous track selection is Tinika, Melbourne based DJ and purveyor of fine Tunes. Fresh off the back of a career-changing set at Novel’s Bridge Rave, Tinika has quickly pushed her way to the front of the Melbourne electronic scene.',
+      genres: 'HOUSE TECHNO DISCO HIP HOP/R&B CORPORATE/PARTY DEEP HOUSE'
+    },
   {
     user_name: 'SourTooth',
     password: 'password',
@@ -276,7 +276,7 @@ all_users = [
     description: "A Naarm-based DJ, Endorfin (Kim) is unafraid to traverse between genres, styles and tempos, always bringing an element of surprise to her DJ sets. Her contagious energy behind the decks reflects her passion and love for the music she plays and is bound to get any crowd moving. Fresh on the scene, she has quickly made a name for herself and is one to watch!.",
     genres: 'HOUSE TECHNO DNB/JUNGLE TRANCE AMBIENT'
   },
-  {  
+  {
     user_name: 'Mon Franco',
     password: 'password',
     email: 'monfranco@gmail.com',
@@ -350,7 +350,7 @@ puts 'Creating users...'
 
 all_users.each do |user|
   profile = User.new
- 
+
   profile.user_name = user[:user_name]
   profile.password = 'password'
   profile.password_confirmation = 'password'
@@ -366,7 +366,7 @@ all_users.each do |user|
   profile.genres = user[:genres]
 
   profile.save!
-  puts "#User {profile.id} created!"
+  puts "User #{profile.id} created!"
 end
 
 puts "Seeding done."

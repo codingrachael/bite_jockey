@@ -9,20 +9,17 @@ export default class extends Controller {
 
   }
   connect() {
-    console.log("hello")
     mapboxgl.accessToken = this.apiKeyValue;
 
-    console.log(this.element)
     this.map = new mapboxgl.Map({
       container: this.element,
-      style: "mapbox://styles/mapbox/streets-v10"
-    });
-    console.log("comment"),
-    this.#addMarkersToMap()
+      style: "mapbox://styles/shane-g711/cl3ilm9fj000214qonapm5yxb"
+    })
+    this._addMarkersToMap()
     this.#fitMapToMarkers()
   }
 
-  #addMarkersToMap() {
+  _addMarkersToMap() {
     this.markersValue.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window)
       const customMarker = document.createElement("div")
@@ -31,7 +28,8 @@ export default class extends Controller {
       customMarker.style.backgroundSize = "contain"
       customMarker.style.width = "60px"
       customMarker.style.height = "60px"
-      new mapboxgl.Marker()
+
+      new mapboxgl.Marker(customMarker)
         .setLngLat([ marker.lng, marker.lat ])
         .setPopup(popup)
         .addTo(this.map)
