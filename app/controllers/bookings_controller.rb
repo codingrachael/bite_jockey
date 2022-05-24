@@ -2,8 +2,7 @@ class BookingsController < ApplicationController
   before_action :find_booking, only: %i[show edit update destroy]
 
   def index
-    # @bookings = policy_scope(Booking)
-    @bookings = Booking.where(booker_id: current_user.id)
+    @bookings = Booking.where(user_id: params[:user_id])
   end
 
   def new

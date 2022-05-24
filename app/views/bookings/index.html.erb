@@ -1,29 +1,63 @@
-<div class="test-page">
+<div class="test-page" style="border: 2px solid yellowgreen;">
  <br><br><br><br><br><br><br><h1>Bookings</h1> <br><br>
   <div class="map-div" style="width: 100%; height: 60vh; display: flex; align-items: center; justify-content: center; margin: 16px 0px;" >
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.2788623433166!2d144.97618517109322!3d-37.79577743401989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad643214247254d%3A0x60ceab8791e84da!2sGlamorama%20Nightclub!5e0!3m2!1sen!2sau!4v1653203164297!5m2!1sen!2sau" width="60%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-  <ul>
-    <% @bookings.each do |booking|%>
-        <li class="booking-card" style="background-image: url(<%= booking.booker.image %>); display:align-items: center;">
-          <div class="informations-container">
-            <h2 class="title"><%= booking.date.to_formatted_s(:rfc822)[0..-15] %> @ <%= booking.date.to_formatted_s(:rfc822)[17..21] %> </h2> <hr>
-            <p class="sub-title" style="font-family: monospace;"><strong>Venue: </strong><%= booking.venue %></p>
-            <p class="sub-title" style="font-family: monospace;"><strong>Set Length: </strong><%= booking.set_length %>hr</p>
-            <p class="sub-title" style="font-family: monospace;"><strong>Hourly Rate: $</strong><%= booking.hourly_rate.to_i %></p>
-            <p class="sub-title" style="font-family: monospace;"><strong>Music Genres: </strong><%= booking.music_genre %></p>
-            <p class="sub-title" style="font-family: monospace;"><strong>Equipment: </strong><%= booking.equipment_type %></p>
-            <hr>
-            <div class="more-information">
-              <p><strong>Description: </strong><%= booking.description %></p><hr>
-              <button id="booker-button">Booking By: <%= booking.user.user_name.upcase %></button> <br>
-              <div class="edit-destroy" style="display: flex; justify-content: center; margin-top: 16px; align-items: center;">
-                <div id="edit" style="margin-right: 4px;"><%= link_to 'Edit', edit_booking_path(booking) %></div>
-                <div id="delete" style="margin-left: 8px; border-radius: 0;><%= button_to 'Delete', booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %> </div>
-              </div>
+  <div class="b-cards" style="border: 12px solid white; padding: 12px;">
+    <ul>
+    <div class="upcoming" style="border: 2px solid pink; margin: 12px;">
+      <h2 style="color: white;">Upcoming Bookings</h2>
+      <% @bookings.each do |booking|%>
+        <% if booking.date.to_datetime() > DateTime.now %>
+          <li class="booking-card" style="background-image: url(<%= booking.user.image %>); display:align-items: center;">
+            <div class="informations-container">
+          <h2 class="title"><%= booking.date.to_formatted_s(:rfc822)[0..-15] %> @ <%= booking.date.to_formatted_s(:rfc822)[17..21] %> </h2> <hr>
+          <p class="sub-title" style="font-family: monospace;"><strong>Venue: </strong><%= booking.venue %></p>
+          <p class="sub-title" style="font-family: monospace;"><strong>Set Length: </strong><%= booking.set_length %>hr</p>
+          <p class="sub-title" style="font-family: monospace;"><strong>Hourly Rate: $</strong><%= booking.hourly_rate.to_i %></p>
+          <p class="sub-title" style="font-family: monospace;"><strong>Music Genres: </strong><%= booking.music_genre %></p>
+          <p class="sub-title" style="font-family: monospace;"><strong>Equipment: </strong><%= booking.equipment_type %></p>
+          <hr>
+          <div class="more-information">
+            <p><strong>Description: </strong><%= booking.description %></p><hr>
+            <button id="booker-button">Booking By: <%= booking.user.user_name.upcase %></button> <br>
+            <div class="edit-destroy" style="display: flex; justify-content: center; margin-top: 16px; align-items: center;">
+              <div id="edit" style="margin-right: 4px;"><%= link_to 'Edit', edit_booking_path(booking) %></div>
+              <div id="delete" style="margin-left: 8px; border-radius: 0;"><%= button_to 'Delete', booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %> </div>
             </div>
           </div>
-        </li>
-    <% end %>
-  </ul>
+          </div>
+          </li>
+        <% end %>
+      <% end %>
+    </div>
+    <ul>
+    <div class="past" style="border: 2px solid orange; margin: 12px;">
+      <h2 style="color: white;">Past Bookings</h2>
+      <% @bookings.each do |booking|%>
+        <% if booking.date.to_datetime() < DateTime.now %>
+          <li class="booking-card" style="background-image: url(<%= booking.booker.image %>); display:align-items: center;">
+            <div class="informations-container">
+          <h2 class="title"><%= booking.date.to_formatted_s(:rfc822)[0..-15] %> @ <%= booking.date.to_formatted_s(:rfc822)[17..21] %> </h2> <hr>
+          <p class="sub-title" style="font-family: monospace;"><strong>Venue: </strong><%= booking.venue %></p>
+          <p class="sub-title" style="font-family: monospace;"><strong>Set Length: </strong><%= booking.set_length %>hr</p>
+          <p class="sub-title" style="font-family: monospace;"><strong>Hourly Rate: $</strong><%= booking.hourly_rate.to_i %></p>
+          <p class="sub-title" style="font-family: monospace;"><strong>Music Genres: </strong><%= booking.music_genre %></p>
+          <p class="sub-title" style="font-family: monospace;"><strong>Equipment: </strong><%= booking.equipment_type %></p>
+          <hr>
+          <div class="more-information">
+            <p><strong>Description: </strong><%= booking.description %></p><hr>
+            <button id="booker-button">Booking By: <%= booking.user.user_name.upcase %></button> <br>
+            <div class="edit-destroy" style="display: flex; justify-content: center; margin-top: 16px; align-items: center;">
+              <div id="edit" style="margin-right: 4px;"><%= link_to 'Edit', edit_booking_path(booking) %></div>
+              <div id="delete" style="margin-left: 8px; border-radius: 0;"><%= button_to 'Delete', booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %> </div>
+            </div>
+          </div>
+          </div>
+          </li>
+        <% end %>
+      <% end %>
+    </div>
+    </ul>
+  </div>
 </div>
