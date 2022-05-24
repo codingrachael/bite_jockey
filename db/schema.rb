@@ -124,7 +124,7 @@ ActiveRecord::Schema.define(version: 2022_05_23_125932) do
     t.string "pronoun"
     t.text "description"
     t.string "genres"
-    t.datetime "last_checked_notifications", default: "2022-05-23 13:00:12"
+    t.datetime "last_checked_notifications", default: "2022-05-24 11:01:07"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
