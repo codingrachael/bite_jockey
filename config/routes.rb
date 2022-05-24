@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get 'playlist-tracks', to: 'spotify_api#playlist_tracks'
 
+  get 'playlist-harmonic', to: 'spotify_api#harmonic_sort'
+
   get 'social_index', to: 'pages#social_index'
 
   get 'test', to: 'pages#test_page'

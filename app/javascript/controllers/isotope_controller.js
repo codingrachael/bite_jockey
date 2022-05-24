@@ -18,9 +18,13 @@ export default class extends Controller {
       const userToken = myVars['user_token']
       const baseUrl = 'https://api.spotify.com/v1'
 
-      var $grid = $('.grid').isotope({
+      var $grid = $('.grid-tracks').isotope({
         itemSelector: '.grid-item-playlist',
         layoutMode: 'fitRows',
+        masonry: {
+          columnWidth: 100,
+          fitWidth: true
+        },
         transitionDuration: '0.6s',
         getSortData: {
           bpm: function (itemElem) {
@@ -126,24 +130,24 @@ export default class extends Controller {
 
         function insertTracks(playlistId){
           $.ajax({
-          url: `${baseUrl}/playlists/${playlistId}/tracks`,
-          type: "POST",
-          dataType: 'json',
-          headers: {
-            'Authorization': "Bearer " + userToken,
-            'Content-Type': 'application/json'
-          },
-          data: JSON.stringify({
-            'uris': newTrackUris,
-            'position': 0
-          }),
-          success: function () {
-            alert(`Playlist Creation Successful!`);
-            // Refresh the page.
-            location.reload(true);
-          }
-        });
-      }
+            url: `${baseUrl}/playlists/${playlistId}/tracks`,
+            type: "POST",
+            dataType: 'json',
+            headers: {
+              'Authorization': "Bearer " + userToken,
+              'Content-Type': 'application/json'
+            },
+            data: JSON.stringify({
+              'uris': newTrackUris,
+              'position': 0
+            }),
+            success: function () {
+              alert(`Playlist Creation Successful!`);
+              // Refresh the page.
+              location.reload(true);
+            }
+          });
+        }
       });
     });
   };

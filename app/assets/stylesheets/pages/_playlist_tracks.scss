@@ -1,15 +1,22 @@
-.playlist_tracks {
+.sorting-container {
 
   background-color: #121212;
+  color: white;
+  padding-left: 250px;
 
-  .tracks_container {
-    margin-left: 100px;
+  .camelot-image {
+    height: 250px;
+    width: 250px;
   }
 
-  .jumbotron {
-    border-radius: 10px;
-    background-color: #2d3436;
-    background-image: linear-gradient(to bottom, #2d3436 0%, #121212 74%);
+  .camelot-image:hover {
+    position: relative;
+    // top: -25px;
+    // left: -35px;
+    width: 500px;
+    height: auto;
+    z-index: 999;
+    transition-duration: 0.3s;
   }
 
   p.display {
@@ -29,12 +36,51 @@
     font-weight: 800;
   }
 
-  .playlist-tracks-text {
-    margin-left: 240px;
-  }
-
   .display-4 span {
     margin: 0 25px;
   }
 
+}
+
+.playlist-tracks-header {
+  margin-top: 80px;
+  h1 {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 32px;
+  }
+
+  p {
+    font-family: 'Raleway';
+    font-weight: 400;
+  }
+}
+
+.playlist-title-description {
+  p {
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+
+.spotify-buttons {
+  height: 100%;
+}
+
+.grid-heading {
+  h1 {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 48px;
+    padding-top: 24px;
+  }
+  .button-container {
+    font-family: 'Raleway';
+    color: white;
+  }
+}
+
+.playlist-title-description {
+  padding-top: 24px;
 }

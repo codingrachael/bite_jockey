@@ -6,7 +6,9 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :playlists
   has_many :notifications, as: :recipient
-  validates :first_name, :last_name, presence: true
+
+  validates :first_name, :last_name, :location, presence: true
+
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
