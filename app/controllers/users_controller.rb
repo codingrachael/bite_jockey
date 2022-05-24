@@ -12,11 +12,6 @@ class UsersController < ApplicationController
       {
         lat: user.latitude,
         lng: user.longitude,
-<<<<<<< HEAD
-        info_window: render_to_string(partial: 'info_window', locals: {
-        user: user }),
-        image_url: helpers.asset_url("")
-=======
         info_window: render_to_string(
           partial: 'info_window',
           locals: {
@@ -24,7 +19,6 @@ class UsersController < ApplicationController
           }
         ),
         image_url: helpers.asset_url("DJicon.png")
->>>>>>> 87f5340f4155e372b8c81d30f645d73cf6c74253
       }
     end
   end
