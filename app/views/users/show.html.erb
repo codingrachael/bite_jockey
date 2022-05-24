@@ -146,3 +146,35 @@
     </ul>
   </div>
 </div>
+\\
+
+#calender
+#adds a monthly calendar view to our home page:
+<%= month_calendar do |date| %>
+  <%= date %>
+<% end %>
+
+<%= month_calendar(events: @meetings, end_attribute: :end_time) do |date, meetings| %>
+  <%= date %>
+
+  <% meetings.each do |meeting| %>
+    <div class="meeting">  <-- We will add some style to the meeting class later so let's add it now -->
+      <p><%= meeting.name %></p>
+    </div>
+  <% end %>
+<% end %>
+
+
+<-- app/views/pages/home.html.erb -->
+<div class="calendar-container">
+  <%= month_calendar(events: @meetings, end_attribute: :end_time) do |date, meetings| %>
+    <%= date %>
+
+    <% meetings.each do |meeting| %>
+      <div class="meeting">
+        <p><%= meeting.name %></p>
+        <small><%= meeting.time unless meeting.multi_days? %></small>
+      </div>
+    <% end %>
+  <% end %>
+</div>

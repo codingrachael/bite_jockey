@@ -1,6 +1,16 @@
-<br><br><br><h1>Editing Booking</h1>
-
-<%= render 'form', booking: @booking %>
-
-<%= link_to 'Show', @booking %> |
-<%= link_to 'Back', :back %>
+<br><br>
+<div class="main_log" style="background-color: black; height: 91.4vh; display: flex; align-items: center; flex-direction: column; justify-content: center;">
+<br><br><br>
+ <div class="title">Edit Booking</div>
+ <div class="log_in" style="width: fit-content; padding: 16px; display: flex; flex-direction: column;">
+  <div class="logo">
+   <img src="https://i.imgur.com/arALlu1.png" alt="" width="100">
+  </div>
+  <div class="form" style="display: flex; color: white;">
+   <%= render 'form', booking: @booking %>
+   <!--<%= link_to 'Show', @booking %> |
+   <%= link_to 'Back', :back %> -->
+  </div>
+ </div>
+ <br>
+</div>
