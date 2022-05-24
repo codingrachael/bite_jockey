@@ -79,15 +79,19 @@
   </div>
 
 
-  <div class="container" id="social-feed" style="height: 100%; border: 5px solid yellow;">
+  <div class="container" id="social-feed" style="height: 100%;">
     <h3>Social Feed</h3>
-    <div class="taggbox-container" style="width:100%;height:100%;overflow: auto;"><div class="taggbox-socialwall" data-wall-id="94175" view-url="https://widget.taggbox.com/94175"></div><script src="https://widget.taggbox.com/embed.min.js" type="text/javascript"></script></div>
+    <div class="taggbox-container" style="width:100%;height:100%;overflow: auto;"><div class="taggbox-socialwall" data-wall-id="96344" view-url="https://widget.taggbox.com/96344"></div><script src="https://widget.taggbox.com/embed.min.js" type="text/javascript"></script></div>
   </div>
-  <div class="container" id="map-container" style="height: 100%; border: 5px solid white;">
+  <div class="container" id="map-container" style="height: 100%;">
     <h3>Info</h3>
-    <div class="container" id="map-and-card" style="display: flex; align-items: center; border: 5px solid white;">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12601.65583373281!2d144.993341!3d-37.8506034!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf17088a665f366ce!2sRevolver%20Upstairs!5e0!3m2!1sen!2sau!4v1651578545691!5m2!1sen!2sau" width="50%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+      <div class="map-div" style="border: 2px solid yellowgreen;">
+        <div class="map-map" style="width: 100%; height: 80vh;">
+          data-controller="mapbox"
+          data-mapbox-markers-value="<%= @markers.to_json %>"
+          data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
       <div class="container" id="info-global" style="width: 30%; height: 100%; border: 5px solid white;">
         <div class="container" id="description">
           <h4>About <%=@user.user_name %></h4>
