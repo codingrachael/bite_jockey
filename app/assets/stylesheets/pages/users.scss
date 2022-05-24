@@ -1,16 +1,31 @@
 // localhost:3000/users (users home page)
 
 .index-page {
-  background-color: grey;
+  background-color: #121212;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  .h1-container {
+  .h1-container h1 {
     // width: 80%;
     color: white;
+    font-family: "Poppins", sans-serif;
   }
+
+  .h1-container p {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-family: "Graphik", sans-serif;
+  }
+
+  .jumbotron {
+    border-radius: 10px;
+    background-color: #2d3436;
+    background-image: linear-gradient(to bottom, #2d3436 0%, #121212 74%);
+  }
+
+
 
   .container .card .icon {
     position: absolute;
@@ -95,4 +110,13 @@
     color: #414141;
   }
 
+  .row {
+    display: flex;
+  }
+
+  .col-6 {
+  flex: 1;
+  padding: 1em;
+  border: solid;
+  }
 }

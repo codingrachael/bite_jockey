@@ -138,4 +138,11 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
   </div>
+
+  <div class="edit/destroy">
+    <ul>
+      <li><%= link_to 'Edit', edit_user_path(@user) %></li>
+      <li><%= button_to 'Destroy', user_path(@user), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    </ul>
+  </div>
 </div>

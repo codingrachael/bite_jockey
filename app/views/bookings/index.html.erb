@@ -1,63 +1,29 @@
-<div class="index-page"><br><br><br>
-  <div class="h1-container">
-    <h1 style="border: 2px solid red; text-align: center; margin: 24px;">Find Some Bite-Mates</h1>
+<div class="test-page">
+ <br><br><br><br><br><br><br><h1>Bookings</h1> <br><br>
+  <div class="map-div" style="width: 100%; height: 60vh; display: flex; align-items: center; justify-content: center; margin: 16px 0px;" >
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.2788623433166!2d144.97618517109322!3d-37.79577743401989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad643214247254d%3A0x60ceab8791e84da!2sGlamorama%20Nightclub!5e0!3m2!1sen!2sau!4v1653203164297!5m2!1sen!2sau" width="60%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-  <div class="map-div" style="border: 2px solid yellowgreen; width: 100%; height: 60vh; display: flex; align-items: center; justify-content: center; margin: 16px 0px;" >
-    <h1 style="background-color: skyblue;">MAP GOES HERE</h1>
-  </div>
-  <div class="cards-div" style="border: 2px solid blue; width: 80%; display: flex; flex-wrap: wrap; align-self: auto; justify-content: center; margin-bottom: 24px;">
-    <% @users.each do |user| %>
-      <div class="card-container" style="width: fit-content; height: auto; border: 2px solid black;" >
-        <div class="container">
-            <div class="card" style="background-color: transparent;">
-                <div class="slide slide1">
-                    <div class="content">
-                        <div class="icon">
-                            <img src="<%= user.image %>" alt="" style="width: 100%; height: 200px; object-fit: contain;">
-                        </div>
-                    </div>
-                </div>
-                <div class="slide slide2">
-                    <div class="content">
-                        <h3><%= user.user_name.upcase %></h3>
-                        <p><%= user.operator_type %></p>
-                        <button type="button" class="btn btn-light" style="margin: 20px;">View Profile</button>
-                    </div>
-                </div>
+  <ul>
+    <% @bookings.each do |booking|%>
+        <li class="booking-card" style="background-image: url(<%= booking.booker.image %>)">
+          <div class="informations-container">
+            <h2 class="title"><%= booking.date.to_formatted_s(:rfc822)[0..-15] %> @ <%= booking.date.to_formatted_s(:rfc822)[17..21] %> </h2> <hr>
+            <p class="sub-title" style="font-family: monospace;"><strong>Venue: </strong><%= booking.venue %></p>
+            <p class="sub-title" style="font-family: monospace;"><strong>Set Length: </strong><%= booking.set_length %>hr</p>
+            <p class="sub-title" style="font-family: monospace;"><strong>Hourly Rate: $</strong><%= booking.hourly_rate.to_i %></p>
+            <p class="sub-title" style="font-family: monospace;"><strong>Music Genres: </strong><%= booking.music_genre %></p>
+            <p class="sub-title" style="font-family: monospace;"><strong>Equipment: </strong><%= booking.equipment_type %></p>
+            <hr>
+            <div class="more-information">
+              <p><strong>Description: </strong><%= booking.description %></p><hr>
+              <button id="booker-button">Booking By: <%= booking.user.user_name.upcase %></button> <br>
+              <div class="edit-destroy" style="display: flex; justify-content: center; margin-top: 16px; align-items: center;">
+                <div id="edit" style="margin-right: 4px; color: red;"><%= link_to 'Edit', edit_booking_path(booking) %></div>
+                <div id="delete" style="margin-left: 8px; border-radius: 0;><%= button_to 'Delete', booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %> </div>
+              </div>
             </div>
-        </div>
-      </div>
+          </div>
+        </li>
     <% end %>
-  </div>
+  </ul>
 </div>
-
-
-
-
-<br><br><br><br><br>
-<!--
-<p id="notice"><%= notice %></p>
-
-<h1>Bookings</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @bookings.each do |booking| %>
-      <tr>
-        <td><%= link_to 'Show', booking %></td>
-        <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
-        <td><%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Booking', new_booking_path %>

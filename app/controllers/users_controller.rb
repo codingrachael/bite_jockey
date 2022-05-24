@@ -51,7 +51,7 @@ class UsersController < ApplicationController
         lng: user.longitude,
         info_window: render_to_string(partial: 'info_window', locals: {
         user: user }),
-        #image_url: helpers.asset_url("images/djmarker.png")
+        image_url: helpers.asset_url("")
       }
     end
   end
@@ -76,7 +76,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.update(params[:user])
+    @user.update!(user_params)
     redirect_to user_path(@user)
   end
 

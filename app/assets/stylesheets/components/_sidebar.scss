@@ -3,7 +3,6 @@
   // margin: 0;
   // padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 .sidebar {
@@ -14,7 +13,9 @@
   width: 78px;
   background: black;
   padding-top: 50px;
+  margin-bottom: 100px;
   transition: all 0.5s ease;
+  z-index: 2;
 }
 
 .sidebar.open {

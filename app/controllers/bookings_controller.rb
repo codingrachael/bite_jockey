@@ -1,8 +1,9 @@
 class BookingsController < ApplicationController
-  before_action :find_booking, only: %i[index show edit update destroy]
+  before_action :find_booking, only: %i[show edit update destroy]
 
   def index
-    @bookings = policy_scope(Booking)
+    # @bookings = policy_scope(Booking)
+    @bookings = Booking.where(booker_id: current_user.id)
   end
 
   def new
@@ -14,15 +15,17 @@ class BookingsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @booking = Booking.new(booking_params)
-    @user = User.find(params[user_id])
-    @booking.user = current_user
+    @user = User.find(params[:user_id])
     @booking.user = @user
+    @booking.booker = current_user
+    # raise
     if @booking.save
-      redirect_to user_path(@user)
+      redirect_to root_path
     else
       render :new
     end
   end
+
 
   def show
   end
@@ -32,23 +35,23 @@ class BookingsController < ApplicationController
 
   def update
     @booking.update(booking_params)
-    redirect_to bookings_path
+    redirect_to user_bookings_path(current_user)
   end
 
   def destroy
-    @booking = Booking.find(params[:id])
+    # @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to user_path(@booking.user)
+    redirect_to user_bookings_path(current_user)
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:description, :venue, :set_length, :hourly_rate, :music_genre, :event_type, :date, :equiptment_type)
+    params.require(:booking).permit(:description, :venue, :set_length, :hourly_rate, :music_genre, :event_type, :date, :equipment_type)
   end
 
   def find_booking
     @booking = Booking.find(params[:id])
-    authorize @booking
+    # authorize @booking
   end
 end
