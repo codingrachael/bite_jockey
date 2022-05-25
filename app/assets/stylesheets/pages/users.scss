@@ -26,12 +26,6 @@
     font-size: small;
   }
 
-  .jumbotron {
-    border-radius: 10px;
-    background-color: #2d3436;
-    background-image: linear-gradient(to bottom, #2d3436 0%, #121212 74%);
-  }
-
   .container {
     display: flex;
     padding-left: 0px;
@@ -39,7 +33,7 @@
     margin-right: 0px;
     margin-left: 0px;
     width: 100%;
-    margin-top: 0px;;
+    margin-top: 0px;
   }
 
   .card {
@@ -79,7 +73,7 @@
   .profile-card-text .badge {
    opacity: 100%;
    text-decoration: none;
-    font-weight: 800;
+  font-weight: 800;
   }
   .profile-card-text:hover .badge:hover {
     color: hotpink;
@@ -128,6 +122,13 @@
     max-height: 80vh;
     overflow-y: scroll;
   }
+
+  .icon-wrapper {
+    display: inline;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    color: white;
+  }
 }
 
 .map-card {
@@ -160,9 +161,16 @@
 .map-card-text .badge {
   opacity: 100%;
   text-decoration: none;
+  text-decoration-color: transparent;
   font-weight: 800;
 }
 
 .map-card-text:hover .badge:hover {
   color: hotpink;
+}
+
+.map-card-text h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  color: white;
 }
