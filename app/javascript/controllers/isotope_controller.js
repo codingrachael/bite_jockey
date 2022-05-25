@@ -20,10 +20,10 @@ export default class extends Controller {
 
       var $grid = $('.grid-tracks').isotope({
         itemSelector: '.grid-item-playlist',
-        layoutMode: 'fitRows',
-        masonry: {
-          columnWidth: 100,
-          fitWidth: true
+        layoutMode: 'vertical',
+        vertical: {
+          // align to center
+          horizontalAlignment: 0.5
         },
         transitionDuration: '0.6s',
         getSortData: {
@@ -65,6 +65,16 @@ export default class extends Controller {
         arrowIcon = $(this).find('.fa-solid');
         arrowIcon.show()
         arrowIcon.toggleClass('fa-caret-up fa-caret-down');
+        const otherButtons = $('.sort-by-button-group button')
+
+        otherButtons.each(function(index, value) {
+          const otherValue = $(value).attr('data-sort-by')
+
+          if (otherValue != sortByValue) {
+            const otherIcon = $(value).find('.fa-solid')
+            otherIcon.hide()
+          }
+        })
       });
 
 

@@ -3,6 +3,7 @@
   background-color: #121212;
   color: white;
   padding-left: 250px;
+  overflow-y: hidden;
 
   .camelot-image {
     height: 250px;
@@ -44,6 +45,7 @@
 
 .playlist-tracks-header {
   margin-top: 80px;
+  padding: 16px;
   h1 {
     font-family: 'Raleway';
     font-weight: 700;
@@ -79,6 +81,10 @@
     font-family: 'Raleway';
     color: white;
   }
+}
+
+.grid-tracks {
+  width: 75%;
 }
 
 .playlist-title-description {
