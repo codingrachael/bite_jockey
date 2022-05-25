@@ -18,9 +18,15 @@
           <li class="nav-item">
             <a class="nav-link" href="/auth/spotify"> BiteMates |</a>
           </li>
-          <li class="nav-item">
-              <a class="nav-link" href="/notifications"> Notifications |</a>
-          </li>
+          <% if current_user.unchecked_notifications.count == 0 %>
+            <li class="nav-item">
+                <a class="nav-link" href="/notifications"> Notifications |</a>
+            </li>
+          <% else %>
+            <li class="nav-item">
+                <a class="nav-link" style="border: 4px solid white;" href="/notifications"> Notifications |</a>
+            </li>
+          <% end %>
         <% else %>
           <li class="nav-item-center active">
             <a class="nav-link" href="/">| Home |<span class="sr-only">(current)</span></a>
