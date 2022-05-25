@@ -44,14 +44,14 @@ all_users = [
       genres: 'HOUSE DISCO HIP HOP/R&B CORPORATE/PARTY FUNK/SOUL VINYL'
    },
     {
-      user_name: 'Tanika',
+      user_name: 'Tinika',
       password: 'password',
-      email: 'tanika@gmail.com',
+      email: 'tinika@gmail.com',
       operator_type: 'DJ',
       location: 'Footscray, Melbourne',
-      first_name: 'Tanika',
+      first_name: 'Tinika',
       last_name: 'Smith',
-      social_link: '@tanika',
+      social_link: '@tinika',
       image: 'https://i.imgur.com/QEau6WV.jpg',
       # spotify_id: 'dj_test',
       pronoun: 'She/Her',
