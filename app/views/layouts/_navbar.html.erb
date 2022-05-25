@@ -7,7 +7,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mx-auto">
+      <ul class="navbar-nav mx-auto" style="display: flex; align-items: center;">
         <% if user_signed_in? %>
           <li class="nav-item-center active">
             <a class="nav-link" href="/">| Home |<span class="sr-only">(current)</span></a>
@@ -23,8 +23,14 @@
                 <a class="nav-link" href="/notifications"> Notifications |</a>
             </li>
           <% else %>
-            <li class="nav-item">
-                <a class="nav-link" style="border: 4px solid white;" href="/notifications"> Notifications |</a>
+            <li class="nav-item" style="display: flex; align-items: center;">
+                <a class="nav-link" href="/notifications" style="font-weight: bold; color: white;"> Notifications </a>
+            </li>
+            <li class="fa-stack fa-2x has-badge" href="/notifications" style="margin-left: -12px;" data-count=<%= current_user.unchecked_notifications.count %>>
+              <i class="fa fa-compact-disc fa-stack-1x fa-inverse" style="font-size: 32px; color: #DB3EB1;" href="/notifications"></i>
+            </li>
+            <!--<li>
+              <i class="fa fa-compact-disc" style="font-size: 24px; color: crimson;"></i>    -->
             </li>
           <% end %>
         <% else %>
