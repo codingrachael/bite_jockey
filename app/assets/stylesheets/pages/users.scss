@@ -10,12 +10,19 @@
     // width: 80%;
     color: white;
     font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 20px;
+    margin-bottom: 0;
+    margin-left: 240px;
+    border-radius: 10px;
+    background-color: #2222;
   }
 
   .h1-container p {
     color: white;
     font-family: "Poppins", sans-serif;
-    font-family: "Graphik", sans-serif;
   }
 
   .jumbotron {
@@ -35,8 +42,52 @@
   }
 
   .card {
-    border: none;
-    height: 400px;
+    height: 300px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    object-fit: contain;
+    padding: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+
+  .card img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 5px;
+    margin-top: 2px;
+  }
+
+  .profile-card-text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: monospace;
+    font-size: small;
+    padding: 0%;
+    margin: 0%;
+    line-height: 3px;
+    color: white;
+  }
+
+  .profile-card-text .badge {
+   opacity: 100%;
+
+
+  }
+  .profile-card-text:hover .badge:hover {
+    color: hotpink;
+  }
+
+  .profile-card-text h5 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    color: white;
   }
 
   .container .card .icon {
@@ -48,80 +99,6 @@
     background-color: transparent;
     // border: 6px solid white;
     // border-bottom: none;
-  }
-
-
-  .container .card .icon .fa {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 80px;
-    color: #fff;
-  }
-
-  .container .card .slide {
-    width: 300px;
-    height: 300px;
-    transition: 0.5s;
-  }
-
-  .container .card .slide.slide1 {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    transition: .7s;
-    transform: translateY(0px);
-  }
-
-  .container .card:hover .slide.slide1 {
-   transform: translateY(0px);
-  }
-
-  .container .card .slide.slide2 {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    height: 150px;
-    transition: .8s;
-    transform: translateY(-220px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  }
-
-  .container .card:hover .slide.slide2 {
-    transform: translateY(-100px);
-  }
-
-  .container .card .slide.slide2::after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 4px;
-    bottom: 15px;
-    left: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: hotpink;
-  }
-
-  .container .card .slide.slide2 .content p {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: #414141;
-  }
-
-  .container .card .slide.slide2 .content h3 {
-    margin: 0 0 10px 0;
-    padding: 0;
-    font-size: 24px;
-    text-align: center;
-    color: #414141;
   }
 
   .row {

@@ -1,9 +1,4 @@
 
-<h2><%= user.user_name %></h2>
-<p><%= user.location %></p>
-<p><%= user.image %></p>
-
-
 <div class="card-container" style="width: fit-content; height: auto; border: 2px solid black; margin: 8px; padding: 4px;" >
   <div class="container">
       <div class="map-card" style="background-color: white;">
@@ -18,6 +13,7 @@
               <div class="content p-3">
                   <h3><%= user.user_name.upcase %></h3>
                   <p><%= user.operator_type %></p>
+                  <p><%= user.location %></p>
                   <%= link_to "View Profile", user_path(user), class:"btn btn-light"%>
               </div>
           </div>
