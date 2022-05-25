@@ -1,7 +1,7 @@
 // localhost:3000/users (users home page)
 
 .index-page {
-  background-color: white;
+  background-color: #121212;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,12 +10,12 @@
     // width: 80%;
     color: white;
     font-family: "Poppins", sans-serif;
+    font-size: xx-large;
     font-weight: 800;
     width: fit-content;
     height: fit-content;
     margin-top: 20px;
     margin-bottom: 0;
-    margin-left: 240px;
     border-radius: 10px;
     background-color: #2222;
   }
@@ -23,6 +23,7 @@
   .h1-container p {
     color: white;
     font-family: "Poppins", sans-serif;
+    font-size: small;
   }
 
   .jumbotron {
@@ -77,8 +78,8 @@
 
   .profile-card-text .badge {
    opacity: 100%;
-
-
+   text-decoration: none;
+    font-weight: 800;
   }
   .profile-card-text:hover .badge:hover {
     color: hotpink;
@@ -127,4 +128,41 @@
     max-height: 80vh;
     overflow-y: scroll;
   }
+}
+
+.map-card {
+    height: 300px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    object-fit: contain;
+    padding: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.map-card-text {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: monospace;
+  font-size: small;
+  padding: 0%;
+  margin: 0%;
+  line-height: 3px;
+  color: white;
+}
+
+
+.map-card-text .badge {
+  opacity: 100%;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.map-card-text:hover .badge:hover {
+  color: hotpink;
 }

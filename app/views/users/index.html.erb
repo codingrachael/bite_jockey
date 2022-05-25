@@ -8,20 +8,20 @@
     </div>
   </header>
 
-  <div class="container-fluid map-card-container border border-warning position-sticky" style=" width: 100%; display: flex; margin-top: -40px; flex-wrap: wrap; align-self: auto; justify-content: center">
+  <div class="container-fluid map-card-container position-sticky" style=" width: 100%; display: flex; margin-top: -40px; flex-wrap: wrap; align-self: auto; justify-content: center">
     <div class="row">
       <div class="col-6 left">
-        <div class="cards-div card-block" style="border: 2px solid blue; width: 100%; display: flex; flex-wrap: wrap; align-self: left; justify-content: center; margin-bottom: 24px;">
+        <div class="cards-div card-block" style=" width: 100%; display: flex; flex-wrap: wrap; align-self: left; justify-content: center; margin-bottom: 24px;">
           <% @users.each do |user| %>
             <div class="card-container" style="width: fit-content; height: auto; padding: 12px;" >
               <div class="card bg-dark border border-white">
                 <img src="<%= user.image %>" alt="" style="width: 170px; height: 170px; object-fit: cover; border-radius: 50%;">
                 <div class="profile-card-text">
                   <h5><%= user.user_name.upcase %></h5>
-                  <p><%= user.operator_type.split.first%></p>
-                  <p><%= user.location %></p>
+                  <p><%= user.operator_type%></p>
+                  <p><%= user.location%></p>
                   <div class="hover-img">
-                  <%= link_to "View Profile", user_path(user),class:"badge badge-pill badge-light", style:"margin-bottom: 20px;"%>
+                  <%= link_to "View Profile", user_path(user),class:"badge badge-pill badge-light", style:"position: sticky; margin-bottom: 20px;"%>
                   </div>
                 </div>
               </div>
