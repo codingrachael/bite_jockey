@@ -1,57 +1,57 @@
 <div>
-  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">
-      <%= image_tag 'bitelogo.jpg', width: '50', height: '50', alt: 'Logo', class: "ms-2 d-inline-block align-top" %>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" style="display: flex; justify-content: space-between;">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mx-auto" style="display: flex; align-items: center;">
-        <% if user_signed_in? %>
-          <li class="nav-item-center active">
-            <a class="nav-link" href="/">| Home |<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/auth/spotify"> Sort My Playlists |</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/auth/spotify"> BiteMates |</a>
-          </li>
-          <% if current_user.unchecked_notifications.count == 0 %>
+      <ul class="navbar-nav mx-auto" style="display: flex; align-items: center; justify-content: space-between; width: 95%;">
+      <a class="navbar-brand" href="/" style="margin: 0 0%; width: 200px; display: flex; justify-content: left;">
+        <%= image_tag 'bitelogo.jpg', width: '50', height: '50', alt: 'Logo', class: "ms-2 d-inline-block align-top" %>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="links" style="display: flex; justify-content: space-evenly; align-items: center;">
+          <% if user_signed_in? %>
+            <li class="nav-item-center active">
+              <a class="nav-link" href="/"><u>Home</u><span class="sr-only">(current)</span></a>
+            </li>
             <li class="nav-item">
-                <a class="nav-link" href="/notifications"> Notifications |</a>
+              <a class="nav-link" href="/auth/spotify"><u>Sort My Playlists</u></a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/auth/spotify"><u>BiteMates</u></a>
+            </li>
+            <% if current_user.unchecked_notifications.count == 0 %>
+              <li class="nav-item">
+                  <a class="nav-link" href="/notifications"><u>Notifications</u></a>
+              </li>
+            <% else %>
+              <li class="nav-item" style="display: flex; align-items: center;">
+                  <a class="nav-link" href="/notifications" style="font-weight: bold; color: white;"><u>Notifications</u></a>
+              </li>
+              <li class="fa-stack fa-2x has-badge" href="/notifications" style="margin-left: -12px;" data-count=<%= current_user.unchecked_notifications.count %>>
+                <i class="fa fa-compact-disc fa-stack-1x fa-inverse" style="font-size: 32px; color: #DB3EB1;" href="/notifications"></i>
+              </li>
+              <!--<li>
+                <i class="fa fa-compact-disc" style="font-size: 24px; color: crimson;"></i>    -->
+              </li>
+            <% end %>
           <% else %>
-            <li class="nav-item" style="display: flex; align-items: center;">
-                <a class="nav-link" href="/notifications" style="font-weight: bold; color: white;"> Notifications </a>
+            <li class="nav-item-center active" style="text">
+              <a class="nav-link" href="/"><u>Home</u><span class="sr-only">(current)</span></a>
             </li>
-            <li class="fa-stack fa-2x has-badge" href="/notifications" style="margin-left: -12px;" data-count=<%= current_user.unchecked_notifications.count %>>
-              <i class="fa fa-compact-disc fa-stack-1x fa-inverse" style="font-size: 32px; color: #DB3EB1;" href="/notifications"></i>
+            <li class="nav-item">
+              <a class="nav-link" href="/auth/spotify"> <u>Sort My Playlists</u></a>
             </li>
-            <!--<li>
-              <i class="fa fa-compact-disc" style="font-size: 24px; color: crimson;"></i>    -->
+            <li class="nav-item">
+              <a class="nav-link" href="/auth/spotify"><u>BiteMates</u></a>
             </li>
           <% end %>
-        <% else %>
-          <li class="nav-item-center active">
-            <a class="nav-link" href="/">| Home |<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/auth/spotify"> Sort My Playlists |</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/auth/spotify"> BiteMates |</a>
-          </li>
-        <% end %>
-      </ul>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="spotify-button" href="/auth/spotify">
-            <span class="spotify-button-text" style="font-family: monospace;"><span>Connect</span></span>
-            <span class="spotify-button-icon"><i class="fa fa-spotify" aria-hidden="true"></i></span>
-          </a>
-        </li>
+        </div>
+          <div class="button-border" style="width: 200px; margin-right: 1%;">
+            <a class="spotify-button" href="/auth/spotify" style="margin-right: 0%;">
+              <span class="spotify-button-text" style="font-family: monospace;"><span>Connect</span></span>
+              <span class="spotify-button-icon"><i class="fa fa-spotify" aria-hidden="true"></i></span>
+            </a>
+          </div>
       </ul>
     </div>
   </nav>

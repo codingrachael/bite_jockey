@@ -15,7 +15,7 @@
     <h1 style="font-family: monospace;">Bite Jockey Will Raise Your DJ Game</h1>
       <div class="row">
         <div class="col-md-6" id="api-card-feature">
-          <h3 class="card-title" style="font-family: monospace;">Access Your Own Spotify Playlists</h3>
+          <h3 class="card-title" style="font-family: monospace;">Access Your Spotify Playlists</h3>
           <p class="card-text">We'll link up your existing Spotify playlists so you can work on those killer sets you've already made, instead of starting from scratch.</p>
           <%= image_tag 'playlists.jpg', width: '100%', height: '60%'%>
         </div>
@@ -25,7 +25,7 @@
           <%= image_tag 'sort.jpg', width: '100%', height: '60%'%>
         </div>
         <div class="col-md-6" id="api-card-feature">
-          <h3 class="card-title" style="font-family: monospace;">Custom Sort By DJ Specific Filters</h3>
+          <h3 class="card-title" style="font-family: monospace;">Sort By DJ Specific Filters</h3>
           <p class="card-text">Choose to manually filter your existing playlists based on unique DJ-relevant categories such as BPM, Key, Danceability, Energy and plenty more. </p>
           <%= image_tag 'filter3.jpg', width: '100%', height: '60%'%>
         </div>
@@ -70,7 +70,7 @@
         </div>
         <div class="col-md-6" id="api-card-feature">
           <h3 class="card-title" style="font-family: monospace;">Get Booked or Book DJs</h3>
-          <p class="card-text">Once the magic's been worked you can remove songs that don't fit, save the final result as a new playlist or over-ride the original playlist.</p>
+          <p class="card-text">Find a DJ that's perfect for your next event or residency. Set the location, price and equiptment details than sit back and enjoy their show!</p>
           <%= image_tag 'booked.jpg', width: '100%', height: '60%'%>
         </div>
       </div>
@@ -78,10 +78,17 @@
   <div class="banner" id="social-banner-bottom";>
     <div class="container h-100">
       <div class="d-flex h-100 text-center align-items-center">
-        <div class="w-100 text-white">
-          <h3 class="display-3">Join The Community</h3>
-          <button data-tf-popup="e0SWw5tD" data-tf-hide-headers data-tf-size="50" data-tf-iframe-props="title=Registration Form" data-tf-medium="snippet" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#DB3EB1;color:#FFFFFF;font-size:20px;border-radius:25px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">Sign Up Now</button><script src="//embed.typeform.com/next/embed.js"></script>
-        </div>
+        <% if user_signed_in? %>
+          <div class="w-100 text-white" style="">
+            <h3 class="display-3">Get Social</h3><br><br>
+            <a href="/users/sign_up" id="sign-up-button">Search DJs</a>
+          </div>
+        <% else %>
+          <div class="w-100 text-white" style="">
+            <h3 class="display-3">Join The Community</h3><br><br>
+            <a href="/users/sign_up" id="sign-up-button">Sign Up Now</a>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
