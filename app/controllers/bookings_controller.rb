@@ -3,6 +3,19 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.where(user_id: params[:user_id])
+    @markers = @bookings.geocoded.map do |booking|
+      {
+        lat: booking.latitude,
+        lng: booking.longitude,
+        info_window: render_to_string(
+          partial: 'info_window',
+          locals: {
+            user: booking
+          }
+        ),
+        image_url: helpers.asset_url("DJicon.png")
+      }
+    end
   end
 
   def new
@@ -24,7 +37,6 @@ class BookingsController < ApplicationController
       render :new
     end
   end
-
 
   def show
   end

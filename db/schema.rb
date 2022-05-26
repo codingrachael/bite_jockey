@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_23_125932) do
+ActiveRecord::Schema.define(version: 2022_05_26_094108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,8 @@ ActiveRecord::Schema.define(version: 2022_05_23_125932) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "equipment_type"
     t.bigint "booker_id"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["booker_id"], name: "index_bookings_on_booker_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -124,7 +126,7 @@ ActiveRecord::Schema.define(version: 2022_05_23_125932) do
     t.string "pronoun"
     t.text "description"
     t.string "genres"
-    t.datetime "last_checked_notifications", default: "2022-05-25 12:56:22"
+    t.datetime "last_checked_notifications", default: "2022-05-24 11:01:07"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
