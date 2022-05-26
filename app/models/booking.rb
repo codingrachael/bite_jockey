@@ -6,8 +6,8 @@ class Booking < ApplicationRecord
   # validates :description, length: { minimum: 50 }, presence: true
   after_create_commit :notify_user
 
-  # geocoded_by :location
-  # after_validation :geocode, if: :will_save_change_to_location?
+  geocoded_by :venue
+  after_validation :geocode, if: :will_save_change_to_venue?
 
   private
 
