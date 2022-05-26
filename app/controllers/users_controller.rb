@@ -25,10 +25,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @bookings = @user.bookings
   end
 
   def new
     @user = User.new
+    
   end
 
   def create

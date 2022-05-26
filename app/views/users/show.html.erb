@@ -77,7 +77,19 @@
           </div>
     </div>
   </div>
-
+  <div class="container" id="calender" style="height: 100%;">
+    <%= month_calendar(events: @bookings, attribute: :date) do |date, bookings| %>
+     <%# single date  %>
+      <%= date.day %>
+      <% bookings.each do |booking| %>
+        <div class="booking" style = "background: white"> 
+          <p><%= booking.booker.user_name %></p>
+           <p><%= booking.venue %></p>
+           <p><%= booking.set_length%></p>
+           <button type="button"> View Bookings</button>
+        </div>
+      <% end %>
+    <% end %>
 
   <div class="container" id="social-feed" style="height: 100%;">
     <h3>Social Feed</h3>

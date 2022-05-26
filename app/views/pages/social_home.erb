@@ -143,7 +143,7 @@
   <%= date %>
 <% end %>
 
-<%= month_calendar(events: @meetings, end_attribute: :end_time) do |date, meetings| %>
+<%= month_calendar(events: @booking, end_attribute: :end_time) do |date, meetings| %>
   <%= date %>
 
   <% meetings.each do |meeting| %>
