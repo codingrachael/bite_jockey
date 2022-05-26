@@ -13,6 +13,7 @@
       </div>
   </div>
 
+
   <div class="container playlists-info">
     <div class="container" id="playlists" style="text-align: center;">
           <h3><%=@user.user_name %>'s Playlists</h3>
@@ -111,8 +112,8 @@
       </div>
     </div>
   </div>
-  <div class="container justify-content-center" id="booking-form" style="height: 100%;">
-    <h3>Book <%=@user.user_name %></h3>
+  <div class="bookings-container container justify-content-center" id="booking-form" style="height: 100%;">
+    <h3>Book<%=@user.user_name %></h3>
     <form>
         <div class="form-group">
           <label hidden for="exampleInputEmail1">Venue</label>
@@ -148,7 +149,8 @@
     </form>
   </div>
 
-  <div class="edit/destroy">
+
+  <div hidden class="edit/destroy">
     <ul>
       <li><%= link_to 'Edit', edit_user_path(@user) %></li>
       <li><%= button_to 'Destroy', user_path(@user), method: :delete, data: { confirm: 'Are you sure?' } %></li>

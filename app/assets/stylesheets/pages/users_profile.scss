@@ -31,7 +31,31 @@
     color: white;
     margin-left: 300px;
     margin-top: 30px;
-    background-color: rgba(240, 70, 161, 0.382);
+    padding: 10px;
+    background-color: rgba(27, 22, 24, 0.327);
+    border-radius: 15px;
+    line-height: 6px;
+  }
+
+  .banner-info h2 {
+    font-weight: 800;
+    font-family: "Poppins",
+    sans-serif;
+    color: white;
+  }
+
+  h3  {
+    font-weight: 800;
+    font-family: "Poppins",
+    sans-serif;
+    color: white;
+  }
+
+  .bookings-container h3 {
+    font-weight: 800;
+    font-family: "Poppins",
+    sans-serif;
+    color: white;
   }
 
   .headings {
@@ -104,6 +128,9 @@
     object-fit: cover;
   }
 
+  .cards .item {
+  }
+
 
   main#carousel {
     grid-row: 1 / 2;
@@ -127,7 +154,7 @@
     position: absolute;
     width: 300px;
     height: 400px;
-    background-color: coral;
+    background-color: rgb(192, 76, 33);
     --r: calc(var(--position) - var(--offset));
     --abs: max(calc(var(--r) * -1), var(--r));
     transition: all 0.25s linear;
