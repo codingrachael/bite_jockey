@@ -85,8 +85,8 @@ all_users = [
     image: 'https://i.imgur.com/HkBEo8e.png',
     # spotify_id: 'dj_test',
     pronoun: 'they/them',
-    description:'MFA has their fingers in many of Naarm's scene pies - booker, promoter and strict trance DJ, MFA knows their way around a good time.
-    Having managed multiple party venues and founded numerous events such as Temple Night Club, Trancendance & Thirstday's, MFA is one is one to watch.',
+    description: "MFA has their fingers in many of Naarm's scene pies - booker, promoter and strict trance DJ, MFA knows their way around a good time.
+    Having managed multiple party venues and founded numerous events such as Temple Night Club, Trancendance & Thirstday's, MFA is one is one to watch.",
     genres: 'TRANCE AMBIENT TECHNO'
   },
   {
