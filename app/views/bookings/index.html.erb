@@ -15,7 +15,7 @@
       <h2 style="color: white;">Upcoming Bookings</h2>
       <% @bookings.each do |booking|%>
         <% if booking.date.to_datetime() > DateTime.now %>
-          <li class="booking-card" style="background-image: url(<%= booking.user.image %>); display:align-items: center;">
+          <li class="booking-card" style="background-image: url(<%= booking.booker.image %>); display:align-items: center;">
             <div class="informations-container">
           <h2 class="title"><%= booking.date.to_formatted_s(:rfc822)[0..-15] %> @ <%= booking.date.to_formatted_s(:rfc822)[17..21] %> </h2> <hr>
           <p class="sub-title" style="font-family: monospace;"><strong>Venue: </strong><%= booking.venue %></p>
