@@ -31,7 +31,32 @@
     color: white;
     margin-left: 300px;
     margin-top: 30px;
-    background-color: rgba(240, 70, 161, 0.382);
+    padding: 10px;
+    background-color: rgba(27, 22, 24, 0.327);
+    border-radius: 15px;
+    line-height: 6px;
+  }
+
+  .banner-info h2 {
+    font-weight: 800;
+    font-family: "Poppins",
+    sans-serif;
+    color: white;
+  }
+
+  h3  {
+    font-weight: 800;
+    font-family: "Poppins",
+    sans-serif;
+    color: white;
+  }
+
+  .bookings-container h3 {
+    font-weight: 800;
+    font-family: "Poppins",
+    sans-serif;
+    color: white;
+    align-self: center;
   }
 
   .headings {
@@ -50,10 +75,11 @@
 
   #playlists h3 {
     text-align: left;
-    margin: 16px;
+    margin: 0px;
+    margin-top: -0px;
+    padding: 0px;
     color: white;
   }
-
 
   #social-feed h3 {
     text-align: left;
@@ -77,8 +103,20 @@
   #booking-form h3 {
     margin: 16px;
     color: white;
-    text-align: left;
+    text-align: center;
   }
+
+  #booking-form  {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 25px;
+  }
+
+  #social-feed {
+    margin-top: -50px;
+  }
+
 
   .cards {
     height: 600px;
@@ -97,13 +135,11 @@
     text-align: center;
   }
 
-
   .cards img {
     width: 100%;
     height: 60%;
     object-fit: cover;
   }
-
 
   main#carousel {
     grid-row: 1 / 2;
@@ -127,7 +163,7 @@
     position: absolute;
     width: 300px;
     height: 400px;
-    background-color: coral;
+    background-color: rgb(192, 76, 33);
     --r: calc(var(--position) - var(--offset));
     --abs: max(calc(var(--r) * -1), var(--r));
     transition: all 0.25s linear;
@@ -215,9 +251,43 @@
     grid-row: 2 / 3;
   }
 
-
   input:nth-of-type(5):checked~main#carousel {
     --position: 5;
   }
 
+  .col-6 .left {
+    display: flex;
+    align-self: flex-start;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    flex: 0 0 65%;
+  }
+
+  .col-6 .right {
+    font-family: "Poppins",
+    sans-serif;
+    color: white;
+  }
+
+  .user-info-box  h4{
+  font-family: "Poppins",
+  sans-serif;
+  color: white;
+  font-weight: 800;
+  }
+
+  .info-playlist-wrapper {
+    display: inline;
+  }
+
+  .calender-div {
+
+
+  }
+
+  .form-group{
+    align-self: center;
+    text-align: center;
+  }
 }
