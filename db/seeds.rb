@@ -23,8 +23,7 @@ all_users = [
     description: "Rachael AKA Omega3 is 1/3 of local events
     collective, Merge Melbourne, home of
     femme & GNC club night 'Freakquency' and
-    founder of The Daily Commute, an electronic music mix series. Omega3's sets are built around tension and release, driving
-    floor fillers and spacey sounds, she flirts with a variety of styles and tempos but her forays into industrial techno and Melbourne minimal have become a calling card. Omega3 has continuously moved dancefloors across Melbourne at venues including Colour, Miscelliania, Rooftop Bar, Baxter’s Lot & The Rochester Hotel.",
+    founder of The Daily Commute, an electronic music mix series. Omega3's sets are built around tension and release, driving floor fillers and spacey sounds, she flirts with a variety of styles and tempos but her forays into industrial techno and Melbourne minimal have become a calling card. Omega3 has continuously moved dancefloors across Melbourne at venues including Colour, Miscelliania, Rooftop Bar, Baxter's Lot & The Rochester Hotel.",
     genre: 'HOUSE TECHNO DISCO TRANCE ELECTRO MINIMAL',
     operator_type: 'DJ, Promoter, Booker'
   },
@@ -40,7 +39,7 @@ all_users = [
       image: 'https://i.imgur.com/iBSNyXe.png',
       # spotify_id: 'dj_test',
       pronoun: 'She/Her',
-      description: "Effortlessly chic, O Honey’s mixes deliver petal-soft hooks, engaging rhythmic patterns and enduring quality. O Honey, started out playing her favourite dance, funk, soul, disco, hip hop and new wave records at local bars and parties in 2018. With a passion for matching the energy, she can always keep the boogie alive, bringing it upbeat or slowing it right down.From weddings and Christmas parties to popular Naarm bars and clubs, O Honey aspires to connect with people through good music, new and old, and create lasting memories on dance floors around Melbourne.",
+      description: "Effortlessly chic, O Honey's mixes deliver petal-soft hooks, engaging rhythmic patterns and enduring quality. O Honey, started out playing her favourite dance, funk, soul, disco, hip hop and new wave records at local bars and parties in 2018. With a passion for matching the energy, she can always keep the boogie alive, bringing it upbeat or slowing it right down. From weddings and Christmas parties to popular Naarm bars and clubs, O Honey aspires to connect with people through good music, new and old, and create lasting memories on dance floors around Melbourne.",
       genres: 'HOUSE DISCO HIP HOP/R&B CORPORATE/PARTY FUNK/SOUL VINYL'
    },
     {
@@ -55,7 +54,7 @@ all_users = [
       image: 'https://i.imgur.com/QEau6WV.jpg',
       # spotify_id: 'dj_test',
       pronoun: 'She/Her',
-      description: 'Renowned for her distinctive taste and adventurous track selection is Tinika, Melbourne based DJ and purveyor of fine Tunes. Fresh off the back of a career-changing set at Novel’s Bridge Rave, Tinika has quickly pushed her way to the front of the Melbourne electronic scene.',
+      description: "Renowned for her distinctive taste and adventurous track selection is Tinika, Melbourne based DJ and purveyor of fine Tunes. Fresh off the back of a career-changing set at Novel's Bridge Rave, Tinika has quickly pushed her way to the front of the Melbourne electronic scene.",
       genres: 'HOUSE TECHNO DISCO HIP HOP/R&B CORPORATE/PARTY DEEP HOUSE'
     },
   {
@@ -78,7 +77,7 @@ all_users = [
     user_name: 'MFA',
     password: 'password',
     email: 'mfa@gmail.com',
-    operator_type: 'DJ, ,  Booker',
+    operator_type: 'DJ, Booker',
     location: 'Fawkner, Melbourne',
     first_name: 'Mary',
     last_name: 'Faw',
@@ -86,8 +85,8 @@ all_users = [
     image: 'https://i.imgur.com/HkBEo8e.png',
     # spotify_id: 'dj_test',
     pronoun: 'they/them',
-    description:'MFA has their fingers in many of Naarm’s scene pies - booker, promoter and strict trance DJ, MFA knows their way around a good time.
-    Having managed multiple party venues and founded numerous events such as Temple Night Club, Trancendance & Thirstday’s, MFA is one is one to watch.',
+    description:'MFA has their fingers in many of Naarm's scene pies - booker, promoter and strict trance DJ, MFA knows their way around a good time.
+    Having managed multiple party venues and founded numerous events such as Temple Night Club, Trancendance & Thirstday's, MFA is one is one to watch.',
     genres: 'TRANCE AMBIENT TECHNO'
   },
   {
@@ -140,7 +139,7 @@ all_users = [
     password: 'password',
     email: 'housemum@gmail.com',
     operator_type: 'DJ',
-    location: 'Franskton, Melbourne',
+    location: 'Frankston, Melbourne',
     first_name: 'Holly',
     last_name: 'Rogers',
     social_link: '@housemum',
@@ -219,7 +218,7 @@ all_users = [
     password: 'password',
     email: 'yellow101@gmail.com',
     operator_type: 'DJ',
-    location: 'North Melbourne, Melbourne',
+    location: 'Brighton, Melbourne',
     first_name: 'Tim',
     last_name: 'Shane',
     social_link: '@yellow',
@@ -233,9 +232,9 @@ all_users = [
     user_name: 'Kayroy',
     password: 'password',
     email: 'kayroy@gmail.com',
-    operator_type: 'DJ, Producer, Promoter, Booker',
-    location: 'Cliffton Hill, Melbourne',
-    first_name: 'Brain',
+    operator_type: 'DJ, Producer',
+    location: 'Elwood, Melbourne',
+    first_name: 'Brian',
     last_name: 'Conner',
     social_link: '@kayroy',
     image: 'https://i.imgur.com/rbVzpZK.jpeg',
@@ -243,7 +242,7 @@ all_users = [
     pronoun: 'He/Him',
     description: "With a reputation for rambunctious DJ sets and an impressive slew of sampladelic releases, Kayroy artfully blends varied influences to deliver sets that are dynamic and exciting, venturing deep into the depths of the Cyborg Disco.
     A slew of acclaimed releases followed on both local and international labels including Sour Edits, Whisky Disco, Clipp.art and Hotfoot, showcasing his unique sampladelic production style, and cementing him as a mainstay of Melbourne’s dance-music community.",
-    genre: 'TECHNO DISCO TRCHNO HIP HOP/ RNB LIVE CORPORATE/PARTY DEEP HOUSE'
+    genre: 'TECHNO DISCO TECHNO HIP HOP/ RNB LIVE CORPORATE/PARTY DEEP HOUSE'
   },
   {
     user_name: 'Merge',
@@ -295,8 +294,8 @@ all_users = [
     user_name: 'Sophie Forrest',
     password: 'password',
     email: 'sophieft@gmail.com',
-    operator_type: 'DJ, Producer, Promoter, Booker',
-    location: 'Armdale, Melbourne',
+    operator_type: 'DJ, Producer',
+    location: 'Armadale, Melbourne',
     first_name: 'Sophie',
     last_name: 'Du',
     social_link: '@sophieforrest',
@@ -319,7 +318,7 @@ all_users = [
     social_link: '@vitamindj',
     image: 'https://i.imgur.com/k4CMVKe.png',
     # spotify_id: 'dj_test',
-    pronoun: 'He/Him',
+    pronoun: 'He/They',
     description: "DJ extraordinaire, Vitamin DJ.
     Plucked fresh from Miscellania and a stellar turn at Ferdy Derke, Vitamin DJ has become known for their stellar techno sounds and spicy Rooftop Bar takeovers. A selector quickly carving a name for themselves amongst Melbourne’s ones to watch, Vitamin DJ will dose you up with a highly concentrated, protein-packed punch that will see you stomping your feet until the bitter end.",
     genres: 'HOUSE TECHNO TRANCE ELECTRO'
