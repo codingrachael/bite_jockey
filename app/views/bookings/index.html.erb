@@ -1,7 +1,13 @@
 <div class="test-page" style="border: 2px solid yellowgreen;">
  <br><br><br><br><br><br><br><h1>Bookings</h1> <br><br>
   <div class="map-div" style="width: 100%; height: 60vh; display: flex; align-items: center; justify-content: center; margin: 16px 0px;" >
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.2788623433166!2d144.97618517109322!3d-37.79577743401989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad643214247254d%3A0x60ceab8791e84da!2sGlamorama%20Nightclub!5e0!3m2!1sen!2sau!4v1653203164297!5m2!1sen!2sau" width="60%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div
+      class="map-map mb-3"
+      style="width: 75%; height: 60vh;"
+      data-controller="mapbox"
+      data-mapbox-markers-value="<%= @markers.to_json %>"
+      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
   <div class="b-cards" style="border: 12px solid white; padding: 12px;">
     <ul>
