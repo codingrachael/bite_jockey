@@ -2,13 +2,12 @@
   <div class="banner" style=" margin-top: 90px;">
       <div class="profile-avatar">
         <img class="avatar-large me-2" alt="avatar-large" src=<%= @user.image %>/>
-
-        <div class="banner-info" id="banner-info">
-          <h2><%=@user.user_name %></h2>
-          <p><%= @user.operator_type %></p>
-          <p><%= @user.location %></p>
-          <p><%= @user.pronoun %></p>
-          <p><%= @user.social_link %></p>
+        <div class="banner-info d-flex flex-column justify-content-center" id="banner-info">
+          <h2 class="mb-4"><%=@user.user_name %></h2>
+          <p class="mb-4"><%= @user.operator_type %></p>
+          <p class="mb-4"><%= @user.location %></p>
+          <p class="mb-4"><%= @user.pronoun %></p>
+          <p class="mb-4"><%= @user.social_link %></p>
         </div>
       </div>
   </div>
@@ -95,8 +94,8 @@
           </div>
         </div>
       </div>
-      <div class="col-4 right">
-        <div class="container user-info-box" id="info-global" style="display: inline-block, width: 400px; height: 200px; color: white; text-align: left;">
+      <div class="col-4 pt-5">
+        <div class="container user-info-box pe-5" id="info-global" style="display: inline-block, width: 400px; height: 200px; color: white; text-align: left;">
           <div class="container" id="description">
             <h4>About <%=@user.user_name %></h4>
             <h4><%= @user.operator_type %></h4>
@@ -114,66 +113,40 @@
     </div>
   </div>
 
-  <div class="container" id="social-feed" style="height: 100%;">
-    <h3>Social Feed</h3>
-    <div class="taggbox-container" style="width:100%;height:100%;overflow: auto;"><div class="taggbox-socialwall" data-wall-id="96344" view-url="https://widget.taggbox.com/96344"></div><script src="https://widget.taggbox.com/embed.min.js" type="text/javascript"></script></div>
-  </div>
-  <div class="container container-fluid" id="map-container" style="height: 100%;">
+  <div class="container container-fluid mb-5" id="map-container">
     <div class="row">
-      <div class="col-6 left map-div" style="border: 2px solid yellowgreen;">
-        <h3>Location</h3>
+      <div class="col-6 left map-div">
+        <h3 style="text-align: center; font-size: 36px;">Location</h3>
         <div
           class="map-map"
-          style="width: 100%; height: 80vh; display: inline-block"
+          style="width: 100%; height: 50vh; display: inline-block"
           data-controller="mapbox"
           data-mapbox-markers-value="<%= @markers.to_json %>"
           data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
         >
         </div>
       </div>
-      <div class="col-6 right calender-div" style="border: 2px solid yellowgreen;">
-        <h3>Calendar</h3>
-        <div class="simple-calendar" style="width: 100%; height: 80vh; display: inline-block">
-          <h1 style="color: white;">Calender Here<h1>
+      <div class="col-6 right calender-div">
+        <h3 style="text-align: center; font-size: 36px;">Book <%=@user.user_name %></h3>
+        <div class="form" style="padding: 0px 16px; color: white; font-size: large;">
+          <%= simple_form_for [@user, @booking] do |f| %>
+            <%= f.input :date %>
+            <%= f.input :venue %>
+            <%= f.input :set_length, label: 'Set Length (Hours)' %>
+            <%= f.input :hourly_rate %>
+            <%= f.input :music_genre %>
+            <%= f.input :equipment_type %>
+            <%= f.input :description %>
+            <%= f.button :submit, "Book Now", class: "btn btn-light btn-submit"%>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
-  <div class="bookings-container container justify-content-center" id="booking-form" style="height: 100%;">
-    <h3>Book <%=@user.user_name %></h3>
-    <form>
-        <div class="form-group">
-          <label hidden for="exampleInputEmail1">Venue</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Venue">
-        </div>
-        <br>
-        <div class="form-group">
-          <label hidden for="exampleInputPassword1">Date</label>
-          <input type="date" class="form-control" placeholder="Date">
-        </div>
-        <br>
-        <div class="form-group">
-          <label hidden for="exampleInputPassword1">Date</label>
-          <input type="time" class="form-control" placeholder="Time">
-        </div>
-        <br>
-        <div class="form-group">
-          <label hidden for="exampleInputEmail1">Hourly Rate</label>
-          <input type="float" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Hourly Rate">
-        </div>
-        <br>
-        <div class="form-group">
-          <label hidden for="exampleInputEmail1">Music Type</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Music Type">
-        </div>
-        <br>
-        <div class="form-group">
-          <label hidden for="exampleInputEmail1">Equipment</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Equipment">
-        </div>
-        <br>
-        <button type="submit" class="btn btn-outline-light w-100 btn-block" style="text-center mt-0">Submit</button>
-    </form>
+
+  <div class="container mt-5" id="social-feed" style="height: 100%;">
+    <h3 style="text-align: center; font-size: 36px;">Social Feed</h3>
+    <div class="taggbox-container" style="width:100%;height:100%;overflow: auto;"><div class="taggbox-socialwall" data-wall-id="96344" view-url="https://widget.taggbox.com/96344"></div><script src="https://widget.taggbox.com/embed.min.js" type="text/javascript"></script></div>
   </div>
 
 
