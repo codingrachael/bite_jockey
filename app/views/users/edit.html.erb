@@ -1,5 +1,13 @@
-<div>
-  <%= simple_form_for [@user] do |f| %>
+
+
+<div class="main_log" style="height: fit-content; display: flex; align-items: center; flex-direction: column; justify-content: center; margin: 148px 12px 44px 12px;">
+ <div class="title">Edit Profile</div>
+ <div class="log_in" style="width: fit-content; padding: 16px; display: flex; flex-direction: column;">
+  <div class="logo">
+   <img src="https://i.imgur.com/arALlu1.png" alt="" width="100">
+  </div>
+  <div class="form" style="display: flex; color: white; align-items: left;">
+   <%= simple_form_for [@user] do |f| %>
       <%= f.input :user_name %>
       <%= f.input :first_name %>
       <%= f.input :last_name %>
@@ -9,7 +17,7 @@
       <%= f.input :description %>
       <%= f.button :submit, "Update", class: "btn-submit"%>
     <% end %>
-  <li><%= link_to 'Edit', edit_user_path(@user) %></li>
-
   </div>
+ </div>
+ <br>
 </div>
