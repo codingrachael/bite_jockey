@@ -52,6 +52,43 @@
   .col {
     padding: 0%;
     margin: 0%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn {
+    margin: 10px;
+    align-items: center;
+  }
+
+  .button-container  {
+    background-color: #1C1E1F;
+    border-radius: 10px;
+    width: 80%;
+    height: 50%;
+    margin-top: -120px;
+    margin-left: 100px;
+    background-color: #FA2A95;
+    background-image: linear-gradient(to bottom, #fa2a95 0%, #9bd3e3 74%);
+  }
+
+
+  .button-container h5 {
+    font-family: "Poppins",
+    sans-serif;
+    color: #F4F4F4;
+    font-weight: 800;
+  }
+
+  .button-container .btn {
+    margin: 10px;
+    align-items: center;
+  }
+
+  .spotify-buttons .btn{
+    border-radius: 40px;
+    margin: 10px;
+    align-items: center;
   }
 
 }
@@ -60,6 +97,7 @@
   margin-top: 80px;
   padding: 16px;
   align-items: left;
+
 
   h1 {
     color: #F4F4F4;
@@ -91,11 +129,6 @@
   }
 }
 
-.spotify-buttons {
-  height: 100%;
-  border: #F4F4F4;
-}
-
 .grid-heading {
   h1 {
     color: #F4F4F4;
@@ -115,6 +148,13 @@
 .grid-tracks {
   width: 95%;
   height: 50px;
+}
+
+.grid-heading {
+  display: flex;
+  width: 95%;
+  align-self: center;
+  align-items: center;
 }
 
 .playlist-title-description {
