@@ -124,6 +124,10 @@
     overflow: hidden;
   }
 
+  #api-feature {
+    background-color: #1C1E1F;
+  }
+
 
   #api-features h1 {
     color: white;
@@ -140,14 +144,14 @@
 
 
   #api-features img {
-    padding: 0 0 0 15%;
     overflow: hidden;
+    border-radius: 15px;
   }
 
 
   #api-features p {
     color: white;
-    padding: 0 10% 24px 15%;
+    // padding: 0 10% 24px 15%;
     font-size: larger;
   }
 
@@ -169,10 +173,10 @@
   #api-card-feature {
     object-fit: cover;
     text-align: left;
-    border-top: 2px solid #DB3EB1;
+    // border-top: 2px solid #DB3EB1;
     background-color: rgb(27, 27, 27);
-    border-left: 6px solid black;
-    border-right: 6px solid black;
+    // border-left: 6px solid black;
+    // border-right: 6px solid black;
     margin-bottom: 16px;
     height: 100%;
   }
