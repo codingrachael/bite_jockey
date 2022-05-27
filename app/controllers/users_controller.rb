@@ -25,6 +25,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @playlists = RSpotify::User.find(@user.spotify_id).playlists
     @markers = [{
       lat: @user.latitude,
       lng: @user.longitude,
