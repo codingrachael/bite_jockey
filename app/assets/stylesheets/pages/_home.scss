@@ -231,6 +231,48 @@
     left: 35px;
   }
 
+  .spotify-button-bottom {
+    font-family: monospace;
+    color: #FFFFFF;
+    font-size: 29px;
+    border-radius: 50px;
+    border: 2px #ffffff solid;
+    background-color: black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 48px 0 24px 0;
+    text-align: center;
+  }
+
+
+  .spotify-button-bottom:hover {
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    box-shadow: 0 0 20px hsl(0, 0%, 100%);
+  }
+
+  .spotify-button-bottom-text {
+    padding: 8px 42px;
+    color: white;
+    text-align: center;
+  }
+
+  .spotify-button-bottom-text:hover {
+    color: black;
+  }
+
+
+  .spotify-button-bottom-text span {
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 35px;
+  }
+
 
   #social-banner-top {
     background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
@@ -327,8 +369,8 @@
     font-size: 1.2em;
     text-decoration: none;
     font-weight: 550;
-    background-color: #DB3EB1;
-
+    background-color: black;
+    font-family: monospace;
     padding: 22px 42px;
     border-radius: 50px;
     border: 2px solid white;
@@ -336,7 +378,8 @@
 
   #sign-up-button:hover {
     box-shadow: 0 0 20px hsl(0, 0%, 100%);
-    background-color: #db3eb183;
+    background-color: white;
+    color: black;
   }
 }
 
