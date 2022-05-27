@@ -26,56 +26,71 @@
               <input type="radio" name="position" />
               <input type="radio" name="position" />
               <main id="carousel">
-              <div class="item">
-                <img class="card-img-top" src="https://media.istockphoto.com/photos/modern-futuristic-sci-fi-concept-club-background-grunge-concrete-picture-id1063881788?k=20&m=1063881788&s=170667a&w=0&h=lR3GsH1YtiJZUH0okJmq2iLJMFkJQH5XA37SSk5sJAA=" alt="Card image cap">
-                <div class="container" id="c-item">
-                  <div class="card-body">
-                    <h5 class="card-title">Dance Hits 2000s</h5>
-                    <p class="card-text">The biggest dancefloor bangers of the 2000's</p>
-                    <a href="#" class="btn btn-info">View Playlist</a>
+                <% if @playlists.empty? %>
+                  <div class="item">
+                    <img class="card-img-top" src="https://media.istockphoto.com/photos/modern-futuristic-sci-fi-concept-club-background-grunge-concrete-picture-id1063881788?k=20&m=1063881788&s=170667a&w=0&h=lR3GsH1YtiJZUH0okJmq2iLJMFkJQH5XA37SSk5sJAA=" alt="Card image cap">
+                    <div class="container" id="c-item">
+                      <div class="card-body">
+                        <h5 class="card-title">Dance Hits 2000s</h5>
+                        <p class="card-text">The biggest dancefloor bangers of the 2000's</p>
+                        <a href="#" class="btn btn-info">View Playlist</a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="item">
-                <img class="card-img-top" src="https://images.unsplash.com/photo-1616855752765-2d867caa9aa7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHRlY2hub3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt="Card image cap">
-                <div class="container" id="c-item">
-                  <div class="card-body">
-                    <h5 class="card-title">Global Groove</h5>
-                    <p class="card-text">Groovy sounds from around the world.</p>
-                    <a href="#" class="btn btn-info">View Playlist</a>
+                  <div class="item">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1616855752765-2d867caa9aa7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHRlY2hub3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt="Card image cap">
+                    <div class="container" id="c-item">
+                      <div class="card-body">
+                        <h5 class="card-title">Global Groove</h5>
+                        <p class="card-text">Groovy sounds from around the world.</p>
+                        <a href="#" class="btn btn-info">View Playlist</a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="item">
-                <img class="card-img-top" src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="Card image cap">
-                <div class="container" id="c-item">
-                  <div class="card-body">
-                    <h5 class="card-title">Rave Classics</h5>
-                    <p class="card-text">Classic tunes that shaped and defined rave culture.</p>
-                    <a href="#" class="btn btn-info">View Playlist</a>
+                  <div class="item">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="Card image cap">
+                    <div class="container" id="c-item">
+                      <div class="card-body">
+                        <h5 class="card-title">Rave Classics</h5>
+                        <p class="card-text">Classic tunes that shaped and defined rave culture.</p>
+                        <a href="#" class="btn btn-info">View Playlist</a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="item">
-                <img class="card-img-top" src="https://images.unsplash.com/photo-1487260211189-670c54da558d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Card image cap">
-                <div class="container" id="c-item">
-                  <div class="card-body">
-                    <h5 class="card-title">Poolside Disco</h5>
-                    <p class="card-text">Disco, house, funk and soul for those warm summer days.</p>
-                    <a href="#" class="btn btn-info">View Playlist</a>
+                  <div class="item">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1487260211189-670c54da558d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Card image cap">
+                    <div class="container" id="c-item">
+                      <div class="card-body">
+                        <h5 class="card-title">Poolside Disco</h5>
+                        <p class="card-text">Disco, house, funk and soul for those warm summer days.</p>
+                        <a href="#" class="btn btn-info">View Playlist</a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="item">
-                <img class="card-img-top" src="https://images.unsplash.com/photo-1619983081593-e2ba5b543168?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Card image cap">
-                <div class="container" id="c-item">
-                  <div class="card-body">
-                    <h5 class="card-title">Warehouse Party</h5>
-                    <p class="card-text">Classic party anthems from the club to your ears!</p>
-                    <a href="#" class="btn btn-info">View Playlist</a>
+                  <div class="item">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1619983081593-e2ba5b543168?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Card image cap">
+                    <div class="container" id="c-item">
+                      <div class="card-body">
+                        <h5 class="card-title">Warehouse Party</h5>
+                        <p class="card-text">Classic party anthems from the club to your ears!</p>
+                        <a href="#" class="btn btn-info">View Playlist</a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
+                <% else %>
+                  <% @playlists.each do |playlist| %>
+                    <div class="item">
+                      <img class="card-img-top" src=<%= playlist.images.first["url"] %> alt="Card image cap">
+                      <div class="container" id="c-item">
+                        <div class="card-body">
+                          <h5 class="card-title"><%= playlist.name %></h5>
+                          <p class="card-text"><%= playlist.description %></p>
+                          <a href=<%= playlist.external_urls["spotify"] %> class="btn btn-info">View Playlist</a>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+                <% end %>
               </main>
             </div>
           </div>
