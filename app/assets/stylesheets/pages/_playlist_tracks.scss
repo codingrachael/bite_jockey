@@ -1,13 +1,13 @@
 .sorting-container {
-  background-color: #0D1012;
+  background-image: linear-gradient(to bottom, #212627 0%, #0D1012 74%);
   color: white;
   padding-left: 250px;
-  overflow-y: none;
+  overflow-y: none !important;
   width: 100%;
 
   .camelot-image {
-    height: 450px;
-    width: 350px;
+    height: 250px;
+    width: 200px;
   }
 
   .camelot-image:hover {
@@ -42,8 +42,6 @@
   }
 
   .jumbotron {
-    background-color: #2d3436;
-    background-image: linear-gradient(to bottom, #2d3436 0%, #0D1012 74%);
     margin-right: 0%;
     margin-left: 0%;
     width: 100vw;
@@ -181,4 +179,8 @@
 
 .header-info {
   margin-top: 46px;
+}
+
+.container-fluid {
+  overflow: hidden;
 }
