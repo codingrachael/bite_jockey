@@ -9,15 +9,15 @@
       data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
-  <div class="b-cards" style="padding: 12px; border: 2px solid aqua; display: flex; width: 80%;">
+  <div class="b-cards" style="padding: 12px; display: flex; width: 80%;">
     <ul>
-      <div class="upcoming" style="margin: 12px; padding: 12px; border: 2px solid yellow; display: flex; flex-direction: column;">
-        <div class="header" style="margin: 12px; padding: 12px; border: 2px solid green; height: fit-content;">
+      <div class="upcoming" style="margin: 12px; padding: 12px; display: flex; flex-direction: column;">
+        <div class="header" style="margin: 12px; padding: 12px; height: fit-content;">
           <h2 style="color: white;">Upcoming Bookings</h2>
         </div>
-        <div class="cards" style="border: 2px solid red; display: flex; flex-wrap: wrap;">
+        <div class="cards" style="display: flex; flex-wrap: wrap;">
           <% @bookings.each do |booking|%>
-            <div class="ind-card" style="border: 2px solid purple;">
+            <div class="ind-card" style="">
               <% if booking.date.to_datetime() > DateTime.now %>
                 <li class="booking-card" style="background-image: url(<%= booking.booker.image %>); display:align-items: center;">
                   <div class="informations-container">
@@ -43,13 +43,13 @@
           <% end %>
         </div>
       </div>
-      <div class="upcoming" style="margin: 12px; padding: 12px; border: 2px solid yellow; display: flex; flex-direction: column;">
-        <div class="header" style="margin: 12px; padding: 12px; border: 2px solid green; height: fit-content;">
+      <div class="upcoming" style="margin: 12px; padding: 12px; display: flex; flex-direction: column;">
+        <div class="header" style="margin: 12px; padding: 12px; height: fit-content;">
           <h2 style="color: white;">Past Bookings</h2>
         </div>
-        <div class="cards" style="border: 2px solid red; display: flex; flex-wrap: wrap;">
+        <div class="cards" style="display: flex; flex-wrap: wrap;">
           <% @bookings.each do |booking|%>
-            <div class="ind-card" style="border: 2px solid purple;">
+            <div class="ind-card" style="">
               <% if booking.date.to_datetime() < DateTime.now %>
                 <li class="booking-card" style="background-image: url(<%= booking.booker.image %>); display:align-items: center;">
                   <div class="informations-container">
