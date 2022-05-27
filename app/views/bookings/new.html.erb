@@ -10,15 +10,15 @@
     </div>
     <div class="form" style="padding: 0px 16px; color: white; font-size: larger;">
       <%= simple_form_for [@user, @booking] do |f| %>
-      <%= f.input :date %>
-      <%= f.input :set_length %>
-      <%= f.input :hourly_rate %>
-      <%= f.input :music_genre %>
-      <%= f.input :venue %>
-      <%= f.input :equipment_type %>
-      <%= f.input :description %>
-      <%= f.button :submit, "Book Now", class: "btn-submit"%>
-    <% end %>
+        <%= f.input :date %>
+        <%= f.input :set_length %>
+        <%= f.input :hourly_rate %>
+        <%= f.input :music_genre %>
+        <%= f.input :venue %>
+        <%= f.input :equipment_type %>
+        <%= f.input :description %>
+        <%= f.button :submit, "Book Now", class: "btn-submit"%>
+      <% end %>
     </div>
   </div>
   <br>
