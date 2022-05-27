@@ -121,7 +121,7 @@
         <% if user_signed_in? %>
           <div class="w-100 text-white" style="">
             <%= image_tag 'social.png', width: '80%', height: 'auto', alt: 'Logo', class: "ms-2 d-inline-block align-top" %><br><br>
-            <a href="/users/sign_up" id="sign-up-button">Search DJs</a>
+            <a href="/users/sign_up" class="ms-2 sign-up-button-align d-inline-block align-self-center" id="sign-up-button">Search DJs</a>
             <!--    <div class="features-btn-div">
               <a class="spotify-button-bottom" href="/auth/spotify">
                 <span class="spotify-button-bottom-text" style="font-family: monospace;"><span>Connect</span></span>
@@ -130,8 +130,8 @@
           </div>
         <% else %>
           <div class="w-100 text-white" style="align-items-center">
-             <%= image_tag 'jointhecommunity.png', width: '80%', height: 'auto', alt: 'Logo', class: "ms-2 d-inline-block align-top" %><br><br>
-            <a href="/users/sign_up" id="sign-up-button">Sign Up Now</a>
+             <%= image_tag 'jointhecommunity.png', width: '80%', height: 'auto', alt: 'Logo', class: "ms-2 d-inline-block align-top" %><br>
+            <a href="/users/sign_up" class="ms-2 align-self-center, margin-top: -50px;" id="sign-up-button">Sign Up Now</a>
           </div>
         <% end %>
       </div>
