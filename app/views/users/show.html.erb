@@ -1,7 +1,7 @@
 <div class="social_home">
   <div class="banner" style=" margin-top: 90px;">
       <div class="profile-avatar">
-        <img class="avatar-large" alt="avatar-large" src=<%= @user.image %>/>
+        <img class="avatar-large me-2" alt="avatar-large" src=<%= @user.image %>/>
 
         <div class="banner-info" id="banner-info">
           <h2><%=@user.user_name %></h2>
@@ -79,13 +79,12 @@
                   </div>
                 <% else %>
                   <% @playlists.each do |playlist| %>
-                    <div class="item">
+                    <div class="item border border-2 border-white bg-dark">
                       <img class="card-img-top" src=<%= playlist.images.first["url"] %> alt="Card image cap">
                       <div class="container" id="c-item">
                         <div class="card-body">
                           <h5 class="card-title"><%= playlist.name %></h5>
                           <p class="card-text"><%= playlist.description %></p>
-                          <a href=<%= playlist.external_urls["spotify"] %> class="btn btn-info">View Playlist</a>
                         </div>
                       </div>
                     </div>
