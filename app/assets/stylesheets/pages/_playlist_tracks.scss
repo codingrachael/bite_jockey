@@ -6,8 +6,8 @@
   width: 100%;
 
   .camelot-image {
-    height: 250px;
-    width: 250px;
+    height: 450px;
+    width: 350px;
   }
 
   .camelot-image:hover {
@@ -112,6 +112,7 @@
     font-size: small;
     font-family: "Poppins",
     sans-serif;
+
   }
 
   .playlist-image img {
@@ -126,6 +127,8 @@
     font-size: small;
     font-family: "Poppins",
     sans-serif;
+    text-align: center;
+    line-height: 2px;
   }
 }
 
@@ -136,6 +139,7 @@
     font-family: "Poppins",
     sans-serif;
     font-weight: 800;
+    text-align: center;
   }
   .button-container {
     color: #F4F4F4;
