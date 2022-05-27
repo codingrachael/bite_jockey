@@ -18,7 +18,7 @@ all_users = [
     last_name: 'Mac',
     social_link: '@omega3',
     image: 'https://i.imgur.com/lKqDn9T.jpeg',
-    #spotify_id: ''
+    spotify_id: '12125628427',
     pronoun: 'She/Her',
     description: "Rachael AKA Omega3 is 1/3 of local events
     collective, Merge Melbourne, home of
