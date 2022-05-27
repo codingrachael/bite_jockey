@@ -2,12 +2,15 @@
   <header>
     <div class="overlay"></div>
     <%= video_tag "dj_vid.mp4", autoplay: :autoplay, loop: :loop, muted: :muted %>
-    <div class="container h-100" style="display:flex; align-items: center;">
+    <div class="container h-100" style="display: flex; align-items: center;">
       <div class="w-100 text-white" id="banner-content">
-        <h1 class="display-3">Bite Jockey</h1>
-        <h3 class="lead mb-0">Less Admin More Mixin</p>
-        <a href="/auth/spotify" class="myButton" style="font-family: monospace;">Sort Your Tracks</a>
-        <a href="/users" class="myButton" style="font-family: monospace;">Get Social</a>
+        <%= image_tag 'Header.png', width: '80%', height: 'auto', alt: 'Logo', class: "ms-2 d-inline-block align-top" %>
+        <!-- <h1 class="display-3">Bite Jockey</h1>
+        <h3 class="lead mb-0">Less Admin More Mixin</p>-->
+        <div class="button-section" style="margin-top: -120px; display: flex; justify-content: center;">
+          <a href="/auth/spotify" class="myButton" style="font-family: monospace; width: 26%; margin-right: 20px;">Sort Your Tracks</a>
+          <a href="/users" class="myButton" style="font-family: monospace; width: 26%; margin-left: 20px;">Get Social</a>
+        </div>
       </div>
     </div>
   </header>
