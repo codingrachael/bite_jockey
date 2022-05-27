@@ -4,14 +4,14 @@
   </div>
   <div class="row">
     <div class="col">
-      <header class="playlist-tracks-header">
+      <header class="playlist-tracks-header jumbotron jumbotron-fluid mb-5 rounded w-100">
         <div class="playlist-tracks-header-text mt-5 mb-5 d-flex justify-content-center align-items-center">
           <div class= "w-50 px-5">
             <h1>Harmonic Sorting</h1>
             <p>Sort your Spotify playlists by any of a wide range of musical attributes such as BPM, key, energy, danceability or leave it up to BiteJockey's algorithm to return the playlists best playable order! </p>
           </div>
-          <div class="p-3">
-            <%= image_tag 'Bite Harmonic Wheel.png', class: "camelot-image" %>
+          <div class="p-0">
+            <%= image_tag 'HarmonicWheelLogo.png', class: "camelot-image" %>
           </div>
         <div>
       </header>
@@ -47,15 +47,23 @@
                     <h4 class="mb-2"><% counter %> <%= track[:name]  %></h4>
                     <p><%= track[:artist] %></p>
                   </div>
-                  <div class="track-audio-features d-flex justify-content-between">
-                    <div class="mx-3 d-flex align-items-center flex-column">
+                  <div class="track-audio-features d-flex justify-content-between align-items-center">
+                    <div class="mx-3">
                       <span class="d-flex"><p>Key: </p><p class="key-text ms-2"><%= track[:key_text] %></p></span>
+                    </div>
+                    <div class="mx-3">
                       <span class="d-flex"><p>Camelot Key: </p><p class="key ms-2"><%= track[:camelot] %></p></span>
+                    </div>
+                    <div class="mx-3">
                       <span class="d-flex"><p class="key ms-2" style="color: transparent;"><%= track[:key] %></p></span>
                     </div>
                     <div class="mx-3">
                       <span class="d-flex"><p>BPM: </p><p class="bpm ms-2"><%= track[:bpm] %></p></span>
+                    </div>
+                    <div class="mx-3">
                       <span class="d-flex"><p>Danceability: </p><p class="danceability ms-2"><%= track[:danceability] %></p></span>
+                    </div>
+                    <div class="mx-3">
                       <span class="d-flex"><p>Energy: </p><p class="energy ms-2"><%= track[:energy] %></p></span>
                     </div>
                   </div>

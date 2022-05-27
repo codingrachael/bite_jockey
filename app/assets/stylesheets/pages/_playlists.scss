@@ -1,5 +1,6 @@
 .playlist-display {
-    background-color: #121212;
+    background-color: #0D1012;
+
 
     .mt-5 {
       margin-top: ($spacer * 5)!important;
@@ -10,13 +11,12 @@
       border-radius: 10px;
       text-align: center;
       box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-      background-color: #2222;
+      background-color: #1C1E1F;
       display: inline-grid;
     }
 
     #playlist-card.card:hover{
-      background-color: pink;
-      color: #dc1778;
+      background-color: #303334;
     }
 
 
@@ -41,7 +41,7 @@
       }
 
       a:hover {
-        color: greenyellow;
+        color: #FA2A95;
       }
     }
 
@@ -63,7 +63,7 @@
     .jumbotron {
       border-radius: 10px;
       background-color: #2d3436;
-      background-image: linear-gradient(to bottom, #2d3436 0%, #121212 74%);
+      background-image: linear-gradient(to bottom, #2d3436 0%, #0D1012 74%);
       margin-right: 0%;
       width: 100vw;
     }
@@ -81,6 +81,7 @@
 
   .items {
     margin-top: 0px;
+    margin-left: 14px;
   }
 
   .jumbo-text {
@@ -94,8 +95,17 @@
     font-family: "Poppins", sans-serif;
   }
 
+  .jumbotron-text .display {
+    margin-left: 26px;
+  }
+
+  .jumbotron-text .display-4 {
+    margin-left: 26px;
+  }
+
   .container-fluid {
     scrollbar-gutter: none;
     overflow: visible;
     overflow-y: scroll;
+    background-color: #0D1012;
   }

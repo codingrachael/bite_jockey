@@ -1,8 +1,8 @@
 <div class="container-fluid w100">
-  <div class="playlist-display page-content-wrapper mt-5">
+  <div class="playlist-display page-content-wrapper mt-2">
     <div class="row justify-content-end">
-      <div class="col-12 p-0">
-         <header class="jumbotron jumbotron-fluid mb-5 rounded p-4"  style="width: 100%;">
+      <div class="col-12 p-0 m-0 w100">
+        <header class="jumbotron jumbotron-fluid mb-5 rounded p-4 w100"  style="width: 100%;">
             <br>
             <br>
             <br>
@@ -26,7 +26,7 @@
       <div class="row justify-content-end">
         <div class="col-10 justify-content-center">
           <% @spotify_user.playlists.each do |playlist| %>
-            <div class="card card-img-top text-center m-3 bg-dark border border-white" id="playlist-card" style="width: 12rem; height: 18rem;">
+            <div class="card card-img-top text-center m-3" id="playlist-card" style="width: 12rem; height: 16rem;">
               <div class="playlist-image img-rounded">
                 <% if playlist.images.first.nil? == false %>
                   <%= image_tag playlist.images.first["url"], size: 150 %>
