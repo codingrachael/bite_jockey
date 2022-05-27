@@ -65,11 +65,17 @@
     background-color: #1C1E1F;
     border-radius: 10px;
     width: 80%;
-    height: 50%;
+    height: 40%;
     margin-top: -120px;
     margin-left: 100px;
-    background-color: #FA2A95;
-    background-image: linear-gradient(to bottom, #fa2a95 0%, #9bd3e3 74%);
+    background-color: #fa2a959a;
+    background-image: linear-gradient(to bottom, #fa2a9591 0%, #9bd3e3cd 74%);
+  }
+
+  .harmonic-btn {
+    border-color: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    font-weight: 800;
+    color: #0D1012;
   }
 
 

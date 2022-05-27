@@ -15,7 +15,7 @@
             <div class="spotify-buttons d-flex flex-wrap justify-content-start align-items-start">
             <button class="update-playlist-button btn btn-outline-light mx-2 mb-2">Update Playlist</button>
             <button class="create-playlist-button btn btn-outline-light mx-2 mb-2">Create New Playlist</button>
-            <%= link_to 'Harmonic Sorting', playlist_harmonic_path(playlist_id: @playlist.id, spotify_user: @user_hash), class: 'btn btn-light mx-2' %>
+            <%= link_to 'Harmonic Sorting', playlist_harmonic_path(playlist_id: @playlist.id, spotify_user: @user_hash), class: 'harmonic-btn btn btn-light mx-2' %>
           </div>
           </div>
         <div>
@@ -56,10 +56,10 @@
                     <span class="d-flex"><p>BPM: </p><p class="bpm ms-2"><%= track[:bpm] %></p></span>
                   </div>
                   <div class="mx-3">
-                    <span class="d-flex"><p>Danceability: </p><p class="danceability ms-2"><%= track[:danceability] %></p></span>
+                    <span class="d-flex"><p>Danceability: </p><p class="danceability ms-2"><%= (track[:danceability] * 100).floor %></p><span>%</span></span>
                   </div>
                   <div class="mx-3">
-                    <span class="d-flex"><p>Energy: </p><p class="energy ms-2"><%= track[:energy] %></p></span>
+                    <span class="d-flex"><p>Energy: </p><p class="energy ms-2"><%= (track[:energy] * 100).floor %></p><span>%</span></span>
                   </div>
                 </div>
               </div>
