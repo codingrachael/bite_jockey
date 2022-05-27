@@ -41,7 +41,7 @@
         <div class="grid-tracks p-3">
           <% counter = 1 %>
           <% @tracks.each do |track| %>
-            <div class="grid-item-playlist border border-white mb-2 p-3" data-uri-value=<%= track[:uri]%>>
+            <div class="grid-item-playlist mb-2 p-3" data-uri-value=<%= track[:uri]%>>
               <div class="track-features d-flex justify-content-between align-items-center">
                 <div class="track-title-artist">
                   <h4 class="mb-2"><% counter %> <%= track[:name]  %></h4>
