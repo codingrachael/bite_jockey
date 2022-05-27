@@ -4,16 +4,15 @@
   </div>
   <div class="row">
     <div class="col">
-      <header class="playlist-tracks-header jumbotron jumbotron-fluid mb-5 rounded w-100">
-        <div class="playlist-tracks-header-text mt-5 mb-5 d-flex justify-content-center align-items-center">
-          <div class= "w-50 px-5">
+      <header class="playlist-tracks-header jumbotron jumbotron-fluid rounded w-100">
+        <div class="playlist-tracks-header-text mt-5 d-flex justify-space-between align-items-center">
+          <div class="p-0">
+            <%= image_tag 'HarmonicWheelLogo.png', class: "ps-4 camelot-image", size: 150 %>
+          </div>
+          <div class= "px-5">
             <h1>Harmonic Sorting</h1>
             <p>Sort your Spotify playlists by any of a wide range of musical attributes such as BPM, key, energy, danceability or leave it up to BiteJockey's algorithm to return the playlists best playable order! </p>
           </div>
-          <div class="p-0">
-            <%= image_tag 'HarmonicWheelLogo.png', class: "camelot-image" %>
-          </div>
-        <div>
       </header>
     </div>
   </div>
@@ -21,31 +20,32 @@
   <div class="row">
     <div class="col">
       <div class="tracks-container mb-5 d-flex justify-content-center">
-        <div class="grid" data-controller='sortable' >
-          <div class="grid-heading d-flex justify-content-between p-3">
-            <div class="image-and-title d-flex">
-              <div class="pe-3">
-                <%= image_tag @playlist.images.first["url"], size: 180 %>
+        <div class="grid d-flex flex-column align-items-center" data-controller='sortable' >
+          <header class="playlist-tracks-header jumbotron jumbotron-fluid rounded w-100">
+            <div class="playlist-tracks-header-text d-flex justify-content-start align-items-left w-100">
+              <div class="p-3 playlist-image">
+                <%= image_tag @playlist.images.first["url"], size: 200 %>
               </div>
-              <div class="playlist-title-description">
+              <div class= "w-100 px-5 header-info" style="margin-top: 12px;">
                 <h1><%= @playlist.name %></h1>
                 <p><%= @playlist.description %></p>
                 <p><%= @playlist.owner.display_name %> • <%= @playlist.total %> songs • <%= @playlist.public ? 'Public' : 'Private' %></p>
+                <p>Sort your Spotify playlists by any of a wide range of musical attributes such as BPM, key, energy, danceability or leave it up to BiteJockey's algorithm to return the playlists best playable order! </p>
+                <div class="spotify-buttons d-flex flex-wrap justify-content-start align-items-start">
+                <button class="update-playlist-button btn btn-outline-light mx-2 mb-2">Update Playlist</button>
+                <button class="create-playlist-button btn btn-outline-light mx-2 mb-2">Create New Playlist</button>
+                <%=link_to 'Regular Sorting', playlist_tracks_path(playlist_id: @playlist.id, spotify_user: @user_hash), class: "btn btn-outline-light mx-2 mb-2" %>
               </div>
-            </div>
-            <div class="button-container d-flex flex-column align-items-end">
-              <button class="update-playlist-button btn btn-success mb-2">Update Playlist</button>
-              <button class="create-playlist-button btn btn-success">Create Playlist</button>
-            </div>
-          </div>
-          <div id="harmonic-cards">
-          <% counter = 1 %>
+            <div>
+          </header>
+          <div id="harmonic-cards" class="p-3 d-flex flex-column justify-content-center align-items-center" style="width: 95%;">
+            <% counter = 1 %>
             <% @tracks.each do |track| %>
               <div class="harmonic-track-card shadow mb-2 p-3" data-uri-value=<%= track[:uri]%> data-camelot-key=<%= track[:camelot]%>>
                 <div class="track-features d-flex justify-content-between align-items-center">
                   <div class="track-title-artist">
                     <h4 class="mb-2"><% counter %> <%= track[:name]  %></h4>
-                    <p><%= track[:artist] %></p>
+                    <p style="text-align: left; font-size: 12px;"><%= track[:artist] %></p>
                   </div>
                   <div class="track-audio-features d-flex justify-content-between align-items-center">
                     <div class="mx-3">
@@ -61,10 +61,10 @@
                       <span class="d-flex"><p>BPM: </p><p class="bpm ms-2"><%= track[:bpm] %></p></span>
                     </div>
                     <div class="mx-3">
-                      <span class="d-flex"><p>Danceability: </p><p class="danceability ms-2"><%= track[:danceability] %></p></span>
+                      <span class="d-flex"><p>Danceability: </p><p class="danceability ms-2"><%= (track[:danceability] * 100).floor %></p><p>%</p></span>
                     </div>
                     <div class="mx-3">
-                      <span class="d-flex"><p>Energy: </p><p class="energy ms-2"><%= track[:energy] %></p></span>
+                      <span class="d-flex"><p>Energy: </p><p class="energy ms-2"><%= (track[:energy] * 100).floor %></p><p>%</p></span>
                     </div>
                   </div>
                 </div>
