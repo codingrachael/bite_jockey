@@ -1,8 +1,6 @@
 require_relative '../../lib/camelot_keys'
 
 class SpotifyApiController < ApplicationController
-  # BASE_URL = 'https://api.spotify.com/v1'
-
   def connect
   end
 
