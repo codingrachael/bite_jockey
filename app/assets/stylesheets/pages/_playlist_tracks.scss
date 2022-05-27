@@ -1,9 +1,9 @@
 .sorting-container {
-
   background-color: #0D1012;
   color: white;
   padding-left: 250px;
-  overflow-y: hidden;
+  overflow-y: none;
+  width: 100%;
 
   .camelot-image {
     height: 250px;
@@ -41,45 +41,74 @@
     margin: 0 25px;
   }
 
+  .jumbotron {
+    background-color: #2d3436;
+    background-image: linear-gradient(to bottom, #2d3436 0%, #0D1012 74%);
+    margin-right: 0%;
+    margin-left: 0%;
+    width: 100vw;
+  }
+
+  .col {
+    padding: 0%;
+    margin: 0%;
+  }
+
 }
 
 .playlist-tracks-header {
   margin-top: 80px;
   padding: 16px;
+  align-items: left;
+
   h1 {
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 32px;
+    color: #F4F4F4;
+    font-size: xx-large;
+    font-family: "Poppins",
+    sans-serif;
+    font-weight: 800;
   }
 
   p {
-    font-family: 'Raleway';
-    font-weight: 400;
+    color: #F4F4F4;
+    font-size: small;
+    font-family: "Poppins",
+    sans-serif;
+  }
+
+  .playlist-image img {
+    border-radius: 10px;
+    margin-left: 26px;
   }
 }
 
 .playlist-title-description {
   p {
-    font-family: 'Raleway';
-    font-weight: 600;
-    font-size: 16px;
+    color: #F4F4F4;
+    font-size: small;
+    font-family: "Poppins",
+    sans-serif;
   }
 }
 
 .spotify-buttons {
   height: 100%;
+  border: #F4F4F4;
 }
 
 .grid-heading {
   h1 {
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 48px;
-    padding-top: 24px;
+    color: #F4F4F4;
+    font-size: xx-large;
+    font-family: "Poppins",
+    sans-serif;
+    font-weight: 800;
   }
   .button-container {
-    font-family: 'Raleway';
-    color: white;
+    color: #F4F4F4;
+    font-size: small;
+    font-family: "Poppins",
+    sans-serif;
   }
 }
 
@@ -89,4 +118,16 @@
 
 .playlist-title-description {
   padding-top: 24px;
+}
+
+.playlist-tracks-header {
+  margin-top: 24px;
+}
+
+.tracks-container {
+  margin-top: 0%;
+}
+
+.header-info {
+  margin-top: 46px;
 }
