@@ -3,49 +3,24 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto" style="display: flex; align-items: center; justify-content: space-between; width: 95%;">
       <a class="navbar-brand" href="/" style="margin: 0 0%; width: 200px; display: flex; justify-content: left;">
-        <%= image_tag 'logo_text.png', width: '300', height: '108.27', alt: 'Logo', class: "ms-2 d-inline-block align-top" %>
+        <%= image_tag 'logo_text.png', width: 'auto', height: '120', alt: 'Logo', class: "ms-2 d-inline-block align-top" %>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
         <div class="links" style="display: flex; justify-content: space-evenly; align-items: center; font-family: monospace;">
           <% if user_signed_in? %>
-            <li class="nav-item-center active">
-              <a class="nav-link" href="/"><u>Home</u><span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="/auth/spotify"><u>Sort Playlists</u></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/auth/spotify"><u>Sort My Playlists</u></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/users"><u>BiteMates</u></a>
+              <a class="nav-link" href="/users"><u>Find DJs</u></a>
             </li>
             <% if current_user.unchecked_notifications.count == 0 %>
               <li class="nav-item">
-                  <a class="nav-link" href="/notifications"><u>Notifications</u></a>
+                  <a class="nav-link" href="/notifications"><u>No New Notifications</u></a>
               </li>
             <% else %>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </div>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown link
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>
-
-
               <li class="nav-item" style="display: flex; align-items: center;">
                   <a class="nav-link" href="/notifications" style="font-weight: bold; color: white;"><u>Notifications <i class="fa fa-caret-down"></i></u></a>
               </li>
@@ -57,23 +32,35 @@
               </li>
             <% end %>
           <% else %>
-            <li class="nav-item-center active" style="text">
-              <a class="nav-link" href="/"><u>Home</u><span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="/auth/spotify"> <u>Sort Playlists</u></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/auth/spotify"> <u>Sort My Playlists</u></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/auth/spotify"><u>BiteMates</u></a>
+              <a class="nav-link" href="/auth/spotify"><u>Find DJs</u></a>
             </li>
           <% end %>
         </div>
+        <div class="right" style="border: 2px solid orange; display: flex; align-items: center; width: fit-content; padding: 0 32px 0 12px;">
           <div class="button-border" style="width: 200px; margin-right: 1%;">
             <a class="spotify-button" href="/auth/spotify" style="margin-right: 0%;">
               <span class="spotify-button-text" style="font-family: monospace;"><span>Connect</span></span>
               <span class="spotify-button-icon"><i class="fa fa-spotify" aria-hidden="true"></i></span>
             </a>
           </div>
+          <div class="avatar" >
+            <% if user_signed_in? %>
+              <img src="<%= current_user.image %>" alt="" class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%;">
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <b class="dropdown-item">User: <%= current_user.user_name %></b>
+                <%= link_to "View Profile", users_path, class: "dropdown-item" %>
+                <%= link_to "My Bookings", user_bookings_path(current_user), class: "dropdown-item" %>
+                <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+              </div>
+            <% else %>
+              <a href="/users/sign_in">Sign In</a>
+            <% end %>
+          </div>
+        </div>
       </ul>
     </div>
   </nav>

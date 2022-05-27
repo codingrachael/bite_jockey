@@ -1,50 +1,55 @@
-<div class="test-page">
+Original Navbar HTML
 
-  <br><br><br><br><br><br><br>
-  <div class="h1-container">
-    <h1 style="border: 2px solid red; text-align: center; margin: 24px;">Your Bookings</h1>
-  </div>
-  <div class="map-div" style="border: 2px solid yellowgreen; width: 100%; height: 60vh; display: flex; align-items: center; justify-content: center; margin: 16px 0px;" >
-    <h1>Map with Booking Location</h1>
-  </div>
-  <div class="cards-div" style="border: 2px solid blue; width: 80%; display: flex; flex-direction: column; flex-wrap: wrap; align-self: auto; justify-content: center; margin-bottom: 24px;">
-    <div class="b-headings" style="border: 2px solid white; text-align: center;">
-      <h1>Upcoming Bookings</h1>
-    </div>
-    <ul>
-      <li class="booking-card" style="background-image: url(https://images.unsplash.com/photo-1516873240891-4bf014598ab4?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870)">
-        <div class="informations-container">
-          <h2 class="title">12th June @ 10pm</h2>
-          <hr><p class="sub-title" style="font-family: monospace;"><strong>Venue:</strong> Festival Hall</p>
-          <p class="sub-title" style="font-family: monospace;"><strong>Set Length:</strong> 2.0hrs</p>
-          <p class="sub-title" style="font-family: monospace;"><strong>Genres:</strong> Deep House, EDM, Techno</p>
-          <p class="sub-title" style="font-family: monospace;"><strong>Equipment:</strong> BYO Portable Decks</p>
-          <p class="sub-title" style="font-family: monospace;"><strong>Hourly Rate:</strong> $150</p> <hr>
-          <div class="more-information">
-            <p class="disclaimer">Two of Naarms finest hard dance crews, Dazed HDT & IWTFA - are joining forces to present ‘Control Theory’ at Subclub. We’ve asked some of our favourite selectors to join us in the basement for a night of music mayhem.</p><hr>
-            <button id="booker-button">Devin: Club90</button>
-          </div>
-        </div>
+<div>
+ <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" style="display: flex; justify-content: space-between;">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+   <ul class="navbar-nav mx-auto" style="display: flex; align-items: center; justify-content: space-between; width: 95%;">
+   <a class="navbar-brand" href="/" style="margin: 0 0%; width: 200px; display: flex; justify-content: left;">
+    <%= image_tag 'logo_text.png', width: '300', height: '108.27', alt: 'Logo', class: "ms-2 d-inline-block align-top" %>
+   </a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+   </button>
+    <div class="links" style="display: flex; justify-content: space-evenly; align-items: center; font-family: monospace;">
+     <% if user_signed_in? %>
+      <li class="nav-item">
+       <a class="nav-link" href="/auth/spotify"><u>Sort My Playlists</u></a>
       </li>
-    </ul>
-    <div class="b-headings" style="border: 2px solid white; text-align: center;">
-      <h1>Past Bookings</h1>
-    </div>
-    <ul>
-      <li class="booking-card" style="background-image: url(https://images.unsplash.com/photo-1539758462369-43adaa19bc1f?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687)">
-        <div class="informations-container">
-          <h2 class="title">12th June @ 10pm</h2>
-          <hr><p class="sub-title" style="font-family: monospace;"><strong>Venue:</strong> Festival Hall</p>
-          <p class="sub-title" style="font-family: monospace;"><strong>Set Length:</strong> 2.0hrs</p>
-          <p class="sub-title" style="font-family: monospace;"><strong>Genres:</strong> Deep House, EDM, Techno</p>
-          <p class="sub-title" style="font-family: monospace;"><strong>Equipment:</strong> BYO Portable Decks</p>
-          <p class="sub-title" style="font-family: monospace;"><strong>Hourly Rate:</strong> $150</p> <hr>
-          <div class="more-information">
-            <p class="disclaimer">Two of Naarms finest hard dance crews, Dazed HDT & IWTFA - are joining forces to present ‘Control Theory’ at Subclub. We’ve asked some of our favourite selectors to join us in the basement for a night of music mayhem.</p><hr>
-            <button id="booker-button">Devin: Club90</button>
-          </div>
-        </div>
+      <li class="nav-item">
+       <a class="nav-link" href="/users"><u>BiteMates</u></a>
       </li>
-    </ul>
+      <% if current_user.unchecked_notifications.count == 0 %>
+       <li class="nav-item">
+         <a class="nav-link" href="/notifications"><u>Notifications</u></a>
+       </li>
+      <% else %>
+      <div class="dropdown">
+       <li class="nav-item" style="display: flex; align-items: center;">
+         <a class="nav-link" href="/notifications" style="font-weight: bold; color: white;"><u>Notifications <i class="fa fa-caret-down"></i></u></a>
+       </li>
+       <li class="fa-stack fa-2x has-badge" href="/notifications" style="margin-left: -18px;" data-count=<%= current_user.unchecked_notifications.count %>>
+        <i class="fa fa-compact-disc fa-stack-1x fa-inverse" style="font-size: 36px; color: #DB3EB1;" href="/notifications"></i>
+       </li>
+       <!--<li>
+        <i class="fa fa-compact-disc" style="font-size: 24px; color: crimson;"></i>   -->
+       </li>
+      <% end %>
+     <% else %>
+      <li class="nav-item">
+       <a class="nav-link" href="/auth/spotify"> <u>Sort My Playlists</u></a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="/auth/spotify"><u>BiteMates</u></a>
+      </li>
+     <% end %>
+    </div>
+     <div class="button-border" style="width: 200px; margin-right: 1%;">
+      <a class="spotify-button" href="/auth/spotify" style="margin-right: 0%;">
+       <span class="spotify-button-text" style="font-family: monospace;"><span>Connect</span></span>
+       <span class="spotify-button-icon"><i class="fa fa-spotify" aria-hidden="true"></i></span>
+      </a>
+     </div>
+   </ul>
   </div>
+ </nav>
 </div>
