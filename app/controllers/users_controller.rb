@@ -25,6 +25,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @playlists = @user.spotify_id ? RSpotify::User.find(@user.spotify_id).playlists.slice(0, 5) : []
+    @booking = Booking.new
+    @booking.user_id = @user.id
     @markers = [{
       lat: @user.latitude,
       lng: @user.longitude,

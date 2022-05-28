@@ -1,13 +1,13 @@
 .sorting-container {
-
-  background-color: #121212;
+  background-image: linear-gradient(to bottom, #212627 0%, #0D1012 74%);
   color: white;
   padding-left: 250px;
-  overflow-y: hidden;
+  overflow-y: none !important;
+  width: 100%;
 
   .camelot-image {
     height: 250px;
-    width: 250px;
+    width: 200px;
   }
 
   .camelot-image:hover {
@@ -41,52 +41,153 @@
     margin: 0 25px;
   }
 
+  .jumbotron {
+    margin-right: 0%;
+    margin-left: 0%;
+    width: 100vw;
+  }
+
+  .col {
+    padding: 0%;
+    margin: 0%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn {
+    margin: 10px;
+    align-items: center;
+  }
+
+  .button-container  {
+    background-color: #1C1E1F;
+    border-radius: 10px;
+    width: 80%;
+    height: 40%;
+    margin-top: -120px;
+    margin-left: 100px;
+    background-color: #fa2a959a;
+    background-image: linear-gradient(to bottom, #fa2a9591 0%, #9bd3e3cd 74%);
+  }
+
+  .harmonic-btn {
+    background: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    font-weight: 800;
+    color: #0D1012;
+  }
+
+  .harmonic-btn:hover {
+    box-shadow: 0 5px 15px rgba(227, 216, 235, 0.718);
+  }
+
+
+
+
+
+  .button-container h5 {
+    font-family: "Poppins",
+    sans-serif;
+    color: #F4F4F4;
+    font-weight: 800;
+  }
+
+  .button-container .btn {
+    margin: 10px;
+    align-items: center;
+  }
+
+  .spotify-buttons .btn{
+    border-radius: 40px;
+    margin: 10px;
+    align-items: center;
+  }
+
 }
 
 .playlist-tracks-header {
   margin-top: 80px;
   padding: 16px;
+  align-items: left;
+
+
   h1 {
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 32px;
+    color: #F4F4F4;
+    font-size: xx-large;
+    font-family: "Poppins",
+    sans-serif;
+    font-weight: 800;
   }
 
   p {
-    font-family: 'Raleway';
-    font-weight: 400;
+    color: #F4F4F4;
+    font-size: small;
+    font-family: "Poppins",
+    sans-serif;
+
+  }
+
+  .playlist-image img {
+    border-radius: 10px;
+    margin-left: 26px;
   }
 }
 
 .playlist-title-description {
   p {
-    font-family: 'Raleway';
-    font-weight: 600;
-    font-size: 16px;
+    color: #F4F4F4;
+    font-size: small;
+    font-family: "Poppins",
+    sans-serif;
+    text-align: center;
+    line-height: 2px;
   }
-}
-
-.spotify-buttons {
-  height: 100%;
 }
 
 .grid-heading {
   h1 {
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 48px;
-    padding-top: 24px;
+    color: #F4F4F4;
+    font-size: xx-large;
+    font-family: "Poppins",
+    sans-serif;
+    font-weight: 800;
+    text-align: center;
   }
   .button-container {
-    font-family: 'Raleway';
-    color: white;
+    color: #F4F4F4;
+    font-size: small;
+    font-family: "Poppins",
+    sans-serif;
   }
 }
 
 .grid-tracks {
-  width: 75%;
+  width: 95%;
+  height: 50px;
+}
+
+.grid-heading {
+  display: flex;
+  width: 95%;
+  align-self: center;
+  align-items: center;
 }
 
 .playlist-title-description {
   padding-top: 24px;
+}
+
+.playlist-tracks-header {
+  margin-top: 24px;
+}
+
+.tracks-container {
+  margin-top: 0%;
+}
+
+.header-info {
+  margin-top: 46px;
+}
+
+.container-fluid {
+  overflow: hidden;
 }

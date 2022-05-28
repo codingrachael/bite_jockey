@@ -1,8 +1,6 @@
 require_relative '../../lib/camelot_keys'
 
 class SpotifyApiController < ApplicationController
-  # BASE_URL = 'https://api.spotify.com/v1'
-
   def connect
   end
 
@@ -30,6 +28,7 @@ class SpotifyApiController < ApplicationController
 
   def harmonic_sort
     build_user
+    @user_hash = @spotify_user.to_hash
     @playlist = @spotify_user.playlists.find { |playlist| playlist.id == user_params[:playlist_id] }
     @tracks = build_tracklist(@playlist)
     @my_vars = {
