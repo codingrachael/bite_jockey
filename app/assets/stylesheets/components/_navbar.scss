@@ -1,6 +1,7 @@
 .navbar {
   background-color: #2d3436;
   background-image: linear-gradient(to bottom, #2d3436 0%, #000000 74%);
+  height: 80px;
 
   .spotify-button {
     font-family: monospace;
@@ -16,6 +17,10 @@
     margin: 16px 8px 16px 0;
   }
 
+  #d-down {
+    // height: 555px;
+    margin-left: -75px;
+  }
 
   .spotify-button:hover {
     background-color: rgb(255, 255, 255);
