@@ -73,13 +73,10 @@ While it was definately a challenge taking on this project with the number of di
 - SCSS
 - Javascript
 
-[Back To The Top](#read-me-template)
-
 ---
 
 
 ## References
-[Back To The Top](#read-me-template)
 
 [View the presentation we made on demo day on 28th June 2022](www.youtube.com)
 
@@ -114,6 +111,3 @@ Tim Fawcett
 Khadija Bulhan
 - [Linkedin](https://www.linkedin.com/in/khadija-bulhan-670967199/)
 - [GitHub](https://github.com/Khadijaa8)
-
-
-[Back To The Top](#read-me-template)
