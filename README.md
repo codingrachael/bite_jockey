@@ -103,7 +103,7 @@ Shane Garland
 
 Tim Fawcett
 - [Linkedin](www.linkedin.com/in/t-fawcett/)
-- [Tim's Profile](https://tjfaw1.github.io/Portfolio/)
+- [Profile](https://tjfaw1.github.io/Portfolio/)
 
 Khadija Bulhan
 - [Linkedin](https://www.linkedin.com/in/khadija-bulhan-670967199/)
