@@ -81,11 +81,11 @@ While it was definately a challenge taking on this project with the number of di
 ## References
 [Back To The Top](#read-me-template)
 
-Here's a recording of the presentation we made on demo day on 28th June 2022. [Presentation Link](www.youtube.com)
+[View the presentation we made on demo day on 28th June 2022](www.youtube.com)
 
-Here's a video walkthrough of the site and it's features.[Walkthrough Link](www.youtube.com)
+<!-- Here's a video walkthrough of the site and it's features.[Walkthrough Link](www.youtube.com) -->
 
-Here are the initial mockups we made on [Excalidraw](https://i.imgur.com/AgAhEDA.png)
+[Here are the initial mockups we made on Excalidraw](https://i.imgur.com/AgAhEDA.png)
 
 ---
 
