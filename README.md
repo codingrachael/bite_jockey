@@ -62,7 +62,7 @@ While it was definately a challenge taking on this project with the number of di
 *User profile page (pt1) displaying profile image, details and playlist of user.*
 
 
-![User Profile Page](https://imgur.com/ea996f2e-6955-41de-a9d3-1d30a429c1ed)
+![User Profile Page](https://i.imgur.com/kjhJK0S.jpg)
 *User profile page (pt2) displaying map location, booking form and social feed.*
 
 #### Technologies
