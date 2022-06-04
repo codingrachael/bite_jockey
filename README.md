@@ -34,8 +34,10 @@ We undertook this creation as part of the final group project during Le Wagon's 
   ![Playlists Page](https://i.imgur.com/zrvCz0L.jpeg)
   *Playlist index page, showing all the user's Spotify Playlists.*
 
+
   ![Track Sorting Page](https://i.imgur.com/flMkAjI.jpg)
   *Playlist track page, showing all the tracks within the Playlist and sortable by specific DJ filters.*
+
 
   ![Harmonic Sorting Page](https://i.imgur.com/90tcxa5.jpg)
   *Harmonic sorting page, allowing tracks to be sorted based on Harmonic Keys*
@@ -54,12 +56,14 @@ While it was definately a challenge taking on this project with the number of di
 
 ![User Index Page](https://i.imgur.com/iGPVp4U.jpg)
 *User index page, search for BiteMates*
+
+
 ![User Profile Page](https://i.imgur.com/JJqs6ND.jpg)
 *User profile page (pt1) displaying profile image, details and playlist of user.*
+
+
 ![User Profile Page](https://imgur.com/ea996f2e-6955-41de-a9d3-1d30a429c1ed)
 *User profile page (pt2) displaying map location, booking form and social feed.*
-![User Profile Page](https://i.imgur.com/azf2kku.jpg)
-*User bookings page displaying details of bookings.*
 
 #### Technologies
 
