@@ -4,6 +4,8 @@
 
 Hey there, welcome to the repository for BiteJockey, a site that aims to help DJs spend less time planning and more time playing. It also allows users to connect with other DJs, make bookings and get booked for gigs.
 
+[🔗View Website🔗](https://bite-jockey.herokuapp.com/)
+
 > Please note, to access the Spotify API features of BiteJockey you will need to be granted access due to Spotify's API restrictions. We'd be more than happy to set this up for any potential users and DJs so please feel to reach out so we can make this happen
 
 ---
@@ -31,11 +33,11 @@ We undertook this creation as part of the final group project during Le Wagon's 
 
   We've also included an additional way to customize a user's playlist via the Harmonic Sorting function. This uses the [Harmonic Mixing Theory](https://en.wikipedia.org/wiki/Harmonic_mixing) which is a tool widely used by DJs to help determine which tracks and sounds work well together.
 
-  ![Playlists Page](https://i.imgur.com/zrvCz0L.jpeg)
+  ![Playlists Page](https://i.imgur.com/flMkAjI.jpg)
   *Playlist index page, showing all the user's Spotify Playlists.*
 
 
-  ![Track Sorting Page](https://i.imgur.com/flMkAjI.jpg)
+  ![Track Sorting Page](https://i.imgur.com/K52rc1o.jpg)
   *Playlist track page, showing all the tracks within the Playlist and sortable by specific DJ filters.*
 
 
@@ -52,8 +54,6 @@ We undertook this creation as part of the final group project during Le Wagon's 
 
   When a user receives a new booking, they'll receive a notification on BiteJockey which will direct them to view the new booking.
 
-While it was definately a challenge taking on this project with the number of different features, we're all extremly proud of how BiteJockey turned out. It was pleasure to work with the team who were all super engaged, motivated and amazing to work with.
-
 ![User Index Page](https://i.imgur.com/iGPVp4U.jpg)
 *User index page, search for BiteMates*
 
@@ -64,6 +64,10 @@ While it was definately a challenge taking on this project with the number of di
 
 ![User Profile Page](https://i.imgur.com/kjhJK0S.jpg)
 *User profile page (pt2) displaying map location, booking form and social feed.*
+
+
+While it was definitely a challenge taking on this project with the number of different features, we're all extremly proud of how BiteJockey turned out. It was pleasure to work with the team who were all super engaged, motivated and amazing to work with.
+
 
 #### Technologies
 
