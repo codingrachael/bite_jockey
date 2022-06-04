@@ -1,10 +1,10 @@
-# Read Me Template
+# BiteJockey
 
 ![Project Image](https://i.imgur.com/EPi3dA1.jpg)
 
-> Hey there, welcome to the repository for our Web Application - BiteJockey. A site that aims to help DJs spend less time planning and more time playing. It also allows users to connect with other DJs, make bookings and get booked for gigs.
+Hey there, welcome to the repository for our Web Application - BiteJockey. A site that aims to help DJs spend less time planning and more time playing. It also allows users to connect with other DJs, make bookings and get booked for gigs.
 
-**** Please note, to access the Spotify API features of BiteJockey you will need to be granted access due to Spotify's API restrictions. We'd be more than happy to set this up for any potential users and DJs so please feel to reach out so we can make this happen ****
+> **** Please note, to access the Spotify API features of BiteJockey you will need to be granted access due to Spotify's API restrictions. We'd be more than happy to set this up for any potential users and DJs so please feel to reach out so we can make this happen ****
 
 ---
 
@@ -21,17 +21,17 @@
 
 BiteJockey is the brain child of group member Rachael McNamara who's also a local Melbourne DJ aka "Omega3".
 
-We undertook this project as part of the final group project during Le Wagon's Coding Bootcamp which concluded in June 2022.
+We undertook this creation as part of the final group project during Le Wagon's Coding Bootcamp which concluded in June 2022.
 
-Major Feature - Spotify API Playlist Filtering
+### Major Feature - Spotify API Playlist Filtering
 
   The premise of the application was to be time-saving tool for DJs who are often spending a lot of time of the 'admin' side of DJ-ing. For every set a DJ plays there's tons of sorting, filtering and adjusting individual tracks in order to build the perfect set with a consistent feel and smooth transitions.
 
   Using the Spotify API, we were able to build features that allowed users to access their own Spotify Playlists and then sort and filter the containing tracks by a number of DJ specific elements (such as BPM, Danceability, Key & Energy). The newly re-ordered playlist can then be saved as a new playlist in Spotify, or it can overide the original playlist.
 
-  We've also included an additional way to customize a users playlist via the Harmonic Sorting function. This uses the Harmonic Mixing Theory (https://en.wikipedia.org/wiki/Harmonic_mixing) which is a tool widely used by DJs to help determine which tracks and sounds work well together.
+  We've also included an additional way to customize a users playlist via the Harmonic Sorting function. This uses the [Harmonic Mixing Theory] (https://en.wikipedia.org/wiki/Harmonic_mixing) which is a tool widely used by DJs to help determine which tracks and sounds work well together.
 
-Secondary Features - Users & Bookings
+### Secondary Features - Users & Bookings
 
   For additional features to the application we added user profiles and booking components.
 
