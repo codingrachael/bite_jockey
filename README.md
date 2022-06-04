@@ -33,8 +33,10 @@ We undertook this creation as part of the final group project during Le Wagon's 
 
   ![Playlists Page](https://i.imgur.com/zrvCz0L.jpeg)
   *Playlist index page, showing all the user's Spotify Playlists.*
+
   ![Track Sorting Page](https://i.imgur.com/flMkAjI.jpg)
   *Playlist track page, showing all the tracks within the Playlist and sortable by specific DJ filters.*
+
   ![Harmonic Sorting Page](https://i.imgur.com/90tcxa5.jpg)
   *Harmonic sorting page, allowing tracks to be sorted based on Harmonic Keys*
 
