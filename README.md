@@ -29,7 +29,7 @@ We undertook this creation as part of the final group project during Le Wagon's 
 
   Using the Spotify API, we were able to build features that allowed users to access their own Spotify Playlists and then sort and filter the containing tracks by a number of DJ specific elements (such as BPM, Danceability, Key & Energy). The newly re-ordered playlist can then be saved as a new playlist in Spotify, or it can overide the original playlist.
 
-  We've also included an additional way to customize a users playlist via the Harmonic Sorting function. This uses the [Harmonic Mixing Theory] (https://en.wikipedia.org/wiki/Harmonic_mixing) which is a tool widely used by DJs to help determine which tracks and sounds work well together.
+  We've also included an additional way to customize a users playlist via the Harmonic Sorting function. This uses the [Harmonic Mixing Theory](https://en.wikipedia.org/wiki/Harmonic_mixing) which is a tool widely used by DJs to help determine which tracks and sounds work well together.
 
 ### Secondary Features - Users & Bookings
 
@@ -59,17 +59,17 @@ While it was definately a challenge taking on this project with the number of di
 ## References
 [Back To The Top](#read-me-template)
 
-Here's a recording of the presentation we made on demo day on 28th June 2022.(youtube.com)
+Here's a recording of the presentation we made on demo day on 28th June 2022. [Presentation Link](www.youtube.com)
 
-Here's a video walkthrough of the site and it's features.(youtube.com)
+Here's a video walkthrough of the site and it's features.[Walkthrough Link](www.youtube.com)
 
-Here's are the initial mockups we made on Excalidraw (https://i.imgur.com/AgAhEDA.png)
+Here are the initial mockups we made on [Excalidraw](https://i.imgur.com/AgAhEDA.png)
 
 ---
 
 ## Author Info
 
-![Project Image](https://i.imgur.com/V0A8BBY.jpg)
+![Team Members](https://i.imgur.com/go2B2iE.png)
 
 BiteJockey was built by Rachael McNamara, Share Garland, Tim Fawcett and Khadija Bulhan.
 
@@ -78,20 +78,20 @@ Big thankyou to all the Teachers and TAs at Le Wagon for their help, encourageme
 Feel free to reach out to any of the team members below:
 
 Rachael McNamara
-- Linkedin - [@RachaelMcNamara](https://www.linkedin.com/in/rachael-m-950082183/)
-- GitHub - [CodingRachael](https://github.com/codingrachael)
+- [Linkedin](https://www.linkedin.com/in/rachael-m-950082183/)
+- [GitHub](https://github.com/codingrachael)
 
 Shane Garland
-- Linkedin - [@ShaneGarland](https://www.linkedin.com/in/shane-garland/)
-- Website - [Shaneo711](https://github.com/shaneo711)
+- [Linkedin](https://www.linkedin.com/in/shane-garland/)
+- [GitHub](https://github.com/shaneo711)
 
 Tim Fawcett
-- Linkedin - [@TimFawcett](https://www.linkedin.com/in/rachael-m-950082183/)
-- Portfolio - [Tim's Profile](https://tjfaw1.github.io/Portfolio/)
+- [Linkedin](www.linkedin.com/in/t-fawcett/)
+- [Tim's Profile](https://tjfaw1.github.io/Portfolio/)
 
 Khadija Bulhan
-- Linkedin - [@KhadijaBulhan](https://www.linkedin.com/in/khadija-bulhan-670967199/)
-- Website - [Khadija](https://github.com/Khadijaa8)
+- [Linkedin](https://www.linkedin.com/in/khadija-bulhan-670967199/)
+- [GitHub](https://github.com/Khadijaa8)
 
 
 [Back To The Top](#read-me-template)
