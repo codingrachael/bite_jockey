@@ -82,7 +82,7 @@ While it was definitely a challenge taking on this project with the number of di
 
 ## References
 
-[View the presentation we made on demo day on 28th June 2022](www.youtube.com)
+<!-- [View the presentation we made on demo day on 28th May 2022](www.youtube.com) -->
 
 <!-- Here's a video walkthrough of the site and it's features.[Walkthrough Link](www.youtube.com) -->
 
