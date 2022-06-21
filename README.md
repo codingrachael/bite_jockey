@@ -5,6 +5,7 @@
 Hey there, welcome to the repository for BiteJockey, a site that aims to help DJs spend less time planning and more time playing. It also allows users to connect with other DJs, make bookings and get booked for gigs.
 
 [🔗View Website🔗](https://bite-jockey.herokuapp.com/)
+
 [📹View Demo📹](https://youtu.be/EtgwZE8tK1M?t=522)
 
 > Please note, to access the Spotify API features of BiteJockey you will need to be granted access due to Spotify's API restrictions. We'd be more than happy to set this up for any potential users and DJs so please feel to reach out so we can make this happen
